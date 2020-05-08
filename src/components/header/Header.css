@@ -1,0 +1,43 @@
+.header-container {
+  background-color: #29303b;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+/* header-left */
+.header-left {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+.header-logo {
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.header-searchbox {
+  padding: 0 10px;
+  flex: 1;
+}
+
+/* header-right */
+.header-right {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+}
+
+.header-profile {
+  padding: 0 10px;
+}
+
+.header-orders {
+  padding: 0 10px;
+}
+
+.header-cart {
+  padding: 0 10px;
+}
