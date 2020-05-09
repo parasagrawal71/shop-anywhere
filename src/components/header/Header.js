@@ -1,7 +1,7 @@
 import React from "react";
 
 // *** IMPORT USER-DEFINED COMPONENTS HERE *** //
-import SearchBox from "../searchBox/SearchBox";
+import SearchBox from "components/searchBox/SearchBox";
 
 // *** IMPORT STYLES HERE *** //
 import "./Header.css";
