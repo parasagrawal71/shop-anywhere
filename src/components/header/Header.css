@@ -1,17 +1,13 @@
 .header {
   background-color: #29303b;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: 20px 10px;
 }
 
 /* header-left */
 .header--left {
-  display: flex;
-  flex-direction: row;
   width: 60%;
+  height: 35px;
 }
 .header__logo {
   font-size: 20px;
@@ -21,12 +17,12 @@
 .header__searchbox {
   padding: 0 10px;
   flex: 1;
+  min-width: 200px;
+  height: 100%;
 }
 
 /* header-right */
 .header--right {
-  display: flex;
-  flex-direction: row;
   padding: 0 10px;
 }
 
