@@ -1,4 +1,4 @@
-.header-container {
+.header {
   background-color: #29303b;
   color: white;
   display: flex;
@@ -8,36 +8,36 @@
 }
 
 /* header-left */
-.header-left {
+.header--left {
   display: flex;
   flex-direction: row;
   width: 60%;
 }
-.header-logo {
+.header__logo {
   font-size: 20px;
   padding: 0 10px;
 }
 
-.header-searchbox {
+.header__searchbox {
   padding: 0 10px;
   flex: 1;
 }
 
 /* header-right */
-.header-right {
+.header--right {
   display: flex;
   flex-direction: row;
   padding: 0 10px;
 }
 
-.header-profile {
+.header__profile {
   padding: 0 10px;
 }
 
-.header-orders {
+.header__orders {
   padding: 0 10px;
 }
 
-.header-cart {
+.header__cart {
   padding: 0 10px;
 }

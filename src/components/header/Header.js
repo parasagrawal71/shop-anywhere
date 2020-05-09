@@ -8,17 +8,17 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header-container">
-      <div className="header-left">
-        <div className="header-logo">Shop Anywhere</div>
-        <div className="header-searchbox">
+    <div className="header">
+      <div className="header--left">
+        <div className="header__logo">Shop Anywhere</div>
+        <div className="header__searchbox">
           <SearchBox placeholder="Search for products" />
         </div>
       </div>
-      <div className="header-right">
-        <div className="header-profile">My Profile</div>
-        <div className="header-orders">Orders</div>
-        <div className="header-cart">Cart</div>
+      <div className="header--right">
+        <div className="header__profile">My Profile</div>
+        <div className="header__orders">Orders</div>
+        <div className="header__cart">Cart</div>
       </div>
     </div>
   );

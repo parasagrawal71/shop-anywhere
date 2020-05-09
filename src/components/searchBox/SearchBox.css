@@ -1,6 +1,6 @@
-.searchbox-container {
+.searchbox {
 }
 
-.searchbox-container input {
+.searchbox__input {
   width: 100%;
 }

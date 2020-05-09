@@ -6,8 +6,8 @@ import "./SearchBox.css";
 const SearchBox = (props) => {
   const { placeholder } = props;
   return (
-    <div className="searchbox-container">
-      <input placeholder={placeholder} />
+    <div className="searchbox">
+      <input placeholder={placeholder} className="searchbox__input" />
     </div>
   );
 };
