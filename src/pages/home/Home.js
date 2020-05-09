@@ -1,7 +1,7 @@
 import React from "react";
 
 // *** IMPORT USER-DEFINED COMPONENTS HERE *** //
-import Header from "../../components/header/Header";
+import Header from "components/header/Header";
 
 // *** IMPORT STYLES HERE *** //
 import "./Home.css";
