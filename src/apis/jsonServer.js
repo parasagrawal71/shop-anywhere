@@ -11,49 +11,55 @@ const request = axios.create({
   baseURL: BASE_URL,
 });
 
-const jsonServer = (
-  method,
-  endpoint,
-  body,
-  parameters = null,
-  headers = null
-) => {
-  // endpoint example: /api/{id}
+const jsonServer = (method, endpoint, body, config) => {
   switch (method.toUpperCase()) {
     case GET:
       return request
-        .get(endpoint, { params: parameters, headers }) // axios#get(url[, config])
+        .get(endpoint, config)
         .then((response) => {
           //   console.log("get response:- ", response);
           return response.data;
-        });
+        })
+        .catch((e) => handleError(e));
+
     case POST:
       return request
-        .post(endpoint, body, { params: parameters, headers }) // axios.post(url[, data[, config]])
+        .post(endpoint, body, config)
         .then((response) => {
           //   console.log("post response:- ", response);
           return response.data;
         })
         .catch((e) => handleError(e));
+
     case PUT:
       return request
-        .put(endpoint, body, { params: parameters, headers }) // axios#put(url[, data[, config]])
+        .put(endpoint, body, config)
         .then((response) => {
           //   console.log("put response:- ", response);
           return response.data;
         })
         .catch((e) => handleError(e));
+
     case DELETE:
       return request
-        .delete(endpoint, { params: parameters, headers }) // axios#delete(url[, config])
+        .delete(endpoint, config)
         .then((response) => {
           //   console.log("delete response:- ", response);
           return response.data;
         })
         .catch((e) => handleError(e));
+
     default:
       return "Wrong call";
   }
 };
 
 export default jsonServer;
+
+// endpoint example: /api/{id}
+
+// config
+// {
+//   params,
+//   headers
+// }
