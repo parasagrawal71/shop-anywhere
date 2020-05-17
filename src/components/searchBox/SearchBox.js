@@ -5,7 +5,7 @@ import { debounce } from "utils/functions";
 
 // *** IMPORT STYLES HERE *** //
 import "./SearchBox.css";
-import "assets/commonStyles/flex.css";
+import "utils/commonStyles/flex.css";
 
 // *** IMPORT ASSETS HERE *** //
 import searchIcon from "assets/svg/search-icon.svg";

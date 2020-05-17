@@ -8,7 +8,7 @@ import SearchBox from "components/searchBox/SearchBox";
 
 // *** IMPORT STYLES HERE *** //
 import "./Header.css";
-import "assets/commonStyles/flex.css";
+import "utils/commonStyles/flex.css";
 
 const Header = () => {
   // STATE VARIABLES
