@@ -9,7 +9,11 @@ import {
 } from "./httpConstants";
 
 const handleError = (error) => {
-  switch (error.response.status) {
+  // console.log("handleError error:- ", error);
+  // console.log("handleError error.response:- ", error.response);
+  // console.log("handleError error.response:- ", error.message);
+  const status = error.response ? error.response.status : null;
+  switch (status) {
     case NOT_FOUND:
       return "Server could not find the requested information.";
     case FORBIDDEN:
@@ -23,7 +27,7 @@ const handleError = (error) => {
     case REQUEST_TIMED_OUT:
       return "REQUEST_TIMED_OUT";
     default:
-      return "Unknown Error";
+      return `${error.message}`;
   }
 };
 

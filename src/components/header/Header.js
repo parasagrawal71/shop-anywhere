@@ -5,6 +5,7 @@ import jsonServer from "apis/jsonServer";
 
 // *** IMPORT USER-DEFINED COMPONENTS HERE *** //
 import SearchBox from "subComponents/searchBox/SearchBox";
+import { toast } from "react-toastify";
 
 // *** IMPORT STYLES HERE *** //
 import "./Header.css";
@@ -28,7 +29,11 @@ const Header = () => {
         ],
       }
     );
-    setSuggestionsData(response);
+    if (Array.isArray(response)) {
+      setSuggestionsData(response);
+    } else {
+      toast.error(response);
+    }
   };
 
   const getProducts = async (query) => {

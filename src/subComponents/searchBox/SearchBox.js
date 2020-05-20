@@ -57,9 +57,13 @@ const SearchBox = (props) => {
 
   // RENDER FUNCTIONS
   const renderSuggestions = () => {
-    return suggestions.map((item) => (
-      <option key={item[keyNames.id]}>{item[keyNames.name]}</option>
-    ));
+    if (Array.isArray(suggestions)) {
+      return suggestions.map((item) => (
+        <option key={item[keyNames.id]}>{item[keyNames.name]}</option>
+      ));
+    }
+    // console.error("SearchBox: Suggestions provided is not in Array format");
+    return [];
   };
 
   return (
