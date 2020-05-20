@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import jsonServer from "apis/jsonServer";
 
 // *** IMPORT USER-DEFINED COMPONENTS HERE *** //
-import SearchBox from "components/searchBox/SearchBox";
+import SearchBox from "subComponents/searchBox/SearchBox";
 
 // *** IMPORT STYLES HERE *** //
 import "./Header.css";
