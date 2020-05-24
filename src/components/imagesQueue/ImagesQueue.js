@@ -5,7 +5,7 @@ import Button from "subComponents/button/Button";
 import ImageCard from "components/imageCard/ImageCard";
 
 // IMPORT STYLES HERE //
-import "./ImagesQueue.css";
+import "./ImagesQueue.scss";
 import "utils/commonStyles/flex.css";
 
 // IMPORT ASSETS HERE //

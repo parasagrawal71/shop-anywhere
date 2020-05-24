@@ -6,7 +6,7 @@ import ImagesQueue from "components/imagesQueue/ImagesQueue";
 import Footer from "components/footer/Footer";
 
 // IMPORT STYLES HERE //
-import "./Home.css";
+import "./Home.scss";
 
 // IMPORT ASSETS HERE //
 import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER

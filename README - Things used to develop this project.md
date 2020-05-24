@@ -7,3 +7,5 @@ Things that is being taken care of while developing this project:-
 - CSS Good Pratices   
 	- BEM based CSS Naming Convention   
 	- Add flex stlyes in common styles to reuse it.   
+- Debouncing for search box
+- Privates routes using react-router-dom

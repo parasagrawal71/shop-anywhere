@@ -1,6 +1,8 @@
+@import "utils/colors/index.scss";
+
 .header {
-  background-color: #29303b;
-  color: white;
+  background-color: $darkGrey;
+  color: $white;
   padding: 20px 10px;
   position: sticky;
   top: 0;
@@ -14,7 +16,7 @@
 }
 .header__logo {
   text-decoration: none;
-  color: white;
+  color: $white;
   font-size: 20px;
   padding: 0 10px;
 }
@@ -41,6 +43,6 @@
 
 .header__cart {
   text-decoration: none;
-  color: white;
+  color: $white;
   padding: 0 10px;
 }

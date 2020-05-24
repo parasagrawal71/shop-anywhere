@@ -1,3 +1,5 @@
+@import "utils/colors/index.scss";
+
 .searchbox {
   height: 100%;
 }
@@ -14,7 +16,7 @@
 }
 
 .searchbox__icon-wrapper {
-  background: #fff;
+  background: $white;
   padding: 0 10px;
 }
 

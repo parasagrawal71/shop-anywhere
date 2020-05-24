@@ -1,3 +1,5 @@
+@import "utils/colors/index.scss";
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -8,7 +10,7 @@ body {
 }
 
 .home__content {
-  background-color: #f1f3f6;
+  background-color: $grey;
   padding: 10px;
 }
 

@@ -6,7 +6,7 @@ import FilterBar from "components/filterBar/FilterBar";
 import CategoryItemCard from "components/categoryItemCard/CategoryItemCard";
 
 // IMPORT STYLES HERE //
-import "./CategoryItems.css";
+import "./CategoryItems.scss";
 
 // IMPORT ASSETS HERE //
 import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER

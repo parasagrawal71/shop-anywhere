@@ -1,11 +1,13 @@
+@import "utils/colors/index.scss";
+
 .images-queue {
   border-radius: 2px;
-  background-color: white;
+  background-color: $white;
 }
 
 .images-queue__header {
   padding: 10px 20px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid $lightGrey;
 }
 
 .images-queue__header--left {
@@ -19,7 +21,7 @@
 }
 
 .images-queue__header-subtext {
-  color: lightgrey;
+  color: $lightGrey;
   font-size: 14px;
   text-transform: capitalize;
 }
@@ -45,7 +47,7 @@
   top: calc(50% - 32px);
   z-index: 1;
   cursor: pointer;
-  background-color: white;
+  background-color: $white;
   border-radius: 0 5px 5px 0;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
   padding: 10px 0;
@@ -60,7 +62,7 @@
   right: 0;
   top: calc(50% - 32px);
   cursor: pointer;
-  background-color: white;
+  background-color: $white;
   border-radius: 5px 0 0 5px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
   padding: 10px 0;

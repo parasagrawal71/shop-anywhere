@@ -1,6 +1,8 @@
+@import "utils/colors/index.scss";
+
 .imagecard {
   text-decoration: none;
-  color: black;
+  color: $black;
   padding: 10px 25px;
   cursor: pointer;
 }

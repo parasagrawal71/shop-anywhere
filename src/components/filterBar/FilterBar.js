@@ -1,7 +1,7 @@
 import React from "react";
 
 // IMPORT STYLES HERE //
-import "./FilterBar.css";
+import "./FilterBar.scss";
 import "utils/commonStyles/flex.css";
 
 const FilterBar = () => {

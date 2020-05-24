@@ -1,9 +1,11 @@
+@import "utils/colors/index.scss";
+
 .category-itemcard {
   text-decoration: none;
-  color: black;
+  color: $black;
   padding: 10px 25px;
   cursor: pointer;
-  background-color: white;
+  background-color: $white;
 }
 
 .category-itemcard:hover {

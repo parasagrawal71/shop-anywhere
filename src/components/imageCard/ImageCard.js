@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // IMPORT STYLES HERE //
-import "./ImageCard.css";
+import "./ImageCard.scss";
 
 const ImageCard = (props) => {
   const { imageTitle, offValue, imgSrc } = props;

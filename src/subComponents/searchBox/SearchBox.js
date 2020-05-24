@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { debounce } from "utils/functions";
 
 // IMPORT STYLES HERE //
-import "./SearchBox.css";
+import "./SearchBox.scss";
 import "utils/commonStyles/flex.css";
 
 // IMPORT ASSETS HERE //

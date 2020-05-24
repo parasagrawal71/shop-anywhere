@@ -4,7 +4,7 @@ import React from "react";
 import Header from "components/header/Header";
 
 // IMPORT STYLES HERE //
-import "./Product.css";
+import "./Product.scss";
 
 const Product = () => {
   return (

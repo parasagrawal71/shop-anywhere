@@ -1,7 +1,7 @@
 import React from "react";
 
 // IMPORT STYLES HERE //
-import "./Button.css";
+import "./Button.scss";
 
 const Button = (props) => {
   const { btnText, btnCallback, btnColor, btnTextColor } = props;

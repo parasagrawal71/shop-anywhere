@@ -1,8 +1,10 @@
+@import "utils/colors/index.scss";
+
 .category-items {
 }
 
 .category-items__content {
-  background-color: #f1f3f6;
+  background-color: $grey;
   padding: 10px;
 }
 
@@ -15,7 +17,7 @@
   margin-left: 10px;
   width: 80%;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: $white;
 }
 
 .category-items__card {
