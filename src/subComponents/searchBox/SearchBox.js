@@ -29,7 +29,7 @@ const SearchBox = (props) => {
   // HOOKS
   useEffect(() => {
     debouncedFunc = debounce(suggestionsCallback, 400);
-  }, []);
+  }, [suggestionsCallback]);
 
   // METHODS
   const onInputChange = (e) => {
