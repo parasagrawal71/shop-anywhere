@@ -39,8 +39,8 @@ const ImagesQueue = (props) => {
   };
 
   const openItemInNextPage = (e) => {
+    // eslint-disable-next-line no-console
     console.log(e.target);
-    console.log("callllllllllllllled");
   };
 
   return (
