@@ -1,13 +1,17 @@
 import React from "react";
+import { Router } from "react-router-dom";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
-import Home from "pages/home/Home";
+import history from "routes/history";
+import Routes from "routes/Routes";
 import Toast from "subComponents/toast/Toast";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Router history={history}>
+        <Routes />
+      </Router>
       <Toast />
     </>
   );
