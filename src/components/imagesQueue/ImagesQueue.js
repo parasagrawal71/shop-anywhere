@@ -66,12 +66,14 @@ const ImagesQueue = (props) => {
             <img src={prevIcon} alt="prev-large" />
           </div>
         ) : null}
-        {imagesData.slice(start, end).map((image) => {
+        {imagesData.slice(start, end).map((image, index) => {
           return (
             <ImageCard
               imageTitle={image.title}
               imgSrc={image.src}
               offValue={image.off}
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
             />
           );
         })}
