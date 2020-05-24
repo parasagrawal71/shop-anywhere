@@ -2,6 +2,9 @@
   background-color: #29303b;
   color: white;
   padding: 20px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 /* header-left */
@@ -10,6 +13,8 @@
   height: 35px;
 }
 .header__logo {
+  text-decoration: none;
+  color: white;
   font-size: 20px;
   padding: 0 10px;
 }
@@ -35,5 +40,7 @@
 }
 
 .header__cart {
+  text-decoration: none;
+  color: white;
   padding: 0 10px;
 }

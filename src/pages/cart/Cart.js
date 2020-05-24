@@ -3,11 +3,14 @@ import React from "react";
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
 
+// IMPORT STYLES HERE //
+import "./Cart.css";
+
 const Cart = () => {
   return (
-    <div>
+    <div className="cart">
       <Header />
-      Cart
+      <div className="cart__content" />
     </div>
   );
 };

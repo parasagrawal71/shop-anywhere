@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // IMPORTS //
 import jsonServer from "apis/jsonServer";
@@ -54,7 +55,9 @@ const Header = () => {
   return (
     <div className="header flex-row-sb">
       <div className="header--left flex-row-v-cen">
-        <div className="header__logo">Shop Anywhere</div>
+        <Link to="/" className="header__logo">
+          Shop Anywhere
+        </Link>
         <div className="header__searchbox">
           <SearchBox
             placeholder="Search for products"
@@ -68,7 +71,9 @@ const Header = () => {
       <div className="header--right flex-row-v-cen">
         <div className="header__profile">My Profile</div>
         <div className="header__orders">Orders</div>
-        <div className="header__cart">Cart</div>
+        <Link to="/cart" className="header__cart">
+          Cart
+        </Link>
       </div>
     </div>
   );
