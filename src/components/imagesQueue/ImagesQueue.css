@@ -31,6 +31,7 @@
 
 .images-queue__content {
   padding: 10px;
+  outline: none;
   position: relative;
 }
 

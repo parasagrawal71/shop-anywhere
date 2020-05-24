@@ -38,6 +38,11 @@ const ImagesQueue = (props) => {
     }
   };
 
+  const openItemInNextPage = (e) => {
+    console.log(e.target);
+    console.log("callllllllllllllled");
+  };
+
   return (
     <div className="images-queue">
       <div className="images-queue__header flex-row-b-sb-cen">
@@ -54,7 +59,13 @@ const ImagesQueue = (props) => {
           />
         </div>
       </div>
-      <div className="images-queue__content flex-row">
+      <div
+        className="images-queue__content flex-row"
+        role="button"
+        onKeyDown={() => {}}
+        tabIndex="0"
+        onClick={openItemInNextPage}
+      >
         {start !== 0 ? (
           <div
             role="button"

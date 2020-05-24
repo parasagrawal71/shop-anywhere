@@ -6,13 +6,7 @@ import "./ImageCard.css";
 const ImageCard = (props) => {
   const { imageTitle, offValue, imgSrc } = props;
   return (
-    <div
-      role="button"
-      className="imagecard flex-col-h-cen"
-      onClick={() => {}}
-      onKeyDown={() => {}}
-      tabIndex="0"
-    >
+    <div className="imagecard flex-col-h-cen">
       <div className="imagecard__img">
         <img src={imgSrc} alt={imageTitle} />
       </div>
