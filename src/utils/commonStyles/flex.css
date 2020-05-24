@@ -62,6 +62,13 @@
   align-items: center;
 }
 
+.flex-row-b-sb-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* *********************************** FLEX COLUMN STLYES *********************************** */
 .flex-col {
   display: flex;

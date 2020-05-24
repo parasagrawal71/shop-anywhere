@@ -6,3 +6,8 @@ body {
 .home {
   font-family: Poppins-Regular;
 }
+
+.home__content {
+  background-color: #f1f3f6;
+  padding: 10px;
+}

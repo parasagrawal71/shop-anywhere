@@ -1,0 +1,26 @@
+.imagecard {
+  padding: 10px 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+.imagecard__img {
+}
+
+.imagecard__img:hover {
+  transform: scale(1.1);
+}
+
+.imagecard__img > img {
+  width: 150px;
+  height: 150px;
+}
+
+.imagecard__title {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.imagecard__off {
+  text-transform: capitalize;
+}
