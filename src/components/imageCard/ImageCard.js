@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // IMPORT STYLES HERE //
 import "./ImageCard.css";
@@ -6,13 +7,13 @@ import "./ImageCard.css";
 const ImageCard = (props) => {
   const { imageTitle, offValue, imgSrc } = props;
   return (
-    <div className="imagecard flex-col-h-cen">
+    <Link to="/category" className="imagecard flex-col-h-cen">
       <div className="imagecard__img">
         <img src={imgSrc} alt={imageTitle} />
       </div>
       <div className="imagecard__title">{imageTitle}</div>
       <div className="imagecard__off">{offValue}</div>
-    </div>
+    </Link>
   );
 };
 

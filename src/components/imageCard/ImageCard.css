@@ -1,4 +1,6 @@
 .imagecard {
+  text-decoration: none;
+  color: black;
   padding: 10px 25px;
   cursor: pointer;
 }

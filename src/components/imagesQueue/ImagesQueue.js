@@ -38,11 +38,6 @@ const ImagesQueue = (props) => {
     }
   };
 
-  const openItemInNextPage = (e) => {
-    // eslint-disable-next-line no-console
-    console.log(e.target);
-  };
-
   return (
     <div className="images-queue">
       <div className="images-queue__header flex-row-b-sb-cen">
@@ -59,13 +54,7 @@ const ImagesQueue = (props) => {
           />
         </div>
       </div>
-      <div
-        className="images-queue__content flex-row"
-        role="button"
-        onKeyDown={() => {}}
-        tabIndex="0"
-        onClick={openItemInNextPage}
-      >
+      <div className="images-queue__content flex-row">
         {start !== 0 ? (
           <div
             role="button"
