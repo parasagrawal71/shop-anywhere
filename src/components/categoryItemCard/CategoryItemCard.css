@@ -1,0 +1,28 @@
+.category-itemcard {
+  text-decoration: none;
+  color: black;
+  padding: 10px 25px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.category-itemcard:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.category-itemcard__img {
+}
+
+.category-itemcard__img > img {
+  width: 170px;
+  height: 170px;
+}
+
+.category-itemcard__title {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.category-itemcard__off {
+  text-transform: capitalize;
+}

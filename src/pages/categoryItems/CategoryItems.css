@@ -1,0 +1,23 @@
+.category-items {
+}
+
+.category-items__content {
+  background-color: #f1f3f6;
+  padding: 10px;
+}
+
+.category-items__content--left {
+  height: 700px;
+  width: 20%;
+}
+
+.category-items__content--right {
+  margin-left: 10px;
+  width: 80%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.category-items__card {
+  margin: 10px;
+}
