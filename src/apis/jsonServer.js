@@ -1,10 +1,10 @@
 import axios from "axios";
 
-// *** IMPORTS *** //
+// IMPORTS //
 import { GET, POST, PUT, DELETE } from "./httpConstants";
 import handleError from "./handleError";
 
-// *** CONSTANTS *** //
+// CONSTANTS //
 const BASE_URL = `http://localhost:3200`;
 
 const request = axios.create({

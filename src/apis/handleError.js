@@ -1,4 +1,4 @@
-// *** IMPORTS *** //
+// IMPORTS //
 import {
   NOT_FOUND,
   FORBIDDEN,

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-// *** IMPORTS *** //
+// IMPORTS //
 import jsonServer from "apis/jsonServer";
 
-// *** IMPORT USER-DEFINED COMPONENTS HERE *** //
+// IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
 import { toast } from "react-toastify";
 
-// *** IMPORT STYLES HERE *** //
+// IMPORT STYLES HERE //
 import "./Header.css";
 import "utils/commonStyles/flex.css";
 
