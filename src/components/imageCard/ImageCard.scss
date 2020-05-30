@@ -3,15 +3,16 @@
 .imagecard {
   text-decoration: none;
   color: $black;
-  padding: 10px 25px;
+  padding: 20px 25px;
   cursor: pointer;
 }
 
-.imagecard__img {
+.imagecard:hover {
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px lightgrey;
 }
 
-.imagecard__img:hover {
-  transform: scale(1.1);
+.imagecard__img {
 }
 
 .imagecard__img > img {
