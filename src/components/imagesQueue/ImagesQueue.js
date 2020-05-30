@@ -9,8 +9,8 @@ import "./ImagesQueue.scss";
 import "utils/commonStyles/flex.css";
 
 // IMPORT ASSETS HERE //
-import nextIcon from "assets/png/next-large.png";
-import prevIcon from "assets/png/prev-large.png";
+import nextIcon from "assets/png/next-32px.png";
+import prevIcon from "assets/png/prev-32px.png";
 
 // Variables
 const MAX_IMAGES_IN_ROW = 6;
