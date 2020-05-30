@@ -77,7 +77,8 @@ const ImagesQueue = (props) => {
             <ImageCard
               imageTitle={image.title}
               imgSrc={image.src}
-              offValue={image.off}
+              secondTitle={image.off}
+              thirdTitle={image.title}
               // eslint-disable-next-line react/no-array-index-key
               key={index}
             />
