@@ -14,7 +14,13 @@ import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER
 // REMOVE THIS LATER
 const offersImages = [
   { src: headphone, title: "headphone 1", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone 2", off: "upto 40% off", link: "" },
+  {
+    src:
+      "https://rukminim1.flixcart.com/image/150/150/k70spzk0/trouser/h/k/u/30-hltr003959-highlander-original-imafpchqmyqyxf8h.jpeg?q=70",
+    title: "men trousers",
+    off: "upto 40% off",
+    link: "",
+  },
   { src: headphone, title: "headphone 3", off: "upto 50% off", link: "" },
   { src: headphone, title: "headphone 4", off: "min 30% off", link: "" },
   { src: headphone, title: "headphone 5", off: "min 40% off", link: "" },
