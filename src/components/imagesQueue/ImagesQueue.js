@@ -13,7 +13,7 @@ import nextIcon from "assets/png/next-32px.png";
 import prevIcon from "assets/png/prev-32px.png";
 
 // Variables
-const MAX_IMAGES_IN_ROW = 6;
+const MAX_IMAGES_IN_ROW = 7;
 
 const ImagesQueue = (props) => {
   // PROPS
@@ -21,20 +21,26 @@ const ImagesQueue = (props) => {
 
   // STATE VARIABLES
   const [start, setStart] = useState(0);
-  const [end, setEnd] = useState(6);
+  const [end, setEnd] = useState(MAX_IMAGES_IN_ROW);
 
   // METHODS
   const showNextImages = () => {
-    if (end < imagesData.length) {
+    if (end < imagesData.length - MAX_IMAGES_IN_ROW) {
       setStart(start + MAX_IMAGES_IN_ROW);
       setEnd(end + MAX_IMAGES_IN_ROW);
+    } else if (end < imagesData.length) {
+      setStart(imagesData.length - MAX_IMAGES_IN_ROW);
+      setEnd(imagesData.length);
     }
   };
 
   const showPrevImages = () => {
-    if (start > 0) {
+    if (start > MAX_IMAGES_IN_ROW) {
       setStart(start - MAX_IMAGES_IN_ROW);
       setEnd(end - MAX_IMAGES_IN_ROW);
+    } else if (start > 0) {
+      setStart(0);
+      setEnd(MAX_IMAGES_IN_ROW);
     }
   };
 

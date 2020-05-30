@@ -13,21 +13,21 @@ import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER
 
 // REMOVE THIS LATER
 const offersImages = [
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 50% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 60% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 50% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 60% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
+  { src: headphone, title: "headphone 1", off: "min 20% off", link: "" },
+  { src: headphone, title: "headphone 2", off: "upto 40% off", link: "" },
+  { src: headphone, title: "headphone 3", off: "upto 50% off", link: "" },
+  { src: headphone, title: "headphone 4", off: "min 30% off", link: "" },
+  { src: headphone, title: "headphone 5", off: "min 40% off", link: "" },
+  { src: headphone, title: "headphone 6", off: "upto 60% off", link: "" },
+  { src: headphone, title: "headphone 7", off: "min 20% off", link: "" },
+  { src: headphone, title: "headphone 8", off: "min 30% off", link: "" },
+  { src: headphone, title: "headphone 9", off: "upto 50% off", link: "" },
+  { src: headphone, title: "headphone 10", off: "min 30% off", link: "" },
+  { src: headphone, title: "headphone 11", off: "min 40% off", link: "" },
+  { src: headphone, title: "headphone 12", off: "upto 60% off", link: "" },
+  { src: headphone, title: "headphone 13", off: "min 20% off", link: "" },
+  { src: headphone, title: "headphone 14", off: "min 20% off", link: "" },
+  { src: headphone, title: "headphone 15", off: "min 30% off", link: "" },
 ];
 
 const Home = () => {
