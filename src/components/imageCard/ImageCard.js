@@ -8,7 +8,7 @@ const ImageCard = (props) => {
   const { imageTitle, secondTitle, thirdTitle, imgSrc } = props;
   return (
     <Link to="/category" className="imagecard flex-col-b-sb-cen">
-      <div className="imagecard__img">
+      <div className="imagecard__img flex-col-cen">
         <img src={imgSrc} alt={imageTitle} />
       </div>
       <div className="imagecard--bottom flex-col-h-cen">

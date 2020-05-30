@@ -15,6 +15,7 @@
 }
 
 .imagecard__img {
+  flex: 1;
 }
 
 .imagecard__img > img {
@@ -26,6 +27,7 @@
 
 .imagecard--bottom {
   height: 30%;
+  padding-top: 5px;
 }
 
 .imagecard__title {
