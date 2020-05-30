@@ -132,3 +132,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.flex-col-b-sb-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

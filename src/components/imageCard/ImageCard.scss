@@ -5,6 +5,8 @@
   color: $black;
   padding: 20px 25px;
   cursor: pointer;
+  min-width: 160px;
+  max-width: 160px;
 }
 
 .imagecard:hover {
@@ -22,17 +24,28 @@
   max-height: 170px;
 }
 
+.imagecard--bottom {
+  height: 30%;
+}
+
 .imagecard__title {
   font-size: 14px;
   text-transform: capitalize;
 }
 
 .imagecard__second-title {
-  text-transform: capitalize;
 }
 
 .imagecard__third-title {
   font-size: 15px;
-  text-transform: capitalize;
   opacity: 0.5;
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.imagecard__second-title::first-letter,
+.imagecard__third-title::first-letter {
+  text-transform: capitalize;
 }
