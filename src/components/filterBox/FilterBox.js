@@ -7,7 +7,6 @@ import Dropdown from "./components/dropDown/DropDown";
 
 // IMPORT STYLES HERE //
 import "./FilterBox.scss";
-import "utils/commonStyles/flex.css";
 
 const brandList = [
   { brand: "a" },

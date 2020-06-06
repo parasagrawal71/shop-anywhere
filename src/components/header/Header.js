@@ -10,7 +10,6 @@ import { toast } from "react-toastify";
 
 // IMPORT STYLES HERE //
 import "./Header.scss";
-import "utils/commonStyles/flex.css";
 
 const Header = () => {
   // STATE VARIABLES

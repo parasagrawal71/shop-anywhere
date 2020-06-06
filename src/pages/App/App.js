@@ -6,6 +6,9 @@ import history from "routes/history";
 import Routes from "routes/Routes";
 import Toast from "subComponents/toast/Toast";
 
+// IMPORT STYLES HERE //
+import "utils/commonStyles/flex.css";
+
 const App = () => {
   return (
     <>

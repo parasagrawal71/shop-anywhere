@@ -6,7 +6,6 @@ import Button from "subComponents/button/Button";
 import Checkbox from "subComponents/checkbox/Checkbox";
 
 // IMPORT STYLES HERE //
-import "utils/commonStyles/flex.css";
 import "./DropDown.scss";
 
 const Dropdown = (props) => {

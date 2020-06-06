@@ -6,7 +6,6 @@ import ImageCard from "components/imageCard/ImageCard";
 
 // IMPORT STYLES HERE //
 import "./ImagesQueue.scss";
-import "utils/commonStyles/flex.css";
 
 // IMPORT ASSETS HERE //
 import nextIcon from "assets/png/next-32px.png";
