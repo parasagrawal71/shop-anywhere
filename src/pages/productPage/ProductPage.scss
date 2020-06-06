@@ -1,9 +1,48 @@
 @import "utils/colors/index.scss";
 
-.product {
+.product-page {
+  background-color: $grey;
 }
 
-.product__content {
-  background-color: $grey;
-  height: 500px;
+.product-page__content {
+  margin: 0 30px;
+}
+
+.product-page__content--left {
+  width: 40%;
+  height: calc(100vh - 75px);
+  background-color: $white;
+}
+
+.product-page__content-image {
+  padding: 50px 0;
+}
+
+.product-page__content--right {
+  flex: 1;
+  border-left: 1px solid $lightGrey;
+  background-color: $white;
+  max-height: calc(100vh - 75px);
+  overflow-y: overlay;
+}
+
+.product-page__content--right > div {
+  height: 3000px;
+}
+
+.product-page__content--right::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+.product-page__content--right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-page__content--right::-webkit-scrollbar-thumb {
+  background: $lightGrey;
+}
+
+.product-page__content--right::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }

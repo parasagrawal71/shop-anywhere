@@ -139,3 +139,10 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.flex-col-b-start-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
