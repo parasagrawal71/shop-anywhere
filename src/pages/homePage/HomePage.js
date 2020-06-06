@@ -6,7 +6,7 @@ import ImagesQueue from "components/imagesQueue/ImagesQueue";
 import Footer from "components/footer/Footer";
 
 // IMPORT STYLES HERE //
-import "./Home.scss";
+import "./HomePage.scss";
 
 // IMPORT ASSETS HERE //
 import offersImages from "assets/jsons/offersImages.json"; // REMOVE THIS LATER

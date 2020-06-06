@@ -2,11 +2,11 @@ import React from "react";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
-import FilterBar from "components/filterBar/FilterBar";
-import CategoryItemCard from "components/categoryItemCard/CategoryItemCard";
+import FilterBox from "components/filterBox/FilterBox";
+import ProductCard from "components/productCard/ProductCard";
 
 // IMPORT STYLES HERE //
-import "./CategoryItems.scss";
+import "./ProductsListPage.scss";
 
 // IMPORT ASSETS HERE //
 import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER
@@ -36,14 +36,14 @@ const CategoryItems = () => {
       <Header />
       <div className="category-items__content flex-row">
         <div className="category-items__content--left">
-          <FilterBar />
+          <FilterBox />
         </div>
         <div className="category-items__content--right flex-row">
           {offersImages.map((image, index) => {
             return (
               // eslint-disable-next-line react/no-array-index-key
               <div className="category-items__card" key={index}>
-                <CategoryItemCard
+                <ProductCard
                   imageTitle={image.title}
                   imgSrc={image.src}
                   offValue={image.off}

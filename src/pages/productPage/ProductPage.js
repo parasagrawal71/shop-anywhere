@@ -4,15 +4,15 @@ import React from "react";
 import Header from "components/header/Header";
 
 // IMPORT STYLES HERE //
-import "./Cart.scss";
+import "./ProductPage.scss";
 
-const Cart = () => {
+const Product = () => {
   return (
-    <div className="cart">
+    <div className="product">
       <Header />
-      <div className="cart__content" />
+      <div className="product__content" />
     </div>
   );
 };
 
-export default Cart;
+export default Product;

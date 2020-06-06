@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { toast } from "react-toastify";
 
 const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
-  const signed = false;
+  const signed = true;
 
   if (isPrivate && !signed) {
     toast.error("Login to open cart");
