@@ -57,6 +57,7 @@ const ImagesQueue = (props) => {
             btnCallback={() => {}}
             btnColor="#2874f0"
             btnTextColor="white"
+            isShadow
           />
         </div>
       </div>
