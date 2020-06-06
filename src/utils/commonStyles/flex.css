@@ -20,7 +20,7 @@
 .flex-row-start {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .flex-row-end {
@@ -45,7 +45,7 @@
 .flex-row-v-start {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .flex-row-v-end {

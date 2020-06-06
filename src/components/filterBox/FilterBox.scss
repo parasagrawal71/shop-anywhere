@@ -2,18 +2,17 @@
 
 .filterbox {
   background-color: $white;
+  font-size: 19px;
 }
 
 .filterbox__header {
   padding: 15px 15px;
   border-bottom: 1px solid $lightGrey;
-  font-size: 19px;
 }
 
 .filterbox__price {
   padding: 15px 15px;
   border-bottom: 1px solid $lightGrey;
-  font-size: 19px;
 }
 
 .filterbox__price-header {
@@ -32,4 +31,13 @@
   border: 1px solid $lightGrey;
   border-radius: 2px;
   padding: 2px 20px;
+}
+
+.filterbox__brand {
+  padding: 15px 15px;
+  border-bottom: 1px solid $lightGrey;
+}
+
+.filterbox__discount {
+  padding: 15px 15px;
 }

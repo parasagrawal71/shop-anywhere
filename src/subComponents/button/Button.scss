@@ -1,5 +1,4 @@
 .button {
-  width: 100%;
   height: 100%;
 }
 
@@ -10,6 +9,7 @@
   height: 100%;
   cursor: pointer;
   text-transform: capitalize;
+  padding: 0;
 }
 
 .button__btn--with-shadow {

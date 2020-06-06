@@ -3,10 +3,31 @@ import React, { useState } from "react";
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Slider from "subComponents/slider/Slider";
 import Button from "subComponents/button/Button";
+import Dropdown from "./components/dropDown/DropDown";
 
 // IMPORT STYLES HERE //
 import "./FilterBox.scss";
 import "utils/commonStyles/flex.css";
+
+const brandList = [
+  { brand: "a" },
+  { brand: "b" },
+  { brand: "c" },
+  { brand: "d" },
+  { brand: "e" },
+  { brand: "f" },
+  { brand: "g" },
+];
+
+const discountList = [
+  { discount: "10%" },
+  { discount: "20%" },
+  { discount: "30%" },
+  { discount: "40%" },
+  { discount: "50%" },
+  { discount: "60%" },
+  { discount: "70%" },
+];
 
 const FilterBox = () => {
   const [rangeValue, setRangeValue] = useState([10, 50]);
@@ -35,6 +56,22 @@ const FilterBox = () => {
           <div className="filterbox__price-inputbox-min">{rangeValue[0]}</div>
           <div className="filterbox__price-inputbox-max">{rangeValue[1]}</div>
         </div>
+      </div>
+      <div className="filterbox__brand">
+        <Dropdown
+          headerText="Brand"
+          itemList={brandList}
+          maxItemsVisible={4}
+          itemKey="brand"
+        />
+      </div>
+      <div className="filterbox__discount">
+        <Dropdown
+          headerText="Discount"
+          itemList={discountList}
+          maxItemsVisible={4}
+          itemKey="discount"
+        />
       </div>
     </div>
   );
