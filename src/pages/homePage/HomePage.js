@@ -11,7 +11,7 @@ import "./HomePage.scss";
 // IMPORT ASSETS HERE //
 import offersImages from "assets/jsons/offersImages.json"; // REMOVE THIS LATER
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="home">
       <Header />
@@ -50,4 +50,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

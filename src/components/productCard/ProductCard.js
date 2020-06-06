@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HOST_URL } from "utils/constants/hostUrl";
 
 // IMPORT STYLES HERE //
 import "./ProductCard.scss";
@@ -14,13 +14,18 @@ const ProductCard = (props) => {
     numOfItemsInALine,
   } = props;
 
+  // CONSTANTS
+
+  // METHODS
   const calculateWidth = () => {
     return `${100 / numOfItemsInALine}%`;
   };
 
   return (
-    <Link
-      to="/product"
+    <a
+      href={`${HOST_URL}/product`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="product-card flex-col-b-sb-cen"
       style={{ width: calculateWidth() }}
     >
@@ -35,7 +40,7 @@ const ProductCard = (props) => {
           <div className="product-card__price-actual">{`Rs ${actualPrice}`}</div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

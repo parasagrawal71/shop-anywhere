@@ -3,7 +3,7 @@ import { Switch } from "react-router-dom";
 
 // IMPORT ALL PAGES HERE //
 import HomePage from "pages/homePage/HomePage";
-import ProductsListPage from "pages/productsListPage/ProductsListPage";
+import ProductsListPage from "pages/productListPage/ProductListPage";
 import CartPage from "pages/cartPage/CartPage";
 import ProductPage from "pages/productPage/ProductPage";
 

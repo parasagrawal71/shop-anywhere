@@ -7,20 +7,20 @@ import ProductCard from "components/productCard/ProductCard";
 import Footer from "components/footer/Footer";
 
 // IMPORT STYLES HERE //
-import "./ProductsListPage.scss";
+import "./ProductListPage.scss";
 
 // IMPORT ASSETS HERE //
 import tshirtsImages from "assets/jsons/tshirtsImages.json"; // REMOVE THIS LATER
 
-const ProductsListPage = () => {
+const ProductListPage = () => {
   return (
-    <div className="products-list">
+    <div className="product-list">
       <Header />
-      <div className="products-list__content flex-row">
-        <div className="products-list__content--left">
+      <div className="product-list__content flex-row">
+        <div className="product-list__content--left">
           <FilterBox />
         </div>
-        <div className="products-list__content--right flex-row">
+        <div className="product-list__content--right flex-row">
           {tshirtsImages.map((image) => {
             return (
               <ProductCard
@@ -41,4 +41,4 @@ const ProductsListPage = () => {
   );
 };
 
-export default ProductsListPage;
+export default ProductListPage;
