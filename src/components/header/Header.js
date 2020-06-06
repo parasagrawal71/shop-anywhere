@@ -53,30 +53,32 @@ const Header = () => {
   };
 
   return (
-    <div className="header flex-row-sb">
+    <>
       <Toast position="bottom-left" />
-      <div className="header--left flex-row-v-cen">
-        <Link to="/" className="header__logo">
-          Shop Anywhere
-        </Link>
-        <div className="header__searchbox">
-          <SearchBox
-            placeholder="Search for products"
-            suggestionsCallback={fetchSuggestions}
-            suggestions={suggestionsData}
-            searchCallback={getProducts}
-            keyNames={{ id: "id", name: "name" }}
-          />
+      <div className="header flex-row-sb">
+        <div className="header--left flex-row-v-cen">
+          <Link to="/" className="header__logo">
+            Shop Anywhere
+          </Link>
+          <div className="header__searchbox">
+            <SearchBox
+              placeholder="Search for products"
+              suggestionsCallback={fetchSuggestions}
+              suggestions={suggestionsData}
+              searchCallback={getProducts}
+              keyNames={{ id: "id", name: "name" }}
+            />
+          </div>
+        </div>
+        <div className="header--right flex-row-v-cen">
+          <div className="header__profile">My Profile</div>
+          <div className="header__orders">Orders</div>
+          <Link to="/cart" className="header__cart">
+            Cart
+          </Link>
         </div>
       </div>
-      <div className="header--right flex-row-v-cen">
-        <div className="header__profile">My Profile</div>
-        <div className="header__orders">Orders</div>
-        <Link to="/cart" className="header__cart">
-          Cart
-        </Link>
-      </div>
-    </div>
+    </>
   );
 };
 

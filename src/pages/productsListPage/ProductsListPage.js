@@ -4,57 +4,41 @@ import React from "react";
 import Header from "components/header/Header";
 import FilterBox from "components/filterBox/FilterBox";
 import ProductCard from "components/productCard/ProductCard";
+import Footer from "components/footer/Footer";
 
 // IMPORT STYLES HERE //
 import "./ProductsListPage.scss";
 
 // IMPORT ASSETS HERE //
-import headphone from "assets/jpg/headphone.jpg"; // REMOVE THIS LATER
+import tshirtsImages from "assets/jsons/tshirtsImages.json"; // REMOVE THIS LATER
 
-// REMOVE THIS LATER
-const offersImages = [
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 50% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 60% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 50% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 40% off", link: "" },
-  { src: headphone, title: "headphone", off: "upto 60% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 20% off", link: "" },
-  { src: headphone, title: "headphone", off: "min 30% off", link: "" },
-];
-
-const CategoryItems = () => {
+const ProductsListPage = () => {
   return (
-    <div className="category-items">
+    <div className="products-list">
       <Header />
-      <div className="category-items__content flex-row">
-        <div className="category-items__content--left">
+      <div className="products-list__content flex-row">
+        <div className="products-list__content--left">
           <FilterBox />
         </div>
-        <div className="category-items__content--right flex-row">
-          {offersImages.map((image, index) => {
+        <div className="products-list__content--right flex-row">
+          {tshirtsImages.map((image) => {
             return (
-              // eslint-disable-next-line react/no-array-index-key
-              <div className="category-items__card" key={index}>
-                <ProductCard
-                  imageTitle={image.title}
-                  imgSrc={image.src}
-                  offValue={image.off}
-                />
-              </div>
+              <ProductCard
+                imgSrc={image.link}
+                imageTitle={image.title}
+                actualPrice={image.actualPrice}
+                offerPrice={image.offerPrice}
+                brandName={image.brand}
+                key={image.link}
+                numOfItemsInALine={4}
+              />
             );
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
 
-export default CategoryItems;
+export default ProductsListPage;

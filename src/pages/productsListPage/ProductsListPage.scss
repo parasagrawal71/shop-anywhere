@@ -1,25 +1,19 @@
 @import "utils/colors/index.scss";
 
-.category-items {
+.products-list {
 }
 
-.category-items__content {
+.products-list__content {
   background-color: $grey;
   padding: 10px;
 }
 
-.category-items__content--left {
-  height: 700px;
+.products-list__content--left {
   width: 20%;
 }
 
-.category-items__content--right {
-  margin-left: 10px;
-  width: 80%;
+.products-list__content--right {
+  margin-left: 1%;
+  width: 79%;
   flex-wrap: wrap;
-  background-color: $white;
-}
-
-.category-items__card {
-  margin: 10px;
 }
