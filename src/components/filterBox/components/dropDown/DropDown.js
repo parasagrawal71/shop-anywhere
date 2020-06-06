@@ -48,6 +48,7 @@ const Dropdown = (props) => {
                 <Checkbox
                   checked={checked[index]}
                   handleChange={() => setChecked(!checked[index])}
+                  color="primary"
                 />
                 <div>{item[itemKey]}</div>
               </div>

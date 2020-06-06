@@ -4,19 +4,20 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Toast = () => {
+const Toast = (props) => {
+  const { position } = props;
   return (
     <div>
       <ToastContainer
-        position="bottom-left"
-        autoClose={3000}
+        position={position}
+        autoClose={2500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
-        pauseOnHover
+        pauseOnHover={false}
       />
     </div>
   );

@@ -3,7 +3,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { makeStyles } from "@material-ui/core/styles";
 
 const CheckboxComponent = (props) => {
-  const { checked, handleChange } = props;
+  const { checked, handleChange, color } = props;
 
   const useStyles = makeStyles({
     root: {
@@ -17,7 +17,7 @@ const CheckboxComponent = (props) => {
       checked={checked}
       onChange={handleChange}
       className={classes.root}
-      color="primary"
+      color={color}
     />
   );
 };

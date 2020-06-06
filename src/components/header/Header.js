@@ -6,6 +6,7 @@ import jsonServer from "apis/jsonServer";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
+import Toast from "subComponents/toast/Toast";
 import { toast } from "react-toastify";
 
 // IMPORT STYLES HERE //
@@ -53,6 +54,7 @@ const Header = () => {
 
   return (
     <div className="header flex-row-sb">
+      <Toast position="bottom-left" />
       <div className="header--left flex-row-v-cen">
         <Link to="/" className="header__logo">
           Shop Anywhere
