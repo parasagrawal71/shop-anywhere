@@ -5,8 +5,7 @@
   color: $black;
   padding: 20px 25px;
   cursor: pointer;
-  min-width: 160px;
-  max-width: 160px;
+  box-sizing: border-box;
 }
 
 .imagecard:hover {

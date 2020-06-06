@@ -5,9 +5,24 @@ import { Link } from "react-router-dom";
 import "./ImageCard.scss";
 
 const ImageCard = (props) => {
-  const { imageTitle, secondTitle, thirdTitle, imgSrc } = props;
+  const {
+    imageTitle,
+    secondTitle,
+    thirdTitle,
+    imgSrc,
+    numOfItemsInALine,
+  } = props;
+
+  const calculateWidth = () => {
+    return `${100 / numOfItemsInALine}%`;
+  };
+
   return (
-    <Link to="/category" className="imagecard flex-col-b-sb-cen">
+    <Link
+      to="/category"
+      className="imagecard flex-col-b-sb-cen"
+      style={{ width: calculateWidth() }}
+    >
       <div className="imagecard__img flex-col-cen">
         <img src={imgSrc} alt={imageTitle} />
       </div>

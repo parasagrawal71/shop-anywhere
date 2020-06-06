@@ -80,6 +80,7 @@ const ImagesQueue = (props) => {
               secondTitle={image.off}
               thirdTitle={image.subTitle}
               key={image.link}
+              numOfItemsInALine={MAX_IMAGES_IN_ROW}
             />
           );
         })}
