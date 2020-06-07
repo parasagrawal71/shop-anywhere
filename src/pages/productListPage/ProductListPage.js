@@ -10,7 +10,7 @@ import Footer from "components/footer/Footer";
 import "./ProductListPage.scss";
 
 // IMPORT ASSETS HERE //
-import tshirtsImages from "assets/jsons/tshirtsImages.json"; // REMOVE THIS LATER
+import tshirtsImages from "assets/jsons/tshirtsImages.json"; // TODO: REMOVE THIS LATER
 
 const ProductListPage = () => {
   return (

@@ -10,8 +10,8 @@ import Carousel from "subComponents/carousel/Carousel";
 import "./HomePage.scss";
 
 // IMPORT ASSETS HERE //
-import offersImages from "assets/jsons/offersImages.json"; // REMOVE THIS LATER
-import slidesImages from "assets/jsons/slidesImages.json"; // REMOVE THIS LATER
+import offersImages from "assets/jsons/offersImages.json"; // TODO: REMOVE THIS LATER
+import slidesImages from "assets/jsons/slidesImages.json"; // TODO: REMOVE THIS LATER
 
 const HomePage = () => {
   return (
