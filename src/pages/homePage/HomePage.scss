@@ -9,6 +9,27 @@
   padding: 10px;
 }
 
+.home__carousel {
+  padding: 10px 0;
+}
+
+.home__carousel-left {
+  width: 35%;
+}
+
+.home__carousel-left > img {
+  width: 100%;
+}
+
+.home__carousel-right {
+  padding-left: 1%;
+  width: 64%;
+}
+
+.home__carousel-right > img {
+  width: 100%;
+}
+
 .home__images-queue {
   padding: 10px 0;
 }

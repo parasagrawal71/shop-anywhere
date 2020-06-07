@@ -5,21 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 // IMPORT STYLES HERE //
 import "./Carousel.scss";
 
-const items = [
-  {
-    link:
-      "https://rukminim1.flixcart.com/flap/1688/280/image/7b8e5d1df0df2689.jpg?q=50",
-  },
-  {
-    link:
-      "https://rukminim1.flixcart.com/flap/1688/280/image/c04a14edaeb8e306.jpg?q=50",
-  },
-  {
-    link:
-      "https://rukminim1.flixcart.com/flap/1688/280/image/3393f0140d6405fe.jpg?q=50",
-  },
-];
-
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -36,7 +21,7 @@ const responsive = {
 };
 
 const CarouselComponent = (props) => {
-  const { deviceType } = props;
+  const { deviceType, slidesImages, autoPlaySpeed } = props;
 
   return (
     <Carousel
@@ -46,9 +31,8 @@ const CarouselComponent = (props) => {
       responsive={responsive}
       // ssr={true} // means to render carousel on server-side.
       infinite
-      // autoPlay={deviceType !== "mobile"}
-      autoPlay={false}
-      autoPlaySpeed={2000}
+      autoPlay={deviceType !== "mobile"}
+      autoPlaySpeed={autoPlaySpeed}
       keyBoardControl
       customTransition="transform .5s ease 0s"
       transitionDuration={500}
@@ -58,7 +42,7 @@ const CarouselComponent = (props) => {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      {items.map((item) => {
+      {slidesImages.map((item) => {
         return (
           <img
             src={item.link}

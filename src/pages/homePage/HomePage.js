@@ -11,13 +11,21 @@ import "./HomePage.scss";
 
 // IMPORT ASSETS HERE //
 import offersImages from "assets/jsons/offersImages.json"; // REMOVE THIS LATER
+import slidesImages from "assets/jsons/slidesImages.json"; // REMOVE THIS LATER
 
 const HomePage = () => {
   return (
     <div className="home">
       <Header />
       <div className="home__content">
-        <Carousel />
+        <div className="home__carousel flex-row">
+          <div className="home__carousel-left">
+            <Carousel slidesImages={slidesImages.items1} autoPlaySpeed={2000} />
+          </div>
+          <div className="home__carousel-right">
+            <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
+          </div>
+        </div>
         <div className="home__images-queue">
           <ImagesQueue
             headerText="offers"
