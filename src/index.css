@@ -1,0 +1,5 @@
+/* *** FONT FAMILIES *** */
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}

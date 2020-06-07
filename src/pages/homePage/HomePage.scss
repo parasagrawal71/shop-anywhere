@@ -1,0 +1,14 @@
+@import "utils/colors/index.scss";
+
+.home {
+  font-family: Poppins-Regular;
+}
+
+.home__content {
+  background-color: $grey;
+  padding: 10px;
+}
+
+.home__images-queue {
+  padding: 10px 0;
+}

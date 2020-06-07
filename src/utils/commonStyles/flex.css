@@ -1,0 +1,148 @@
+/* *********************************** FLEX ROW STLYES *********************************** */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* *** FLEX ROW HORIZONTAL STLYES *** */
+.flex-row-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-row-sb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-row-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flex-row-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* *** FLEX ROW VERTICAL STLYES *** */
+.flex-row-v-cen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-row-v-sb {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
+.flex-row-v-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.flex-row-v-end {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+/* *** FLEX ROW BOTH STLYES *** */
+.flex-row-b-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-b-sb-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* *********************************** FLEX COLUMN STLYES *********************************** */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* *** FLEX COLUMN HORIZONTAL STLYES *** */
+.flex-col-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-col-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* *** FLEX COLUMN VERTICAL STLYES *** */
+.flex-col-h-cen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-col-h-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.flex-col-h-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex-col-h-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* *** FLEX COLUMN BOTH STLYES *** */
+.flex-col-b-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-b-sb-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col-b-start-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
