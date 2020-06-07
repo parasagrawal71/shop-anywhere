@@ -4,7 +4,7 @@ import React from "react";
 import Header from "components/header/Header";
 import ImagesQueue from "components/imagesQueue/ImagesQueue";
 import Footer from "components/footer/Footer";
-// import Carousel from "subComponents/carousel/Carousel";
+import Carousel from "subComponents/carousel/Carousel";
 
 // IMPORT STYLES HERE //
 import "./HomePage.scss";
@@ -17,7 +17,7 @@ const HomePage = () => {
     <div className="home">
       <Header />
       <div className="home__content">
-        {/* <Carousel /> */}
+        <Carousel />
         <div className="home__images-queue">
           <ImagesQueue
             headerText="offers"
