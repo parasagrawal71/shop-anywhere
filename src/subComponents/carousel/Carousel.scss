@@ -1,14 +1,17 @@
 .carousel-container {
+  border-radius: 3px;
 }
 
 .carousel__image {
   width: 100%;
   max-height: 315px;
+  border-radius: 3px;
 }
 
 .react-multiple-carousel__arrow {
   width: 33px;
   height: 33px;
+  z-index: 1;
 }
 
 .react-multiple-carousel__arrow--left {
