@@ -1,5 +1,5 @@
 import React from "react";
-import { HOST_URL } from "utils/constants/hostUrl";
+import { CLIENT_URL } from "utils/constants/clientUrl";
 
 // IMPORT STYLES HERE //
 import "./ProductCard.scss";
@@ -23,7 +23,7 @@ const ProductCard = (props) => {
 
   return (
     <a
-      href={`${HOST_URL}/product`}
+      href={`${CLIENT_URL}/product`}
       target="_blank"
       rel="noopener noreferrer"
       className="product-card flex-col-b-sb-cen"
