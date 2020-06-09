@@ -36,7 +36,7 @@ const FilterBox = () => {
 
   return (
     <div className="filterbox">
-      <div className="filterbox__header flex-row-sb">
+      <div className="filterbox__header">
         <div className="filterbox__header--left">Filters</div>
         <div className="filterbox__header--right">
           <Button btnText="Clear All" btnColor="white" btnTextColor="blue" />
@@ -51,7 +51,7 @@ const FilterBox = () => {
             sliderWidth="100%"
           />
         </div>
-        <div className="filterbox__price-inputbox flex-row-sb">
+        <div className="filterbox__price-inputbox">
           <div className="filterbox__price-inputbox-min">{rangeValue[0]}</div>
           <div className="filterbox__price-inputbox-max">{rangeValue[1]}</div>
         </div>

@@ -6,7 +6,6 @@ import history from "routes/history";
 import Routes from "routes/Routes";
 
 // IMPORT STYLES HERE //
-import "utils/commonStyles/flex.css";
 import "./App.css";
 
 const App = () => {

@@ -66,7 +66,7 @@ const SearchBox = (props) => {
   };
 
   return (
-    <div className="searchbox flex-row">
+    <div className="searchbox">
       <input
         type="search"
         placeholder={placeholder}
@@ -79,7 +79,7 @@ const SearchBox = (props) => {
       <datalist id="suggestions">{renderSuggestions()}</datalist>
       <div
         role="button"
-        className="searchbox__icon-wrapper flex-col-cen"
+        className="searchbox__icon-wrapper"
         tabIndex="0"
         onClick={onInputSubmit}
         onKeyDown={onEnterKeyPress}

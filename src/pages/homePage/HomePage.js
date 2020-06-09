@@ -18,7 +18,7 @@ const HomePage = () => {
     <div className="home">
       <Header />
       <div className="home__content">
-        <div className="home__carousel flex-row">
+        <div className="home__carousel">
           <div className="home__carousel-left">
             <Carousel slidesImages={slidesImages.items1} autoPlaySpeed={2000} />
           </div>

@@ -30,7 +30,7 @@ const Dropdown = (props) => {
 
   return (
     <div className="dropdown">
-      <div className="dropdown__header flex-row-sb">
+      <div className="dropdown__header">
         <div className="dropdown__header-text">{headerText}</div>
         <button
           type="button"
@@ -44,7 +44,7 @@ const Dropdown = (props) => {
         <div className="dropdown__list">
           {itemList.slice(0, numOfItemsVisible).map((item, index) => {
             return (
-              <div key={item[itemKey]} className="flex-row">
+              <div key={item[itemKey]} className="dropdown__list-item">
                 <Checkbox
                   checked={checked[index]}
                   handleChange={() => setChecked(!checked[index])}
@@ -54,7 +54,7 @@ const Dropdown = (props) => {
               </div>
             );
           })}
-          <div className="dropdown__showMoreLessBtn flex-row-start">
+          <div className="dropdown__showMoreLessBtn">
             <Button
               btnText={
                 numOfItemsVisible === MAX_ITEMS_VISIBLE

@@ -1,4 +1,5 @@
 @import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
 
 .home {
   font-family: Poppins-Regular;
@@ -10,6 +11,7 @@
 }
 
 .home__carousel {
+  @include flex-row;
   padding: 10px 0;
 }
 

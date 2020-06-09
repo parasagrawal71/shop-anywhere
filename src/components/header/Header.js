@@ -72,8 +72,8 @@ const Header = () => {
   return (
     <>
       <Toast position="bottom-left" />
-      <div className="header flex-row-sb">
-        <div className="header--left flex-row-v-cen">
+      <div className="header">
+        <div className="header--left">
           <Link to="/" className="header__logo">
             Shop Anywhere
           </Link>
@@ -87,10 +87,10 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="header--right flex-row-v-cen">
+        <div className="header--right">
           <div className="header__profile">My Profile</div>
           <div className="header__orders">Orders</div>
-          <Link to="/cart" className="header__cart flex-row-v-cen">
+          <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={cartCount} color="secondary">
                 <img className="header__cart-img" src={cartIcon} alt="cart" />

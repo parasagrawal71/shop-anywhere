@@ -26,16 +26,16 @@ const ProductCard = (props) => {
       href={`${CLIENT_URL}/product`}
       target="_blank"
       rel="noopener noreferrer"
-      className="product-card flex-col-b-sb-cen"
+      className="product-card"
       style={{ width: calculateWidth() }}
     >
-      <div className="product-card__img flex-col-cen">
+      <div className="product-card__img">
         <img src={imgSrc} alt={imageTitle} />
       </div>
-      <div className="product-card--bottom flex-col-h-cen">
+      <div className="product-card--bottom">
         <div className="product-card__title">{imageTitle}</div>
         <div className="product-card__brandname">{brandName}</div>
-        <div className="product-card__price flex-row">
+        <div className="product-card__price">
           <div className="product-card__price-offer">{`Rs ${offerPrice}`}</div>
           <div className="product-card__price-actual">{`Rs ${actualPrice}`}</div>
         </div>

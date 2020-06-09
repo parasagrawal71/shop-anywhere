@@ -1,6 +1,8 @@
 @import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
 
 .searchbox {
+  @include flex-row;
   height: 100%;
 }
 
@@ -17,6 +19,7 @@
 }
 
 .searchbox__icon-wrapper {
+  @include flex-col-cen;
   background: $lightGrey;
   padding: 0 10px;
 }

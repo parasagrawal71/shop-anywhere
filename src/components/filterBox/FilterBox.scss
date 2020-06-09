@@ -1,4 +1,5 @@
 @import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
 
 .filterbox {
   background-color: $white;
@@ -6,6 +7,7 @@
 }
 
 .filterbox__header {
+  @include flex-row-sb;
   padding: 15px 15px;
   border-bottom: 1px solid $lightGrey;
 }
@@ -21,6 +23,7 @@
 }
 
 .filterbox__price-inputbox {
+  @include flex-row-sb;
 }
 .filterbox__price-inputbox-min {
   border: 1px solid $lightGrey;

@@ -1,6 +1,8 @@
 @import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
 
 .imagecard {
+  @include flex-col-b-sb-cen;
   text-decoration: none;
   color: $black;
   padding: 20px 25px;
@@ -14,6 +16,7 @@
 }
 
 .imagecard__img {
+  @include flex-col-cen;
   flex: 1;
 }
 
@@ -25,6 +28,7 @@
 }
 
 .imagecard--bottom {
+  @include flex-col-h-cen;
   height: 30%;
   padding-top: 5px;
 }

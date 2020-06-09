@@ -1,6 +1,8 @@
 @import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
 
 .header {
+  @include flex-row-sb;
   font-family: Poppins-Regular;
   background-color: $white;
   color: $black;
@@ -13,6 +15,7 @@
 
 /* header-left */
 .header--left {
+  @include flex-row-v-cen;
   width: 60%;
   height: 35px;
 }
@@ -32,6 +35,7 @@
 
 /* header-right */
 .header--right {
+  @include flex-row-v-cen;
   padding: 0 10px;
 }
 
@@ -44,6 +48,7 @@
 }
 
 .header__cart {
+  @include flex-row-v-cen;
   text-decoration: none;
   color: $black;
   padding: 0 10px;

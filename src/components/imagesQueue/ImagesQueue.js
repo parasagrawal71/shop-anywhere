@@ -45,7 +45,7 @@ const ImagesQueue = (props) => {
 
   return (
     <div className="images-queue">
-      <div className="images-queue__header flex-row-b-sb-cen">
+      <div className="images-queue__header">
         <div className="images-queue__header--left">
           <div className="images-queue__header-text">{headerText}</div>
           <div className="images-queue__header-subtext">{headerSubText}</div>
@@ -60,7 +60,7 @@ const ImagesQueue = (props) => {
           />
         </div>
       </div>
-      <div className="images-queue__content flex-row">
+      <div className="images-queue__content">
         {start !== 0 ? (
           <div
             role="button"

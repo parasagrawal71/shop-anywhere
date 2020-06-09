@@ -16,11 +16,11 @@ const ProductListPage = () => {
   return (
     <div className="product-list">
       <Header />
-      <div className="product-list__content flex-row">
+      <div className="product-list__content">
         <div className="product-list__content--left">
           <FilterBox />
         </div>
-        <div className="product-list__content--right flex-row">
+        <div className="product-list__content--right">
           {tshirtsImages.map((image) => {
             return (
               <ProductCard
