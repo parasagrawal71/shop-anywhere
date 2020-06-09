@@ -1,0 +1,148 @@
+/* *********************************** FLEX ROW STLYES *********************************** */
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* *** FLEX ROW HORIZONTAL STLYES *** */
+@mixin flex-row-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flex-row-sb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flex-row-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@mixin flex-row-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* *** FLEX ROW VERTICAL STLYES *** */
+@mixin flex-row-v-cen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-row-v-sb {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
+@mixin flex-row-v-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@mixin flex-row-v-end {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+/* *** FLEX ROW BOTH STLYES *** */
+@mixin flex-row-b-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-b-sb-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* *********************************** FLEX COLUMN STLYES *********************************** */
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* *** FLEX COLUMN HORIZONTAL STLYES *** */
+@mixin flex-col-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-col-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin flex-col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* *** FLEX COLUMN VERTICAL STLYES *** */
+@mixin flex-col-h-cen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-col-h-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+@mixin flex-col-h-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flex-col-h-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* *** FLEX COLUMN BOTH STLYES *** */
+@mixin flex-col-b-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-b-sb-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-col-b-start-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

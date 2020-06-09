@@ -4,7 +4,17 @@ import React from "react";
 import "./Button.scss";
 
 const Button = (props) => {
-  const { btnText, btnCallback, btnColor, btnTextColor, isShadow } = props;
+  const {
+    btnText,
+    btnCallback,
+    btnColor,
+    btnTextColor,
+    isShadow,
+    btnWidth,
+    btnHeight,
+    customContainerClass,
+    customBtnClass,
+  } = props;
 
   const returnBtnClasses = () => {
     if (isShadow) {
@@ -14,11 +24,14 @@ const Button = (props) => {
   };
 
   return (
-    <div className="button">
+    <div
+      className={`button ${customContainerClass}`}
+      style={{ width: btnWidth, height: btnHeight }}
+    >
       <button
         type="button"
         onClick={btnCallback}
-        className={`button__btn ${returnBtnClasses()}`}
+        className={`button__btn ${returnBtnClasses()} ${customBtnClass}`}
         style={{ background: btnColor, color: btnTextColor }}
       >
         {btnText}
