@@ -10,7 +10,13 @@ const CartPage = () => {
   return (
     <div className="cart">
       <Header />
-      <div className="cart__content" />
+      <section className="cart__content flex-row">
+        <section className="cart__content--left">
+          <div className="cart__content--left-header">My Cart (2)</div>
+          <div className="cart__content--left-item">Card Item</div>
+        </section>
+        <aside className="cart__content--right">ASide</aside>
+      </section>
     </div>
   );
 };
