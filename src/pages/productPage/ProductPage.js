@@ -6,7 +6,7 @@ import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
 import TextInput from "subComponents/textInput/TextInput";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ProductPage.scss";
 
 const brandName = "Peter England";

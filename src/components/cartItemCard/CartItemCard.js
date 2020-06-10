@@ -3,7 +3,7 @@ import React from "react";
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Button from "subComponents/button/Button";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./CartItemCard.scss";
 
 const brandName = "Peter England";

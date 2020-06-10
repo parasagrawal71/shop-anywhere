@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./Carousel.scss";
 
 const responsive = {

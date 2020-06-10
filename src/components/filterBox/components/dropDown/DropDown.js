@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-// IMPORT ASSETS HERE //
-import downIcon from "assets/png/down-16px.png";
+// IMPORT USER-DEFINED COMPONENTS HERE //
 import Button from "subComponents/button/Button";
 import Checkbox from "subComponents/checkbox/Checkbox";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./DropDown.scss";
+import downIcon from "assets/png/down-16px.png";
 
 const Dropdown = (props) => {
   const { headerText, itemList, maxItemsVisible, itemKey } = props;

@@ -5,7 +5,7 @@ import Slider from "subComponents/slider/Slider";
 import Button from "subComponents/button/Button";
 import Dropdown from "./components/dropDown/DropDown";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./FilterBox.scss";
 
 const brandList = [

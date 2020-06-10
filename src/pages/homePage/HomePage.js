@@ -6,10 +6,8 @@ import ImagesQueue from "components/imagesQueue/ImagesQueue";
 import Footer from "components/footer/Footer";
 import Carousel from "subComponents/carousel/Carousel";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./HomePage.scss";
-
-// IMPORT ASSETS HERE //
 import offersImages from "assets/jsons/offersImages.json"; // TODO: REMOVE THIS LATER
 import slidesImages from "assets/jsons/slidesImages.json"; // TODO: REMOVE THIS LATER
 

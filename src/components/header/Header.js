@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-// IMPORTS //
-import jsonServer from "apis/jsonServer";
 import Badge from "@material-ui/core/Badge";
 import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
+import { toast } from "react-toastify";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
 import Toast from "subComponents/toast/Toast";
-import { toast } from "react-toastify";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./Header.scss";
-
-// IMPORT ASSETS HERE //
 import cartIcon from "assets/png/cart-24px.png";
+import jsonServer from "apis/jsonServer";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {

@@ -6,10 +6,8 @@ import FilterBox from "components/filterBox/FilterBox";
 import ProductCard from "components/productCard/ProductCard";
 import Footer from "components/footer/Footer";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ProductListPage.scss";
-
-// IMPORT ASSETS HERE //
 import tshirtsImages from "assets/jsons/tshirtsImages.json"; // TODO: REMOVE THIS LATER
 
 const ProductListPage = () => {

@@ -1,14 +1,12 @@
 import axios from "axios";
 
 // IMPORTS //
+import { SERVER_URL } from "utils/constants/urls";
 import { GET, POST, PUT, DELETE } from "./httpConstants";
 import handleError from "./handleError";
 
-// CONSTANTS //
-const BASE_URL = `http://localhost:3200`;
-
 const request = axios.create({
-  baseURL: BASE_URL,
+  baseURL: SERVER_URL,
 });
 
 const jsonServer = (method, endpoint, body, config) => {

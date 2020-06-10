@@ -1,8 +1,8 @@
 import React from "react";
-import { CLIENT_URL } from "utils/constants/clientUrl";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ProductCard.scss";
+import { CLIENT_URL } from "utils/constants/urls";
 
 const ProductCard = (props) => {
   const {

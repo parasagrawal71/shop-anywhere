@@ -5,7 +5,7 @@ import Header from "components/header/Header";
 import CartItemCard from "components/cartItemCard/CartItemCard";
 import Button from "subComponents/button/Button";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./CartPage.scss";
 
 const CartPage = () => {

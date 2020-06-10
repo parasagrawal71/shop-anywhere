@@ -5,7 +5,7 @@ import { Router } from "react-router-dom";
 import history from "routes/history";
 import Routes from "routes/Routes";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./App.css";
 
 const App = () => {

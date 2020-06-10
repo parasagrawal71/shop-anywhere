@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-// IMPORTS //
-import { debounce } from "utils/functions";
-
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./SearchBox.scss";
-
-// IMPORT ASSETS HERE //
 import searchIcon from "assets/svg/search-icon.svg";
+import { debounce } from "utils/functions";
 
 // VARIABLES
 let debouncedFunc;

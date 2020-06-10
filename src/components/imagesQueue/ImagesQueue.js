@@ -4,14 +4,12 @@ import React, { useState } from "react";
 import Button from "subComponents/button/Button";
 import ImageCard from "components/imageCard/ImageCard";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ImagesQueue.scss";
-
-// IMPORT ASSETS HERE //
 import nextIcon from "assets/png/next-32px.png";
 import prevIcon from "assets/png/prev-32px.png";
 
-// Variables
+// VARIABLES
 const MAX_IMAGES_IN_ROW = 7;
 
 const ImagesQueue = (props) => {

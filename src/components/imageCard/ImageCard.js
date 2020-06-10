@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ImageCard.scss";
 
 const ImageCard = (props) => {

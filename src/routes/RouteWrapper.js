@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
-
-// IMPORT USER-DEFINED COMPONENTS HERE //
 import { toast } from "react-toastify";
 
 const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {

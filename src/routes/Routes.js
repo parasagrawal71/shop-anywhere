@@ -7,6 +7,7 @@ import ProductsListPage from "pages/productListPage/ProductListPage";
 import CartPage from "pages/cartPage/CartPage";
 import ProductPage from "pages/productPage/ProductPage";
 
+// IMPORT OTHERS HERE //
 import Route from "./RouteWrapper";
 
 const Routes = () => {

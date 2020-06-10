@@ -21,11 +21,11 @@ const handleError = (error) => {
     case UNAUTHORIZED:
       return "UNAUTHORIZED";
     case BAD_REQUEST:
-      return "BAD_REQUEST";
+      return "BAD REQUEST";
     case INTERNAL_SERVER_ERROR:
-      return "INTERNAL_SERVER_ERROR";
+      return "INTERNAL SERVER ERROR";
     case REQUEST_TIMED_OUT:
-      return "REQUEST_TIMED_OUT";
+      return "REQUEST TIMED OUT";
     default:
       return `${error.message}`;
   }
