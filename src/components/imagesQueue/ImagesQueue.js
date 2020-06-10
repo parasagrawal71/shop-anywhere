@@ -50,15 +50,14 @@ const ImagesQueue = (props) => {
           <div className="images-queue__header-text">{headerText}</div>
           <div className="images-queue__header-subtext">{headerSubText}</div>
         </div>
-        <div className="images-queue__header--right">
-          <Button
-            btnText="view all"
-            btnCallback={() => {}}
-            btnColor="#2874f0"
-            btnTextColor="white"
-            isShadow
-          />
-        </div>
+        <Button
+          btnText="view all"
+          btnCallback={() => {}}
+          btnColor="#2874f0"
+          btnTextColor="white"
+          isShadow
+          customContainerClass="images-queue__header--right"
+        />
       </div>
       <div className="images-queue__content">
         {start !== 0 ? (

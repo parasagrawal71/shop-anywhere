@@ -38,9 +38,12 @@ const FilterBox = () => {
     <div className="filterbox">
       <div className="filterbox__header">
         <div className="filterbox__header--left">Filters</div>
-        <div className="filterbox__header--right">
-          <Button btnText="Clear All" btnColor="white" btnTextColor="blue" />
-        </div>
+        <Button
+          btnText="Clear All"
+          btnColor="white"
+          btnTextColor="blue"
+          customContainerClass="filterbox__header--right"
+        />
       </div>
       <div className="filterbox__price">
         <div className="filterbox__price-header">Price</div>

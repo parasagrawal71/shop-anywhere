@@ -25,13 +25,13 @@ const Button = (props) => {
 
   return (
     <div
-      className={`button ${customContainerClass}`}
+      className={`button ${customContainerClass || ""}`}
       style={{ width: btnWidth, height: btnHeight }}
     >
       <button
         type="button"
         onClick={btnCallback}
-        className={`button__btn ${returnBtnClasses()} ${customBtnClass}`}
+        className={`button__btn ${returnBtnClasses()} ${customBtnClass || ""}`}
         style={{ background: btnColor, color: btnTextColor }}
       >
         {btnText}
