@@ -138,6 +138,7 @@
 
 .product-page__content__color-values {
   @include flex-row;
+  padding-bottom: 15px;
 }
 
 .product-page__content__color-value-btnWrapper {
@@ -152,6 +153,19 @@
 
 .product-page__content__color-value:last-child {
   margin-right: 0;
+}
+
+.product-page__content__delivery {
+}
+
+.product-page__content__delivery-header {
+}
+
+.product-page__content__delivery-input-wrapper {
+  margin-top: 10px;
+}
+
+.product-page__content__delivery-input {
 }
 
 // Custom Scroll bar

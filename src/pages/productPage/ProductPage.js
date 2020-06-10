@@ -4,6 +4,7 @@ import React from "react";
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
+import TextInput from "subComponents/textInput/TextInput";
 
 // IMPORT STYLES HERE //
 import "./ProductPage.scss";
@@ -111,6 +112,16 @@ const ProductPage = () => {
                 );
               })}
             </div>
+          </div>
+          <div className="product-page__content__delivery">
+            <div className="product-page__content__delivery-header">
+              Delivery Options
+            </div>
+            <TextInput
+              label="Enter Pincode"
+              customContainerClass="product-page__content__delivery-input-wrapper"
+              customFieldClass="product-page__content__delivery-input"
+            />
           </div>
         </section>
       </section>
