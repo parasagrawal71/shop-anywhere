@@ -52,25 +52,30 @@
 /* header-right */
 .header--right {
   font-family: "Roboto-Medium";
-  width: 50%;
   @include flex-row-v-cen;
 }
 
 .header__searchbox {
   flex: 1;
-  min-width: 200px;
+  width: 300px;
+  transition: width ease-in-out 0.25s;
   height: 100%;
-  padding-right: 20px;
+  padding-right: 30px;
+}
+
+.header__searchbox:focus-within {
+  width: 450px;
+  transition: width ease-in-out 0.35s;
 }
 
 .header__profile {
   font-size: 15px;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .header__orders {
   font-size: 15px;
-  padding-right: 8px;
+  padding-right: 18px;
 }
 
 .header__cart {

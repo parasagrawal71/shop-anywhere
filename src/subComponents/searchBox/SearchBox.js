@@ -62,7 +62,7 @@ const SearchBox = (props) => {
   };
 
   return (
-    <div className="searchbox">
+    <main className="searchbox">
       <input
         type="search"
         placeholder={placeholder}
@@ -72,7 +72,6 @@ const SearchBox = (props) => {
         onChange={onInputChange}
         onKeyDown={onEnterKeyPress}
       />
-      <datalist id="suggestions">{renderSuggestions()}</datalist>
       <div
         role="button"
         className="searchbox__icon-wrapper"
@@ -82,7 +81,8 @@ const SearchBox = (props) => {
       >
         <img src={searchIcon} alt="Search" className="searchbox__icon" />
       </div>
-    </div>
+      <datalist id="suggestions">{renderSuggestions()}</datalist>
+    </main>
   );
 };
 

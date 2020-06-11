@@ -114,7 +114,7 @@ const Header = () => {
               keyNames={{ id: "id", name: "name" }}
             />
           </div>
-          <div className="header__profile">My Profile</div>
+          <div className="header__profile">Profile</div>
           <div className="header__orders">Orders</div>
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
