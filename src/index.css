@@ -3,3 +3,13 @@
   font-family: "Poppins-Regular";
   src: url(assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "IndieFlower-Regular";
+  src: url(assets/fonts/IndieFlower/IndieFlower-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(assets/fonts//Roboto/Roboto-Medium.ttf) format("truetype");
+}

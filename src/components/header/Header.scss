@@ -2,7 +2,7 @@
 @import "utils/commonStyles/flex.scss";
 
 .header {
-  @include flex-row-sb;
+  @include flex-row-b-sb-cen;
   font-family: Poppins-Regular;
   background-color: $white;
   color: $black;
@@ -16,47 +16,72 @@
 /* header-left */
 .header--left {
   @include flex-row-v-cen;
-  width: 60%;
+  width: 40%;
   height: 35px;
 }
-.header__logo {
+
+.header__logo-wrapper {
+  @include flex-row-v-cen;
   text-decoration: none;
-  color: $black;
-  font-size: 20px;
-  padding: 0 10px;
+  min-width: 200px;
 }
 
-.header__searchbox {
-  padding: 0 10px;
-  flex: 1;
-  min-width: 200px;
-  height: 100%;
+.header__logo {
+}
+
+.header__app-title {
+  padding-left: 10px;
+  font-family: "IndieFlower-Regular";
+  font-size: 22px;
+  color: $black;
+  margin-top: 8px;
+}
+
+.header__categories {
+  @include flex-row;
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+.header__categories__item {
+  font-family: "Roboto-Medium";
+  padding-left: 20px;
+  font-size: 15px;
 }
 
 /* header-right */
 .header--right {
+  font-family: "Roboto-Medium";
+  width: 50%;
   @include flex-row-v-cen;
-  padding: 0 10px;
+}
+
+.header__searchbox {
+  flex: 1;
+  min-width: 200px;
+  height: 100%;
+  padding-right: 20px;
 }
 
 .header__profile {
-  padding: 0 10px;
+  font-size: 15px;
+  padding-right: 20px;
 }
 
 .header__orders {
-  padding: 0 10px;
+  font-size: 15px;
+  padding-right: 8px;
 }
 
 .header__cart {
   @include flex-row-v-cen;
   text-decoration: none;
   color: $black;
-  padding: 0 10px;
 }
 
 .header__cart-img {
 }
 
 .header__cart-text {
-  padding-left: 5px;
+  font-size: 15px;
 }

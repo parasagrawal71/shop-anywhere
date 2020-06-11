@@ -8,10 +8,12 @@ import { toast } from "react-toastify";
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
 import Toast from "subComponents/toast/Toast";
+import TextButton from "subComponents/textButton/TextButton";
 
 // IMPORT OTHERS HERE //
 import "./Header.scss";
 import cartIcon from "assets/png/cart-24px.png";
+import appLogo from "assets/png/app-logo-32px.png";
 import jsonServer from "apis/jsonServer";
 
 const StyledBadge = withStyles((theme) => ({
@@ -68,11 +70,41 @@ const Header = () => {
   return (
     <>
       <Toast position="bottom-left" />
-      <div className="header">
-        <div className="header--left">
-          <Link to="/" className="header__logo">
-            Shop Anywhere
+      <main className="header">
+        <section className="header--left">
+          <Link to="/" className="header__logo-wrapper">
+            <img src={appLogo} alt="app-logo" className="header__logo" />
+            <div className="header__app-title">Shop Anywhere</div>
           </Link>
+          <section className="header__categories">
+            <TextButton
+              btnText="MEN"
+              btnCallback={() => {}}
+              hoverCallback={() => {}}
+              customBtnClass="header__categories__item"
+            />
+            <TextButton
+              btnText="WOMEN"
+              btnCallback={() => {}}
+              hoverCallback={() => {}}
+              customBtnClass="header__categories__item"
+            />
+            <TextButton
+              btnText="KIDS"
+              btnCallback={() => {}}
+              hoverCallback={() => {}}
+              customBtnClass="header__categories__item"
+            />
+            <TextButton
+              btnText="ACCESSORIES"
+              btnCallback={() => {}}
+              hoverCallback={() => {}}
+              customBtnClass="header__categories__item"
+            />
+          </section>
+        </section>
+
+        <section className="header--right">
           <div className="header__searchbox">
             <SearchBox
               placeholder="Search for products"
@@ -82,8 +114,6 @@ const Header = () => {
               keyNames={{ id: "id", name: "name" }}
             />
           </div>
-        </div>
-        <div className="header--right">
           <div className="header__profile">My Profile</div>
           <div className="header__orders">Orders</div>
           <Link to="/cart" className="header__cart">
@@ -94,8 +124,8 @@ const Header = () => {
             </IconButton>
             <div className="header__cart-text">Cart</div>
           </Link>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 };
