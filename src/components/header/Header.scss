@@ -16,7 +16,7 @@
 /* header-left */
 .header--left {
   @include flex-row-v-cen;
-  width: 40%;
+  width: 50%;
   height: 35px;
 }
 
@@ -38,15 +38,24 @@
 }
 
 .header__categories {
-  @include flex-row;
+  @include flex-row-v-end;
   margin-top: 6px;
   padding-left: 20px;
 }
 
 .header__categories__item {
   font-family: "Roboto-Medium";
-  padding-left: 20px;
+  padding: 0 20px;
   font-size: 15px;
+}
+
+.header__categories__dropdown {
+  top: 88px;
+  left: 215px;
+  background-color: $white;
+  min-width: 700px;
+  min-height: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* header-right */

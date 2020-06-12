@@ -79,28 +79,36 @@ const Header = () => {
           <section className="header__categories">
             <TextButton
               btnText="MEN"
-              btnCallback={() => {}}
-              hoverCallback={() => {}}
+              onHoverRequired
               customBtnClass="header__categories__item"
-            />
+              customDropdownClass="header__categories__dropdown"
+            >
+              <div className="">MEN</div>
+            </TextButton>
             <TextButton
               btnText="WOMEN"
-              btnCallback={() => {}}
-              hoverCallback={() => {}}
+              onHoverRequired
               customBtnClass="header__categories__item"
-            />
+              customDropdownClass="header__categories__dropdown"
+            >
+              <div className="">WOMEN</div>
+            </TextButton>
             <TextButton
               btnText="KIDS"
-              btnCallback={() => {}}
-              hoverCallback={() => {}}
+              onHoverRequired
               customBtnClass="header__categories__item"
-            />
+              customDropdownClass="header__categories__dropdown"
+            >
+              <div className="">KIDS</div>
+            </TextButton>
             <TextButton
               btnText="ACCESSORIES"
-              btnCallback={() => {}}
-              hoverCallback={() => {}}
+              onHoverRequired
               customBtnClass="header__categories__item"
-            />
+              customDropdownClass="header__categories__dropdown"
+            >
+              <div className="">ACCESSORIES</div>
+            </TextButton>
           </section>
         </section>
 

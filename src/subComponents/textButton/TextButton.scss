@@ -10,3 +10,21 @@
   background-color: $white;
   padding: 0;
 }
+
+.dropdown-content {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.3s linear;
+  border-radius: 0 0 4px 4px;
+}
+
+.text-button:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text-button:hover {
+  border-bottom: 3px solid $orange;
+}

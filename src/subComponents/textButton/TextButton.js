@@ -4,17 +4,28 @@ import React from "react";
 import "./TextButton.scss";
 
 const TextButton = (props) => {
-  const { btnText, customBtnClass, btnCallback, hoverCallback } = props;
+  const {
+    btnText,
+    customBtnClass,
+    btnCallback,
+    onHoverRequired,
+    customDropdownClass,
+    children,
+  } = props;
 
   return (
     <button
       type="button"
       onClick={btnCallback}
-      onMouseOver={hoverCallback}
-      onFocus={() => {}}
       className={`text-button ${customBtnClass || ""}`}
     >
       {btnText}
+
+      {onHoverRequired && (
+        <div className={`dropdown-content ${customDropdownClass || ""}`}>
+          {children}
+        </div>
+      )}
     </button>
   );
 };
