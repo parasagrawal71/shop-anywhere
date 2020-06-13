@@ -171,10 +171,16 @@ const Header = () => {
             iconOnRight={returnProfileIcon()}
           >
             <div className="header__profile-dropdown-content">
-              <Link to="/" className="header__profile-dropdown-content-item">
+              <Link
+                to="/profile"
+                className="header__profile-dropdown-content-item"
+              >
                 My Profile
               </Link>
-              <Link to="/" className="header__profile-dropdown-content-item">
+              <Link
+                to="/wishlist"
+                className="header__profile-dropdown-content-item"
+              >
                 Wishlist
               </Link>
               <Link to="/" className="header__profile-dropdown-content-item">
