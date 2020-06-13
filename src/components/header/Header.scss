@@ -15,7 +15,7 @@
 
 /* header-left */
 .header--left {
-  @include flex-row-v-cen;
+  @include flex-row;
   width: 50%;
   height: 35px;
 }
@@ -38,7 +38,7 @@
 }
 
 .header__categories {
-  @include flex-row-v-end;
+  @include flex-row;
   margin-top: 6px;
   padding-left: 20px;
 }
