@@ -6,7 +6,7 @@
   font-family: Poppins-Regular;
   background-color: $white;
   color: $black;
-  padding: 20px 10px;
+  padding: 10px 10px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -44,8 +44,9 @@
 
 .header__categories__item {
   font-family: "Roboto-Medium";
-  padding: 0 20px;
+  padding: 20px 20px;
   font-size: 15px;
+  border-bottom: 3px solid transparent;
 }
 
 .header__categories__item:hover {
@@ -142,6 +143,7 @@
 .header__profile {
   font-family: "Roboto-Medium";
   font-size: 15px;
+  padding: 25px 0;
   padding-right: 30px;
   cursor: pointer;
   position: relative;
@@ -159,7 +161,7 @@
 }
 
 .header__profile-dropdown {
-  top: 53px;
+  top: 79px;
   left: -35px;
   background-color: $white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
