@@ -6,9 +6,10 @@ import "./TextButton.scss";
 const TextButton = (props) => {
   const {
     btnText,
-    customBtnClass,
     btnCallback,
     onHoverRequired,
+    iconOnRight,
+    customBtnClass,
     customDropdownClass,
     children,
   } = props;
@@ -20,7 +21,7 @@ const TextButton = (props) => {
       className={`text-button ${customBtnClass || ""}`}
     >
       {btnText}
-
+      {iconOnRight}
       {onHoverRequired && (
         <div className={`dropdown-content ${customDropdownClass || ""}`}>
           {children}

@@ -14,7 +14,10 @@ import TextButton from "subComponents/textButton/TextButton";
 import "./Header.scss";
 import cartIcon from "assets/png/cart-24px.png";
 import appLogo from "assets/png/app-logo-32px.png";
+import rightSolidIcon from "assets/png/right-solid-16px.png";
+import downThinIcon from "assets/png/down-thin-16px.png";
 import jsonServer from "apis/jsonServer";
+import headerCategories from "assets/jsons/headerCategories.json"; // TODO: REMOVE THIS LATER
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -67,6 +70,71 @@ const Header = () => {
     );
   };
 
+  const returnCategoriesAndContent = () => {
+    return Object.keys(headerCategories).map((majorCat, i) => {
+      return (
+        <TextButton
+          btnText={majorCat}
+          onHoverRequired
+          customBtnClass="header__categories__item"
+          customDropdownClass="header__categories__dropdown"
+          key={majorCat + String(i)}
+        >
+          <section className="header__categories__dropdown-content">
+            {Object.values(headerCategories[majorCat]).map((col, j) => {
+              return (
+                <section
+                  className="header__categories__dropdown-column"
+                  key={col + String(j)}
+                >
+                  {Object.keys(col).map((subCol, k) => {
+                    return (
+                      <div
+                        className="header__categories__dropdown-sub-column"
+                        key={subCol + String(k)}
+                      >
+                        <div className="header__categories__dropdown-sub-column-header">
+                          {subCol.replace("-", " ")}
+                          <img
+                            src={rightSolidIcon}
+                            alt="right-arrow"
+                            className="header__categories__dropdown-sub-column-icon"
+                          />
+                        </div>
+                        <div className="header__categories__dropdown-sub-column-items">
+                          {col[subCol].map((item, l) => {
+                            return (
+                              <div
+                                key={item + String(l)}
+                                className="header__categories__dropdown-sub-column-item"
+                              >
+                                {item}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </section>
+              );
+            })}
+          </section>
+        </TextButton>
+      );
+    });
+  };
+
+  const returnProfileIcon = () => {
+    return (
+      <img
+        src={downThinIcon}
+        alt="down-arrow-thin"
+        className="header__profile-down-icon"
+      />
+    );
+  };
+
   return (
     <>
       <Toast position="bottom-left" />
@@ -77,38 +145,7 @@ const Header = () => {
             <div className="header__app-title">Shop Anywhere</div>
           </Link>
           <section className="header__categories">
-            <TextButton
-              btnText="MEN"
-              onHoverRequired
-              customBtnClass="header__categories__item"
-              customDropdownClass="header__categories__dropdown"
-            >
-              <div className="">MEN</div>
-            </TextButton>
-            <TextButton
-              btnText="WOMEN"
-              onHoverRequired
-              customBtnClass="header__categories__item"
-              customDropdownClass="header__categories__dropdown"
-            >
-              <div className="">WOMEN</div>
-            </TextButton>
-            <TextButton
-              btnText="KIDS"
-              onHoverRequired
-              customBtnClass="header__categories__item"
-              customDropdownClass="header__categories__dropdown"
-            >
-              <div className="">KIDS</div>
-            </TextButton>
-            <TextButton
-              btnText="ACCESSORIES"
-              onHoverRequired
-              customBtnClass="header__categories__item"
-              customDropdownClass="header__categories__dropdown"
-            >
-              <div className="">ACCESSORIES</div>
-            </TextButton>
+            {returnCategoriesAndContent()}
           </section>
         </section>
 
@@ -122,7 +159,22 @@ const Header = () => {
               keyNames={{ id: "id", name: "name" }}
             />
           </div>
-          <div className="header__profile">Profile</div>
+          <TextButton
+            btnText="Profile"
+            onHoverRequired
+            customBtnClass="header__profile"
+            customDropdownClass="header__profile-dropdown"
+            iconOnRight={returnProfileIcon()}
+          >
+            <div className="header__profile-dropdown-content">
+              <div className="header__profile-dropdown-content-item">
+                My Profile
+              </div>
+              <div className="header__profile-dropdown-content-item">
+                Wishlist
+              </div>
+            </div>
+          </TextButton>
           <div className="header__orders">Orders</div>
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
