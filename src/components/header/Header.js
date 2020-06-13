@@ -167,15 +167,19 @@ const Header = () => {
             iconOnRight={returnProfileIcon()}
           >
             <div className="header__profile-dropdown-content">
-              <div className="header__profile-dropdown-content-item">
+              <Link to="/" className="header__profile-dropdown-content-item">
                 My Profile
-              </div>
-              <div className="header__profile-dropdown-content-item">
+              </Link>
+              <Link to="/" className="header__profile-dropdown-content-item">
                 Wishlist
-              </div>
+              </Link>
             </div>
           </TextButton>
-          <div className="header__orders">Orders</div>
+          <TextButton
+            btnText="Orders"
+            btnCallback={() => {}}
+            customBtnClass="header__profile"
+          />
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={cartCount} color="secondary">

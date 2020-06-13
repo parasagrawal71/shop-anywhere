@@ -44,9 +44,10 @@
 
 .header__categories__item {
   font-family: "Roboto-Medium";
-  padding: 20px 20px;
   font-size: 15px;
+  padding: 20px 20px;
   border-bottom: 3px solid transparent;
+  text-transform: uppercase;
 }
 
 .header__categories__item:hover {
@@ -169,10 +170,17 @@
   padding: 15px 30px;
 }
 
+.header__profile-dropdown-content {
+  @include flex-col;
+}
+
 .header__profile-dropdown-content-item {
+  text-decoration: none;
+  color: $black;
   padding-bottom: 15px;
   text-align: start;
   font-family: "Roboto-Regular";
+  font-size: 14px;
 }
 
 .header__profile-dropdown-content-item:last-child {

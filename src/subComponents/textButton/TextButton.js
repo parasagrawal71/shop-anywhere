@@ -15,10 +15,12 @@ const TextButton = (props) => {
   } = props;
 
   return (
-    <button
-      type="button"
+    <div
+      role="button"
       onClick={btnCallback}
       className={`text-button ${customBtnClass || ""}`}
+      onKeyDown={() => {}}
+      tabIndex="0"
     >
       {btnText}
       {iconOnRight}
@@ -27,7 +29,7 @@ const TextButton = (props) => {
           {children}
         </div>
       )}
-    </button>
+    </div>
   );
 };
 
