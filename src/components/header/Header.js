@@ -93,23 +93,27 @@ const Header = () => {
                         className="header__categories__dropdown-sub-column"
                         key={subCol + String(k)}
                       >
-                        <div className="header__categories__dropdown-sub-column-header">
+                        <Link
+                          to="/"
+                          className="header__categories__dropdown-sub-column-header"
+                        >
                           {subCol.replace("-", " ")}
                           <img
                             src={rightSolidIcon}
                             alt="right-arrow"
                             className="header__categories__dropdown-sub-column-icon"
                           />
-                        </div>
+                        </Link>
                         <div className="header__categories__dropdown-sub-column-items">
                           {col[subCol].map((item, l) => {
                             return (
-                              <div
+                              <Link
+                                to="/category"
                                 key={item + String(l)}
                                 className="header__categories__dropdown-sub-column-item"
                               >
                                 {item}
-                              </div>
+                              </Link>
                             );
                           })}
                         </div>
@@ -173,13 +177,14 @@ const Header = () => {
               <Link to="/" className="header__profile-dropdown-content-item">
                 Wishlist
               </Link>
+              <Link to="/" className="header__profile-dropdown-content-item">
+                Logout
+              </Link>
             </div>
           </TextButton>
-          <TextButton
-            btnText="Orders"
-            btnCallback={() => {}}
-            customBtnClass="header__profile"
-          />
+          <Link to="/orders" className="header__profile">
+            Orders
+          </Link>
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={cartCount} color="secondary">

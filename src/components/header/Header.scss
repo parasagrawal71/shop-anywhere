@@ -56,7 +56,7 @@
 
 .header__categories__dropdown {
   top: 100%;
-  left: 17%;
+  left: 200px;
   background-color: $white;
   min-width: 700px;
   min-height: 430px;
@@ -96,9 +96,10 @@
 }
 
 .header__categories__dropdown-sub-column-header {
+  text-decoration: none;
+  color: $black;
   font-size: 16px;
   padding-bottom: 10px;
-  cursor: pointer;
 }
 
 .header__categories__dropdown-sub-column-icon {
@@ -113,9 +114,10 @@
 }
 
 .header__categories__dropdown-sub-column-item {
+  text-decoration: none;
+  color: $black;
   font-family: "Roboto-Regular";
   padding-bottom: 7px;
-  cursor: pointer;
 }
 
 .header__categories__dropdown-sub-column-item:last-child {
@@ -142,11 +144,12 @@
 }
 
 .header__profile {
+  text-decoration: none;
+  color: $black;
   font-family: "Roboto-Medium";
   font-size: 15px;
   padding: 25px 0;
   padding-right: 30px;
-  cursor: pointer;
   position: relative;
 }
 
