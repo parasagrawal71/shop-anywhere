@@ -17,23 +17,11 @@ const HomePage = () => {
       <Header />
       <div className="home__content">
         <div className="home__carousel">
-          <div className="home__carousel-left">
-            <Carousel slidesImages={slidesImages.items1} autoPlaySpeed={2000} />
-          </div>
-          <div className="home__carousel-right">
-            <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
-          </div>
+          <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
         </div>
         <div className="home__images-queue">
           <ImagesQueue
             headerText="offers"
-            headerSubText="suggested for you"
-            imagesData={offersImages}
-          />
-        </div>
-        <div className="home__images-queue">
-          <ImagesQueue
-            headerText="Categories"
             headerSubText="suggested for you"
             imagesData={offersImages}
           />
@@ -47,8 +35,15 @@ const HomePage = () => {
         </div>
         <div className="home__images-queue">
           <ImagesQueue
-            headerText="Recently Viewed"
+            headerText="You may like"
             headerSubText="suggested for you"
+            imagesData={offersImages}
+          />
+        </div>
+        <div className="home__images-queue">
+          <ImagesQueue
+            headerText="Recently Viewed"
+            headerSubText=""
             imagesData={offersImages}
           />
         </div>

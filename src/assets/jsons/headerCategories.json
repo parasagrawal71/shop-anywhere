@@ -2,7 +2,7 @@
   "men": {
     "col-1": {
       "top-wear": ["tshirts", "shirts", "sleeveless"],
-      "bottom-wear": ["jeans", "shorts", "pants"],
+      "bottom-wear": ["jeans", "shorts", "pants", "trousers"],
       "footwear": ["slippers", "shoes"]
     },
     "col-2": {
@@ -45,7 +45,8 @@
   },
   "accessories": {
     "col-1": {
-      "accessories": ["backpacks", "wallets", "goggles"]
+      "accessories": ["backpacks", "wallets", "goggles", "fitness-accessories"],
+      "electronics": ["mobile", "tvs", "headphones", "trimmers"]
     }
   }
 }

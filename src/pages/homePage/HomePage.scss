@@ -13,22 +13,10 @@
 .home__carousel {
   @include flex-row;
   padding: 10px 0;
-}
-
-.home__carousel-left {
-  width: 35%;
-}
-
-.home__carousel-left > img {
   width: 100%;
 }
 
-.home__carousel-right {
-  padding-left: 1%;
-  width: 64%;
-}
-
-.home__carousel-right > img {
+.home__carousel > div {
   width: 100%;
 }
 

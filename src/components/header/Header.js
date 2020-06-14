@@ -112,7 +112,7 @@ const Header = () => {
                                 key={item + String(l)}
                                 className="header__categories__dropdown-sub-column-item"
                               >
-                                {item}
+                                {item.replace("-", " ")}
                               </Link>
                             );
                           })}
