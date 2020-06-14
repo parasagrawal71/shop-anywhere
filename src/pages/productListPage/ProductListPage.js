@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
@@ -10,6 +10,10 @@ import Footer from "components/footer/Footer";
 import "./ProductListPage.scss";
 
 const ProductListPage = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const returnVisitedCategoryItems = () => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
     const categoryItems = require(`assets/jsons/categories/${props.match.params.category}.json`);
