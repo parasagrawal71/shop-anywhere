@@ -11,6 +11,7 @@ const ImageCard = (props) => {
     thirdTitle,
     imgSrc,
     numOfItemsInALine,
+    route,
   } = props;
 
   const calculateWidth = () => {
@@ -19,7 +20,7 @@ const ImageCard = (props) => {
 
   return (
     <Link
-      to="/category"
+      to={`/category/${route}`}
       className="imagecard"
       style={{ width: calculateWidth() }}
     >

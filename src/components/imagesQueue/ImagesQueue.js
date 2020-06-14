@@ -78,6 +78,7 @@ const ImagesQueue = (props) => {
               thirdTitle={image.subTitle}
               key={image.link}
               numOfItemsInALine={MAX_IMAGES_IN_ROW}
+              route={image.category}
             />
           );
         })}
