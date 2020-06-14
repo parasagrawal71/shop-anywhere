@@ -36,7 +36,7 @@ const ProductListPage = (props) => {
                 actualPrice={image.actualPrice}
                 offerPrice={image.offerPrice}
                 brandName={image.brand}
-                key={image.link}
+                key={image.category}
                 numOfItemsInALine={4}
               />
             );
