@@ -9,10 +9,11 @@ import Footer from "components/footer/Footer";
 // IMPORT OTHERS HERE //
 import "./ProductListPage.scss";
 
-const ProductListPage = () => {
+const ProductListPage = (props) => {
   const returnVisitedCategoryItems = () => {
-    // eslint-disable-next-line global-require
-    return require("assets/jsons/tshirtsImages.json");
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    const categoryItems = require(`assets/jsons/categories/${props.match.params.category}.json`);
+    return categoryItems;
   };
 
   return (

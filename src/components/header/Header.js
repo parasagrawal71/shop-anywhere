@@ -70,6 +70,15 @@ const Header = () => {
     );
   };
 
+  const returnCategoryRoute = (majorCat, col, subCol, item, j) => {
+    if (Object.keys(headerCategories[majorCat])[j] !== "col-2") {
+      // console.log(`${majorCat}-${item}`);
+      return `${majorCat}-${item}`;
+    }
+    // console.log(`${majorCat}-${subCol.split("-")[0]}-${item}`);
+    return `${majorCat}-${subCol.split("-")[0]}-${item}`;
+  };
+
   const returnCategoriesAndContent = () => {
     return Object.keys(headerCategories).map((majorCat, i) => {
       return (
@@ -108,7 +117,13 @@ const Header = () => {
                           {col[subCol].map((item, l) => {
                             return (
                               <Link
-                                to="/category"
+                                to={`/category/${returnCategoryRoute(
+                                  majorCat,
+                                  col,
+                                  subCol,
+                                  item,
+                                  j
+                                )}`}
                                 key={item + String(l)}
                                 className="header__categories__dropdown-sub-column-item"
                               >

@@ -6,7 +6,7 @@
       "footwear": ["slippers", "shoes"]
     },
     "col-2": {
-      "causal-wear": ["tshirts", "shirts", "jeans"],
+      "casual-wear": ["tshirts", "shirts", "jeans"],
       "formal-wear": ["shirts", "pants", "tie"],
       "sports-wear": ["tshirts", "shorts"]
     },
@@ -22,7 +22,7 @@
     },
     "col-2": {
       "indian-wear": ["sarees", "dresses"],
-      "causal-wear": ["tshirts", "shirts", "jeans"],
+      "casual-wear": ["tshirts", "shirts", "jeans"],
       "sports-wear": ["tshirts", "shorts"]
     },
     "col-3": {
@@ -36,7 +36,7 @@
       "footwear": ["slippers", "shoes"]
     },
     "col-2": {
-      "causal-wear": ["tshirts", "shirts", "jeans"],
+      "casual-wear": ["tshirts", "shirts", "jeans"],
       "sports-wear": ["tshirts", "shorts"]
     },
     "col-3": {
@@ -46,7 +46,7 @@
   "accessories": {
     "col-1": {
       "accessories": ["backpacks", "wallets", "goggles", "fitness-accessories"],
-      "electronics": ["mobile", "tvs", "headphones", "trimmers"]
+      "electronics": ["mobile", "laptops", "tvs", "headphones", "trimmers"]
     }
   }
 }
