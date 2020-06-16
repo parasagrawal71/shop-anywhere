@@ -1,6 +1,7 @@
 {
-  "men": {
-    "col-1": {
+  "categories": {
+    "men": {
+      "_id": "mj-men",
       "top-wear": {
         "tshirts": { "route": "men-tshirts" },
         "shirts": { "route": "men-shirts" },
@@ -15,9 +16,7 @@
       "footwear": {
         "slippers": { "route": "men-slippers" },
         "shoes": { "route": "men-shoes" }
-      }
-    },
-    "col-2": {
+      },
       "casual-wear": {
         "tshirts": { "route": "men-casual-tshirts" },
         "shirts": { "route": "men-casual-shirts" },
@@ -31,9 +30,7 @@
       "sports-wear": {
         "tshirts": { "route": "men-sports-tshirts" },
         "shorts": { "route": "men-sports-shorts" }
-      }
-    },
-    "col-3": {
+      },
       "accessories": {
         "tie": { "route": "men-tie" },
         "belt": { "route": "men-belt" },
@@ -41,10 +38,9 @@
         "socks": { "route": "men-socks" },
         "watches": { "route": "men-watches" }
       }
-    }
-  },
-  "women": {
-    "col-1": {
+    },
+    "women": {
+      "_id": "mj-women",
       "top-wear": {
         "tops": { "route": "women-tops" },
         "shirts": { "route": "women-shirts" },
@@ -59,9 +55,7 @@
         "slippers": { "route": "women-slippers" },
         "heels": { "route": "women-heels" },
         "boots": { "route": "women-boots" }
-      }
-    },
-    "col-2": {
+      },
       "casual-wear": {
         "tshirts": { "route": "women-casual-tshirts" },
         "shirts": { "route": "women-casual-shirts" },
@@ -74,18 +68,15 @@
       "sports-wear": {
         "tshirts": { "route": "women-sports-tshirts" },
         "shorts": { "route": "women-sports-shorts" }
-      }
-    },
-    "col-3": {
+      },
       "accessories": {
         "belt": { "route": "women-belt" },
         "socks": { "route": "women-socks" },
         "watches": { "route": "women-watches" }
       }
-    }
-  },
-  "kids": {
-    "col-1": {
+    },
+    "kids": {
+      "_id": "mj-kids",
       "top-wear": {
         "tshirts": { "route": "kids-tshirts" },
         "shirts": { "route": "kids-shirts" },
@@ -99,9 +90,7 @@
       "footwear": {
         "slippers": { "route": "kids-slippers" },
         "shoes": { "route": "kids-shoes" }
-      }
-    },
-    "col-2": {
+      },
       "casual-wear": {
         "tshirts": { "route": "kids-casual-tshirts" },
         "shirts": { "route": "kids-casual-shirts" },
@@ -110,18 +99,15 @@
       "sports-wear": {
         "tshirts": { "route": "kids-sports-tshirts" },
         "shorts": { "route": "kids-sports-shorts" }
-      }
-    },
-    "col-3": {
+      },
       "accessories": {
         "belt": { "route": "kids-belt" },
         "caps": { "route": "kids-caps" },
         "socks": { "route": "kids-socks" }
       }
-    }
-  },
-  "accessories": {
-    "col-1": {
+    },
+    "accessories": {
+      "_id": "mj-accessories",
       "electronics": {
         "mobile": { "route": "accessories-mobile" },
         "tvs": { "route": "accessories-tvs" },
