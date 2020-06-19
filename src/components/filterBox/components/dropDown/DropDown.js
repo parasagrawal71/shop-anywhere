@@ -6,7 +6,7 @@ import Checkbox from "subComponents/checkbox/Checkbox";
 
 // IMPORT OTHERS HERE //
 import "./DropDown.scss";
-import downIcon from "assets/png/down-16px.png";
+import { downIcon16px } from "assets/Images";
 
 const Dropdown = (props) => {
   const { headerText, itemList, maxItemsVisible, itemKey } = props;
@@ -37,7 +37,7 @@ const Dropdown = (props) => {
           className="dropdown__header-icon"
           onClick={() => setShowItems(!showItems)}
         >
-          <img src={downIcon} alt="dropdown" />
+          <img src={downIcon16px} alt="dropdown" />
         </button>
       </div>
       {showItems && (

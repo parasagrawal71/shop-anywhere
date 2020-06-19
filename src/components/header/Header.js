@@ -12,10 +12,13 @@ import TextButton from "subComponents/textButton/TextButton";
 
 // IMPORT OTHERS HERE //
 import "./Header.scss";
-import cartIcon from "assets/png/cart-24px.png";
-import appLogo from "assets/png/app-logo-32px.png";
-import rightSolidIcon from "assets/png/right-solid-16px.png";
-import downThinIcon from "assets/png/down-thin-16px.png";
+import {
+  cartIcon24px,
+  appLogo32px,
+  rightSolidIcon16px,
+  downThinIcon16px,
+} from "assets/Images";
+import { APP_NAME } from "utils/constants";
 import jsonServer from "apis/jsonServer";
 import headerCategories from "assets/jsons/headerCategories.json"; // TODO: REMOVE THIS LATER
 
@@ -99,7 +102,7 @@ const Header = () => {
                         >
                           {subCol.replace("-", " ")}
                           <img
-                            src={rightSolidIcon}
+                            src={rightSolidIcon16px}
                             alt="right-arrow"
                             className="header__categories__dropdown-sub-column-icon"
                           />
@@ -132,7 +135,7 @@ const Header = () => {
   const returnProfileIcon = () => {
     return (
       <img
-        src={downThinIcon}
+        src={downThinIcon16px}
         alt="down-arrow-thin"
         className="header__profile-down-icon"
       />
@@ -145,8 +148,8 @@ const Header = () => {
       <main className="header">
         <section className="header--left">
           <Link to="/" className="header__logo-wrapper">
-            <img src={appLogo} alt="app-logo" className="header__logo" />
-            <div className="header__app-title">Shop Anywhere</div>
+            <img src={appLogo32px} alt="app-logo" className="header__logo" />
+            <div className="header__app-title">{APP_NAME}</div>
           </Link>
           <section className="header__categories">
             {returnCategoriesAndContent()}
@@ -194,7 +197,11 @@ const Header = () => {
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={cartCount} color="secondary">
-                <img className="header__cart-img" src={cartIcon} alt="cart" />
+                <img
+                  className="header__cart-img"
+                  src={cartIcon24px}
+                  alt="cart"
+                />
               </StyledBadge>
             </IconButton>
             <div className="header__cart-text">Cart</div>

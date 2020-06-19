@@ -6,8 +6,7 @@ import ImageCard from "components/imageCard/ImageCard";
 
 // IMPORT OTHERS HERE //
 import "./ImagesQueue.scss";
-import nextIcon from "assets/png/next-32px.png";
-import prevIcon from "assets/png/prev-32px.png";
+import { nextIcon32px, prevIcon32px } from "assets/Images";
 
 // VARIABLES
 const MAX_IMAGES_IN_ROW = 7;
@@ -66,7 +65,7 @@ const ImagesQueue = (props) => {
             onKeyDown={() => {}}
             tabIndex="0"
           >
-            <img src={prevIcon} alt="prev-large" />
+            <img src={prevIcon32px} alt="prev-large" />
           </div>
         ) : null}
         {imagesData.slice(start, end).map((image) => {
@@ -90,7 +89,7 @@ const ImagesQueue = (props) => {
             onKeyDown={() => {}}
             tabIndex="0"
           >
-            <img src={nextIcon} alt="next-large" />
+            <img src={nextIcon32px} alt="next-large" />
           </div>
         ) : null}
       </div>

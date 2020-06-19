@@ -2,7 +2,7 @@ import React from "react";
 
 // IMPORT OTHERS HERE //
 import "./ProductCard.scss";
-import { CLIENT_URL } from "utils/constants/urls";
+import { CLIENT_URL } from "utils/constants";
 
 const ProductCard = (props) => {
   const {

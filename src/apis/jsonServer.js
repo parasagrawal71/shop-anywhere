@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // IMPORTS //
-import { SERVER_URL } from "utils/constants/urls";
+import { SERVER_URL } from "utils/constants";
 import { GET, POST, PUT, DELETE } from "./httpConstants";
 import handleError from "./handleError";
 

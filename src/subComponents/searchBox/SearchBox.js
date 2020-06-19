@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // IMPORT OTHERS HERE //
 import "./SearchBox.scss";
-import searchIcon from "assets/svg/search-icon.svg";
+import { searchIcon } from "assets/Images";
 import { debounce } from "utils/functions";
 
 // VARIABLES
