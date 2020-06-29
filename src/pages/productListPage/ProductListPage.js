@@ -5,9 +5,29 @@ import Header from "components/header/Header";
 import FilterBox from "components/filterBox/FilterBox";
 import ProductCard from "components/productCard/ProductCard";
 import Footer from "components/footer/Footer";
+import Breadcrumb from "subComponents/breadcrumb/Breadcrumb";
 
 // IMPORT OTHERS HERE //
 import "./ProductListPage.scss";
+
+const BreadcrumbData = [
+  {
+    path: "/",
+    label: "Home",
+  },
+  {
+    path: "men-tshirts",
+    label: "Men",
+  },
+  {
+    path: "men-tshirts",
+    label: "Top Wear",
+  },
+  {
+    path: "men-tshirts",
+    label: "Tshirts",
+  },
+];
 
 const ProductListPage = (props) => {
   useEffect(() => {
@@ -28,19 +48,27 @@ const ProductListPage = (props) => {
           <FilterBox />
         </div>
         <div className="product-list__content--right">
-          {returnVisitedCategoryItems().map((image) => {
-            return (
-              <ProductCard
-                imgSrc={image.link}
-                imageTitle={image.title}
-                actualPrice={image.actualPrice}
-                offerPrice={image.offerPrice}
-                brandName={image.brand}
-                key={image.category}
-                numOfItemsInALine={4}
-              />
-            );
-          })}
+          <div className="product-list__content__header">
+            <div className="product-list__content__breadcrumb">
+              <Breadcrumb BreadcrumbData={BreadcrumbData} />
+            </div>
+            <div className="product-list__content__sortby">Sort By</div>
+          </div>
+          <div className="product-list__content__products">
+            {returnVisitedCategoryItems().map((image) => {
+              return (
+                <ProductCard
+                  imgSrc={image.link}
+                  imageTitle={image.title}
+                  actualPrice={image.actualPrice}
+                  offerPrice={image.offerPrice}
+                  brandName={image.brand}
+                  key={image.category}
+                  numOfItemsInALine={4}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <Footer />

@@ -15,8 +15,12 @@
 }
 
 .product-list__content--right {
-  @include flex-row;
+  background-color: $white;
   margin-left: 1%;
   width: 79%;
+}
+
+.product-list__content__products {
+  @include flex-row;
   flex-wrap: wrap;
 }
