@@ -6,6 +6,7 @@ import FilterBox from "components/filterBox/FilterBox";
 import ProductCard from "components/productCard/ProductCard";
 import Footer from "components/footer/Footer";
 import Breadcrumb from "subComponents/breadcrumb/Breadcrumb";
+import TextButton from "subComponents/textButton/TextButton";
 
 // IMPORT OTHERS HERE //
 import "./ProductListPage.scss";
@@ -49,10 +50,28 @@ const ProductListPage = (props) => {
         </div>
         <div className="product-list__content--right">
           <div className="product-list__content__header">
-            <div className="product-list__content__breadcrumb">
-              <Breadcrumb BreadcrumbData={BreadcrumbData} />
+            <Breadcrumb BreadcrumbData={BreadcrumbData} />
+            <div className="product-list__content__productTitle">
+              Men&#39;s Tshirts
             </div>
-            <div className="product-list__content__sortby">Sort By</div>
+            <div className="product-list__content__sortby">
+              <div className="product-list__content__sortby-item">Sort By</div>
+              <TextButton
+                btnText="Discount"
+                btnCallback={() => {}}
+                customBtnClass="product-list__content__sortby-item activeClass"
+              />
+              <TextButton
+                btnText="Low to High"
+                btnCallback={() => {}}
+                customBtnClass="product-list__content__sortby-item"
+              />
+              <TextButton
+                btnText="High to Low"
+                btnCallback={() => {}}
+                customBtnClass="product-list__content__sortby-item"
+              />
+            </div>
           </div>
           <div className="product-list__content__products">
             {returnVisitedCategoryItems().map((image) => {
