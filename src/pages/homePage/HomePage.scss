@@ -5,6 +5,14 @@
   font-family: Poppins-Regular;
 }
 
+.home__temp-msg {
+  @include flex-row-cen;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  padding: 5px 0;
+  background-color: #f1eef1;
+}
+
 .home__content {
   background-color: $grey;
   padding: 10px;

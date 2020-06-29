@@ -15,6 +15,7 @@ const HomePage = () => {
   return (
     <div className="home">
       <Header />
+      {/* <div className="home__temp-msg">This website is not completed yet</div> */}
       <div className="home__content">
         <div className="home__carousel">
           <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
