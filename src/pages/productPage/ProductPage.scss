@@ -30,6 +30,7 @@
   min-height: 62px;
   margin: 5px;
   border: 1px solid $lightGrey;
+  outline: none;
 }
 
 .product-page__content__small-image:first-child {
@@ -59,6 +60,10 @@
 
 .product-page__content--left-bottom {
   @include flex-row-sb;
+}
+
+.product-page__content--left-bottom-btn:active {
+  border: 1px solid $lightGrey;
 }
 
 .product-page__content--right {

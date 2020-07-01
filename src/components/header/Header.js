@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
-import Toast from "subComponents/toast/Toast";
+// import Toast from "subComponents/toast/Toast";
 import TextButton from "subComponents/textButton/TextButton";
 
 // IMPORT OTHERS HERE //
@@ -144,7 +144,7 @@ const Header = () => {
 
   return (
     <>
-      <Toast position="bottom-left" />
+      {/* <Toast position="bottom-left" /> */}
       <main className="header">
         <section className="header--left">
           <Link to="/" className="header__logo-wrapper">

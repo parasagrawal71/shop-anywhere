@@ -14,6 +14,8 @@ const Button = (props) => {
     btnHeight,
     customContainerClass,
     customBtnClass,
+    customContainerStyle,
+    customBtnStyle,
   } = props;
 
   const returnBtnClasses = () => {
@@ -26,13 +28,17 @@ const Button = (props) => {
   return (
     <div
       className={`button ${customContainerClass || ""}`}
-      style={{ width: btnWidth, height: btnHeight }}
+      style={{ width: btnWidth, height: btnHeight, ...customContainerStyle }}
     >
       <button
         type="button"
         onClick={btnCallback}
         className={`button__btn ${returnBtnClasses()} ${customBtnClass || ""}`}
-        style={{ background: btnColor, color: btnTextColor }}
+        style={{
+          background: btnColor,
+          color: btnTextColor,
+          ...customBtnStyle,
+        }}
       >
         {btnText}
       </button>
