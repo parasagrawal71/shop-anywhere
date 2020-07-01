@@ -7,6 +7,7 @@ import ProductCard from "components/productCard/ProductCard";
 import Footer from "components/footer/Footer";
 import Breadcrumb from "subComponents/breadcrumb/Breadcrumb";
 import TextButton from "subComponents/textButton/TextButton";
+import Pagination from "subComponents/pagination/Pagination";
 
 // IMPORT OTHERS HERE //
 import "./ProductListPage.scss";
@@ -87,6 +88,9 @@ const ProductListPage = (props) => {
                 />
               );
             })}
+          </div>
+          <div className="product-list__content__footer">
+            <Pagination data={returnVisitedCategoryItems()} perPage={20} />
           </div>
         </div>
       </div>

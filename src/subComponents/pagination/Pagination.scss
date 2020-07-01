@@ -1,0 +1,28 @@
+@import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
+
+.pagination-container {
+  list-style-type: none;
+  @include flex-row-cen;
+}
+
+.active-page {
+  border: 1px solid $lightGrey;
+  border-radius: 2px;
+}
+
+.any-page {
+  padding: 5px 10px;
+}
+
+.any-page a {
+  outline: none;
+}
+
+.previous-btn {
+  padding: 5px 10px;
+}
+
+.next-btn {
+  padding: 5px 10px;
+}
