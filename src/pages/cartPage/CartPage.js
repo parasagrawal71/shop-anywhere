@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
@@ -14,6 +14,26 @@ const CartPage = (props) => {
   const { myCart, saveLater } = props;
 
   const [showCartItems, setShowCartItems] = useState(true);
+  const [productTotal, setProductTotal] = useState(0);
+  const [deliveryTotal, setDeliveryTotal] = useState(0);
+
+  useEffect(() => {
+    let productSum = 0;
+    let deliverySum = 0;
+    if (myCart.length > 1) {
+      productSum = myCart.reduce(
+        (sum, curr) => sum.offerPrice + curr.offerPrice
+      );
+      deliverySum = myCart.reduce(
+        (sum, curr) => sum.deliveryFee + curr.deliveryFee
+      );
+    } else if (myCart.length === 1) {
+      productSum = myCart[0].offerPrice;
+      deliverySum = myCart[0].deliveryFee;
+    }
+    setProductTotal(productSum);
+    setDeliveryTotal(deliverySum);
+  }, [myCart]);
 
   return (
     <div className="cart">
@@ -68,15 +88,15 @@ const CartPage = (props) => {
           <div className="cart__content__aside__header">Price Details</div>
           <div className="cart__content__aside__price">
             <div>Price</div>
-            <div>1299</div>
+            <div>{productTotal}</div>
           </div>
           <div className="cart__content__aside__price">
             <div>Delivery Fee</div>
-            <div>50</div>
+            <div>{deliveryTotal}</div>
           </div>
           <div className="cart__content__aside__price">
             <div>Total</div>
-            <div>1349</div>
+            <div>{productTotal + deliveryTotal}</div>
           </div>
           <Button
             btnText="Place Order"
