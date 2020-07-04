@@ -7,6 +7,7 @@ import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
 // import TextInput from "subComponents/textInput/TextInput";
+import history from "routes/history";
 import {
   updateToastState as updateToastStateAction,
   addToCart as addToCartAction,
@@ -59,21 +60,25 @@ const ProductPage = (props) => {
   };
 
   const handleAddToCart = () => {
-    updateToastState({ position: "bottom-center" });
     if (productSize && productColor) {
+      updateToastState({ position: "bottom-right", autoCloseTime: 1500 });
       addToCart(product);
       toast.info("Added to cart");
+      history.push("/cart");
       return;
     }
+    updateToastState({ position: "bottom-right" });
     toast.info("Select size and color to proceed");
+    toast.clearWaitingQueue();
   };
 
   const handleBuyNow = () => {
-    updateToastState({ position: "bottom-center" });
+    updateToastState({ position: "bottom-right" });
     if (productSize && productColor) {
       return;
     }
     toast.info("Select size and color to proceed");
+    toast.clearWaitingQueue();
   };
 
   return (

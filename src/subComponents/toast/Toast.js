@@ -4,13 +4,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Toast = (props) => {
   const { toastState } = props;
-  const { position } = toastState;
+  const { position, autoCloseTime } = toastState;
 
   return (
     <div>
       <ToastContainer
         position={position}
-        autoClose={2500}
+        autoClose={autoCloseTime}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -18,6 +18,7 @@ const Toast = (props) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover={false}
+        limit={1}
       />
     </div>
   );

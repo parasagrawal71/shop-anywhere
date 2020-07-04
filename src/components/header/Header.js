@@ -57,6 +57,7 @@ const Header = (props) => {
     } else {
       updateToastState({ position: "bottom-left" });
       toast.error(response);
+      toast.clearWaitingQueue();
     }
   };
 

@@ -2,6 +2,7 @@ import { TOAST_NEW_STATE } from "../actions/types";
 
 const INITIAL_STATE = {
   position: "bottom-left",
+  autoCloseTime: 2000,
 };
 
 export default (state = INITIAL_STATE, action) => {
