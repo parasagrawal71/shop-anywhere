@@ -5,6 +5,7 @@ import {
   SAVE_FOR_LATER,
   MOVE_TO_CART,
   REMOVE_SAVE_FOR_LATER,
+  UPDATE_PRODUCT_COUNT,
 } from "./types";
 
 export const updateToastState = (state) => {
@@ -46,5 +47,12 @@ export const removeSaveForLater = (item) => {
   return {
     type: REMOVE_SAVE_FOR_LATER,
     payload: item,
+  };
+};
+
+export const updateProductCount = (updatedItem) => {
+  return {
+    type: UPDATE_PRODUCT_COUNT,
+    payload: updatedItem,
   };
 };

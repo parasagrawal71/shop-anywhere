@@ -4,6 +4,7 @@ import {
   SAVE_FOR_LATER,
   MOVE_TO_CART,
   REMOVE_SAVE_FOR_LATER,
+  UPDATE_PRODUCT_COUNT,
 } from "../actions/types";
 
 const INITIAL_STATE = {
@@ -15,6 +16,7 @@ const INITIAL_STATE = {
       actualPrice: 1574,
       offerPrice: 1374,
       category: "accessories-backpacks",
+      itemCount: 1,
     },
     {
       link: "https://m.media-amazon.com/images/I/61+MlcjLruL._AC_UL320_.jpg",
@@ -23,6 +25,7 @@ const INITIAL_STATE = {
       actualPrice: 2170,
       offerPrice: 1452,
       category: "accessories-backpacks",
+      itemCount: 1,
     },
   ],
   saveLater: [],
@@ -64,6 +67,19 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         saveLater: [
           ...state.saveLater.filter((ele) => ele.link !== action.payload.link),
+        ],
+      };
+
+    case UPDATE_PRODUCT_COUNT:
+      return {
+        ...state,
+        myCart: [
+          ...state.myCart.map((ele) => {
+            if (ele.link === action.payload.link) {
+              return action.payload;
+            }
+            return ele;
+          }),
         ],
       };
 

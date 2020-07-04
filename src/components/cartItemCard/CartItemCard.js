@@ -8,6 +8,7 @@ import {
   saveForLater as saveForLaterAction,
   moveToCart as moveToCartAction,
   removeSaveForLater as removeSaveForLaterAction,
+  updateProductCount as updateProductCountAction,
 } from "redux/actions";
 
 // IMPORT OTHERS HERE //
@@ -21,6 +22,7 @@ const CartItemCard = (props) => {
     saveForLater,
     moveToCart,
     removeSaveForLater,
+    updateProductCount,
   } = props;
   const { link, brand, title, actualPrice, offerPrice } = cartItem;
 
@@ -44,19 +46,37 @@ const CartItemCard = (props) => {
           </div>
         </div>
         <div className="cart-item__quantity">
-          <Button
-            btnText="-"
-            btnColor="white"
-            customContainerClass="cart-item__quantity-btnWrapper"
-            customBtnClass="cart-item__quantity-btn"
-          />
-          <div className="cart-item__quantity">3</div>
-          <Button
-            btnText="+"
-            btnColor="white"
-            customContainerClass="cart-item__quantity-btnWrapper"
-            customBtnClass="cart-item__quantity-btn"
-          />
+          {isMyCart ? (
+            <>
+              <Button
+                btnText="-"
+                btnCallback={() => {
+                  if (cartItem.itemCount > 0) {
+                    updateProductCount({
+                      ...cartItem,
+                      itemCount: cartItem.itemCount - 1,
+                    });
+                  }
+                }}
+                btnColor="white"
+                customContainerClass="cart-item__quantity-btnWrapper"
+                customBtnClass="cart-item__quantity-btn"
+              />
+              <div className="cart-item__quantity">{cartItem.itemCount}</div>
+              <Button
+                btnText="+"
+                btnCallback={() => {
+                  updateProductCount({
+                    ...cartItem,
+                    itemCount: cartItem.itemCount + 1,
+                  });
+                }}
+                btnColor="white"
+                customContainerClass="cart-item__quantity-btnWrapper"
+                customBtnClass="cart-item__quantity-btn"
+              />
+            </>
+          ) : null}
         </div>
         <Button
           btnText={isMyCart ? "Save for Later" : "Move to Cart"}
@@ -95,4 +115,5 @@ export default connect(null, {
   saveForLater: saveForLaterAction,
   moveToCart: moveToCartAction,
   removeSaveForLater: removeSaveForLaterAction,
+  updateProductCount: updateProductCountAction,
 })(CartItemCard);
