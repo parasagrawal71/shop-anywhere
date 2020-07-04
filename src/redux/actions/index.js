@@ -1,4 +1,9 @@
-import { TOAST_NEW_STATE, ADD_TO_CART, REMOVE_FROM_CART } from "./types";
+import {
+  TOAST_NEW_STATE,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  SAVE_FOR_LATER,
+} from "./types";
 
 export const updateToastState = (state) => {
   return {
@@ -18,5 +23,12 @@ export const removeFromCart = (item) => {
   return {
     type: REMOVE_FROM_CART,
     payload: item,
+  };
+};
+
+export const saveForLater = (newItem) => {
+  return {
+    type: SAVE_FOR_LATER,
+    payload: newItem,
   };
 };

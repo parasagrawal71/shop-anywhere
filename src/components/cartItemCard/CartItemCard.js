@@ -3,13 +3,16 @@ import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Button from "subComponents/button/Button";
-import { removeFromCart as removeFromCartAction } from "redux/actions";
+import {
+  removeFromCart as removeFromCartAction,
+  saveForLater as saveForLaterAction,
+} from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./CartItemCard.scss";
 
 const CartItemCard = (props) => {
-  const { cartItem, removeFromCart } = props;
+  const { cartItem, removeFromCart, saveForLater } = props;
   const { link, brand, title, actualPrice, offerPrice } = cartItem;
 
   return (
@@ -48,6 +51,9 @@ const CartItemCard = (props) => {
         </div>
         <Button
           btnText="Save for Later"
+          btnCallback={() => {
+            saveForLater(cartItem);
+          }}
           btnColor="white"
           btnWidth="100px"
           btnHeight="30px"
@@ -67,6 +73,7 @@ const CartItemCard = (props) => {
   );
 };
 
-export default connect(null, { removeFromCart: removeFromCartAction })(
-  CartItemCard
-);
+export default connect(null, {
+  removeFromCart: removeFromCartAction,
+  saveForLater: saveForLaterAction,
+})(CartItemCard);

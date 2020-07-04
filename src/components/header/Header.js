@@ -33,7 +33,7 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge);
 
 const Header = (props) => {
-  const { updateToastState, cart } = props;
+  const { updateToastState, myCart } = props;
 
   // STATE VARIABLES
   const [suggestionsData, setSuggestionsData] = useState([]);
@@ -197,7 +197,7 @@ const Header = (props) => {
           </Link>
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={cart.length} color="secondary">
+              <StyledBadge badgeContent={myCart.length} color="secondary">
                 <img
                   className="header__cart-img"
                   src={cartIcon24px}
@@ -214,7 +214,7 @@ const Header = (props) => {
 };
 
 const mapStateToProps = (store) => {
-  return { cart: store.cart };
+  return { myCart: store.cart.myCart };
 };
 
 export default connect(mapStateToProps, {

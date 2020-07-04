@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
 import CartItemCard from "components/cartItemCard/CartItemCard";
 import Button from "subComponents/button/Button";
+import TextButton from "subComponents/textButton/TextButton";
 
 // IMPORT OTHERS HERE //
 import "./CartPage.scss";
 
 const CartPage = (props) => {
-  const { cart } = props;
+  const { myCart, saveLater } = props;
+
+  const [showCartItems, setShowCartItems] = useState(true);
 
   return (
     <div className="cart">
@@ -18,18 +21,30 @@ const CartPage = (props) => {
       <section className="cart__content">
         <section className="cart__content--left">
           <div className="cart__content--left-header">
-            <div className="cart__content--left-header-cart">
-              {`My Cart (${cart.length})`}
-            </div>
-            <div className="cart__content--left-header-later">
-              Save for Later (0)
-            </div>
+            <TextButton
+              btnText={`My Cart (${myCart.length})`}
+              btnCallback={() => setShowCartItems(true)}
+              customBtnClass="cart__content--left-header-cart"
+            />
+            <TextButton
+              btnText={`Save for Later (${saveLater.length})`}
+              btnCallback={() => setShowCartItems(false)}
+              customBtnClass="cart__content--left-header-later"
+            />
           </div>
-          <div className="cart__content--left-items">
-            {cart.map((cartItem) => {
-              return <CartItemCard cartItem={cartItem} />;
-            })}
-          </div>
+          {showCartItems ? (
+            <div className="cart__content--left-items">
+              {myCart.map((cartItem) => {
+                return <CartItemCard cartItem={cartItem} key={cartItem.link} />;
+              })}
+            </div>
+          ) : (
+            <div className="cart__content--left-items">
+              {saveLater.map((cartItem) => {
+                return <CartItemCard cartItem={cartItem} key={cartItem.link} />;
+              })}
+            </div>
+          )}
         </section>
         <aside className="cart__content__aside">
           <div className="cart__content__aside__header">Price Details</div>
@@ -60,7 +75,7 @@ const CartPage = (props) => {
 };
 
 const mapStateToProps = (store) => {
-  return { cart: store.cart };
+  return { myCart: store.cart.myCart, saveLater: store.cart.saveLater };
 };
 
 export default connect(mapStateToProps)(CartPage);
