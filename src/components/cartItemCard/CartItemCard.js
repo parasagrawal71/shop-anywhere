@@ -24,7 +24,7 @@ const CartItemCard = (props) => {
     removeSaveForLater,
     updateProductCount,
   } = props;
-  const { link, brand, title, actualPrice, offerPrice } = cartItem;
+  const { link, brand, title, actualPrice, offerPrice, deliveryFee } = cartItem;
 
   return (
     <main className="cart-item">
@@ -45,6 +45,8 @@ const CartItemCard = (props) => {
             )} % Off)`}
           </div>
         </div>
+
+        <div className="cart-item__deliveryFee">{`Delivery: ${deliveryFee}`}</div>
         <div className="cart-item__quantity">
           {isMyCart ? (
             <>

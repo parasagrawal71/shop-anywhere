@@ -26,7 +26,7 @@
 }
 .cart-item__prices {
   @include flex-row-v-cen;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
 }
 .cart-item__prices-offerPrice {
   font-weight: bold;
@@ -39,9 +39,13 @@
 .cart-item__prices-discount {
 }
 
+.cart-item__deliveryFee {
+  padding-bottom: 20px;
+}
+
 .cart-item__quantity {
   @include flex-row;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .cart-item__quantity-btnWrapper {
