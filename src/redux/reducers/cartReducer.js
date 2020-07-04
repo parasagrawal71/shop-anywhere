@@ -2,6 +2,8 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   SAVE_FOR_LATER,
+  MOVE_TO_CART,
+  REMOVE_SAVE_FOR_LATER,
 } from "../actions/types";
 
 const INITIAL_STATE = {
@@ -30,6 +32,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       return { ...state, myCart: [...state.myCart, action.payload] };
+
     case REMOVE_FROM_CART:
       return {
         ...state,
@@ -37,6 +40,7 @@ export default (state = INITIAL_STATE, action) => {
           ...state.myCart.filter((ele) => ele.link !== action.payload.link),
         ],
       };
+
     case SAVE_FOR_LATER:
       return {
         ...state,
@@ -45,6 +49,24 @@ export default (state = INITIAL_STATE, action) => {
           ...state.myCart.filter((ele) => ele.link !== action.payload.link),
         ],
       };
+
+    case MOVE_TO_CART:
+      return {
+        ...state,
+        saveLater: [
+          ...state.saveLater.filter((ele) => ele.link !== action.payload.link),
+        ],
+        myCart: [...state.myCart, action.payload],
+      };
+
+    case REMOVE_SAVE_FOR_LATER:
+      return {
+        ...state,
+        saveLater: [
+          ...state.saveLater.filter((ele) => ele.link !== action.payload.link),
+        ],
+      };
+
     default:
       return state;
   }

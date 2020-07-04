@@ -11,6 +11,7 @@ const TextButton = (props) => {
     iconOnRight,
     customBtnClass,
     customDropdownClass,
+    customBtnStyle,
     children,
   } = props;
 
@@ -19,6 +20,7 @@ const TextButton = (props) => {
       role="button"
       onClick={btnCallback}
       className={`text-button ${customBtnClass || ""}`}
+      style={customBtnStyle}
       onKeyDown={() => {}}
       tabIndex="0"
     >

@@ -19,7 +19,7 @@
 }
 
 .cart__content--left-header {
-  padding: 12px 10px;
+  // padding: 12px 10px;
   margin-bottom: 10px;
   font-size: 18px;
   background-color: $white;
@@ -28,8 +28,11 @@
 }
 
 .cart__content--left-header-cart {
-  margin-right: 10px;
-  border: 1px solid red;
+  padding: 12px 10px;
+}
+
+.cart__content--left-header-later {
+  padding: 12px 10px;
 }
 
 .cart__content--left-items {

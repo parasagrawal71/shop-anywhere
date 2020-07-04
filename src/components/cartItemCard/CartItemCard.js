@@ -6,13 +6,22 @@ import Button from "subComponents/button/Button";
 import {
   removeFromCart as removeFromCartAction,
   saveForLater as saveForLaterAction,
+  moveToCart as moveToCartAction,
+  removeSaveForLater as removeSaveForLaterAction,
 } from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./CartItemCard.scss";
 
 const CartItemCard = (props) => {
-  const { cartItem, removeFromCart, saveForLater } = props;
+  const {
+    cartItem,
+    isMyCart,
+    removeFromCart,
+    saveForLater,
+    moveToCart,
+    removeSaveForLater,
+  } = props;
   const { link, brand, title, actualPrice, offerPrice } = cartItem;
 
   return (
@@ -50,9 +59,13 @@ const CartItemCard = (props) => {
           />
         </div>
         <Button
-          btnText="Save for Later"
+          btnText={isMyCart ? "Save for Later" : "Move to Cart"}
           btnCallback={() => {
-            saveForLater(cartItem);
+            if (isMyCart) {
+              saveForLater(cartItem);
+              return;
+            }
+            moveToCart(cartItem);
           }}
           btnColor="white"
           btnWidth="100px"
@@ -63,7 +76,11 @@ const CartItemCard = (props) => {
       <Button
         btnText="X"
         btnCallback={() => {
-          removeFromCart(cartItem);
+          if (isMyCart) {
+            removeFromCart(cartItem);
+            return;
+          }
+          removeSaveForLater(cartItem);
         }}
         btnColor="white"
         customContainerClass="cart-item__crossWrapper"
@@ -76,4 +93,6 @@ const CartItemCard = (props) => {
 export default connect(null, {
   removeFromCart: removeFromCartAction,
   saveForLater: saveForLaterAction,
+  moveToCart: moveToCartAction,
+  removeSaveForLater: removeSaveForLaterAction,
 })(CartItemCard);

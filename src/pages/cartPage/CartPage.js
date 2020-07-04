@@ -25,23 +25,41 @@ const CartPage = (props) => {
               btnText={`My Cart (${myCart.length})`}
               btnCallback={() => setShowCartItems(true)}
               customBtnClass="cart__content--left-header-cart"
+              customBtnStyle={
+                showCartItems ? { backgroundColor: "lightgrey" } : {}
+              }
             />
             <TextButton
               btnText={`Save for Later (${saveLater.length})`}
               btnCallback={() => setShowCartItems(false)}
               customBtnClass="cart__content--left-header-later"
+              customBtnStyle={
+                showCartItems ? {} : { backgroundColor: "lightgrey" }
+              }
             />
           </div>
           {showCartItems ? (
             <div className="cart__content--left-items">
               {myCart.map((cartItem) => {
-                return <CartItemCard cartItem={cartItem} key={cartItem.link} />;
+                return (
+                  <CartItemCard
+                    cartItem={cartItem}
+                    key={cartItem.link}
+                    isMyCart
+                  />
+                );
               })}
             </div>
           ) : (
             <div className="cart__content--left-items">
               {saveLater.map((cartItem) => {
-                return <CartItemCard cartItem={cartItem} key={cartItem.link} />;
+                return (
+                  <CartItemCard
+                    cartItem={cartItem}
+                    key={cartItem.link}
+                    isMyCart={false}
+                  />
+                );
               })}
             </div>
           )}

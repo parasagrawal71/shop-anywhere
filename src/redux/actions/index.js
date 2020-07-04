@@ -3,6 +3,8 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   SAVE_FOR_LATER,
+  MOVE_TO_CART,
+  REMOVE_SAVE_FOR_LATER,
 } from "./types";
 
 export const updateToastState = (state) => {
@@ -30,5 +32,19 @@ export const saveForLater = (newItem) => {
   return {
     type: SAVE_FOR_LATER,
     payload: newItem,
+  };
+};
+
+export const moveToCart = (item) => {
+  return {
+    type: MOVE_TO_CART,
+    payload: item,
+  };
+};
+
+export const removeSaveForLater = (item) => {
+  return {
+    type: REMOVE_SAVE_FOR_LATER,
+    payload: item,
   };
 };
