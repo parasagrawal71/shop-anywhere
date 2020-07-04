@@ -18,8 +18,11 @@ const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
 
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-    .isRequired,
+  component: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.func,
+    PropTypes.elementType,
+  ]).isRequired,
 };
 
 RouteWrapper.defaultProps = {
