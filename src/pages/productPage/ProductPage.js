@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
 // import TextInput from "subComponents/textInput/TextInput";
-import Toast from "subComponents/toast/Toast";
+import { updateToastState as updateToastStateAction } from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./ProductPage.scss";
@@ -24,7 +25,8 @@ const smallImages = [
   { link: "https://m.media-amazon.com/images/I/71p2DUxefbL._AC_UL320_.jpg" },
 ];
 
-const ProductPage = () => {
+const ProductPage = (props) => {
+  const { updateToastState } = props;
   const [smallImageIndex, setSmallImageIndex] = useState(0);
   const [productSize, setProductSize] = useState("");
   const [productColor, setProductColor] = useState("");
@@ -45,6 +47,7 @@ const ProductPage = () => {
   };
 
   const handleAddToCart = () => {
+    updateToastState({ position: "bottom-center" });
     if (productSize && productColor) {
       toast.info("Added to cart");
       return;
@@ -53,6 +56,7 @@ const ProductPage = () => {
   };
 
   const handleBuyNow = () => {
+    updateToastState({ position: "bottom-center" });
     if (productSize && productColor) {
       return;
     }
@@ -61,7 +65,6 @@ const ProductPage = () => {
 
   return (
     <main className="product-page">
-      <Toast position="bottom-center" />
       <Header />
       <section className="product-page__content">
         <section className="product-page__content--left">
@@ -190,4 +193,6 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default connect(null, { updateToastState: updateToastStateAction })(
+  ProductPage
+);

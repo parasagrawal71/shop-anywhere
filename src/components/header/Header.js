@@ -4,11 +4,12 @@ import Badge from "@material-ui/core/Badge";
 import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import { toast } from "react-toastify";
+import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
-// import Toast from "subComponents/toast/Toast";
 import TextButton from "subComponents/textButton/TextButton";
+import { updateToastState as updateToastStateAction } from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./Header.scss";
@@ -33,7 +34,9 @@ const StyledBadge = withStyles((theme) => ({
 
 const cartCount = 2; // TODO: REMOVE THIS LATER
 
-const Header = () => {
+const Header = (props) => {
+  const { updateToastState } = props;
+
   // STATE VARIABLES
   const [suggestionsData, setSuggestionsData] = useState([]);
 
@@ -54,6 +57,7 @@ const Header = () => {
     if (Array.isArray(response)) {
       setSuggestionsData(response);
     } else {
+      updateToastState({ position: "bottom-left" });
       toast.error(response);
     }
   };
@@ -144,7 +148,6 @@ const Header = () => {
 
   return (
     <>
-      {/* <Toast position="bottom-left" /> */}
       <main className="header">
         <section className="header--left">
           <Link to="/" className="header__logo-wrapper">
@@ -212,4 +215,6 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default connect(null, { updateToastState: updateToastStateAction })(
+  Header
+);
