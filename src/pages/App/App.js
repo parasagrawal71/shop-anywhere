@@ -15,7 +15,7 @@ const App = (props) => {
 
   return (
     <>
-      <Toast position={toastState.position} />
+      <Toast toastState={toastState} />
       <Router history={history}>
         <Routes />
       </Router>

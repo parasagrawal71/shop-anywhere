@@ -3,7 +3,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Toast = (props) => {
-  const { position } = props;
+  const { toastState } = props;
+  const { position } = toastState;
+
   return (
     <div>
       <ToastContainer
