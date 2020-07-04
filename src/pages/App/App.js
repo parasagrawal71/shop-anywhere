@@ -23,8 +23,8 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return { toastState: state.toastState };
+const mapStateToProps = (store) => {
+  return { toastState: store.toastState };
 };
 
 export default connect(mapStateToProps)(App);

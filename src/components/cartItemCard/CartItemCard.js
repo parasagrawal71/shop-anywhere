@@ -1,35 +1,34 @@
 import React from "react";
+import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Button from "subComponents/button/Button";
+import { removeFromCart as removeFromCartAction } from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./CartItemCard.scss";
 
-const brandName = "Peter England";
-const productTitle = "Men's Solid Slim fit T-Shirt";
-const actualPrice = 999;
-const offerPrice = 499;
+const CartItemCard = (props) => {
+  const { cartItem, removeFromCart } = props;
+  const { link, brand, title, actualPrice, offerPrice } = cartItem;
 
-const CartItemCard = () => {
   return (
     <main className="cart-item">
-      <div>
-        <img
-          src="https://rukminim1.flixcart.com/flap/150/150/image/b616a7aa607d3be0.jpg?q=70"
-          alt="cart-item"
-        />
+      <div className="cart-item__img">
+        <img src={link} alt="cart-item" />
       </div>
       <section className="cart-item__details">
-        <div className="cart-item__brandName">{brandName}</div>
-        <div className="cart-item__productTitle">{productTitle}</div>
+        <div className="cart-item__brandName">{brand}</div>
+        <div className="cart-item__productTitle">{title}</div>
         <div className="cart-item__prices">
           <div className="cart-item__prices-offerPrice">
             {`Rs ${offerPrice}`}
           </div>
           <div className="cart-item__prices-actualPrice">{actualPrice}</div>
           <div className="cart-item__prices-discount">
-            {`(${((offerPrice / actualPrice) * 100).toFixed(0)} % Off)`}
+            {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(
+              0
+            )} % Off)`}
           </div>
         </div>
         <div className="cart-item__quantity">
@@ -57,6 +56,9 @@ const CartItemCard = () => {
       </section>
       <Button
         btnText="X"
+        btnCallback={() => {
+          removeFromCart(cartItem);
+        }}
         btnColor="white"
         customContainerClass="cart-item__crossWrapper"
         customBtnClass="cart-item__cross"
@@ -65,4 +67,6 @@ const CartItemCard = () => {
   );
 };
 
-export default CartItemCard;
+export default connect(null, { removeFromCart: removeFromCartAction })(
+  CartItemCard
+);

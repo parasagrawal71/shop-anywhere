@@ -10,6 +10,13 @@
   position: relative;
 }
 
+.cart-item__img img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
 .cart-item__details {
   padding-left: 20px;
 }

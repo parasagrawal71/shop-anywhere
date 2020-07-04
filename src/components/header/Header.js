@@ -32,10 +32,8 @@ const StyledBadge = withStyles((theme) => ({
   },
 }))(Badge);
 
-const cartCount = 2; // TODO: REMOVE THIS LATER
-
 const Header = (props) => {
-  const { updateToastState } = props;
+  const { updateToastState, cart } = props;
 
   // STATE VARIABLES
   const [suggestionsData, setSuggestionsData] = useState([]);
@@ -199,7 +197,7 @@ const Header = (props) => {
           </Link>
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={cartCount} color="secondary">
+              <StyledBadge badgeContent={cart.length} color="secondary">
                 <img
                   className="header__cart-img"
                   src={cartIcon24px}
@@ -215,6 +213,10 @@ const Header = (props) => {
   );
 };
 
-export default connect(null, { updateToastState: updateToastStateAction })(
-  Header
-);
+const mapStateToProps = (store) => {
+  return { cart: store.cart };
+};
+
+export default connect(mapStateToProps, {
+  updateToastState: updateToastStateAction,
+})(Header);

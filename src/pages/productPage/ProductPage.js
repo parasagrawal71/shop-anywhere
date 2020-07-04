@@ -7,15 +7,22 @@ import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
 // import TextInput from "subComponents/textInput/TextInput";
-import { updateToastState as updateToastStateAction } from "redux/actions";
+import {
+  updateToastState as updateToastStateAction,
+  addToCart as addToCartAction,
+} from "redux/actions";
 
 // IMPORT OTHERS HERE //
 import "./ProductPage.scss";
 
-const brandName = "Peter England";
-const productTitle = "Men's Solid Slim fit T-Shirt";
-const actualPrice = 999;
-const offerPrice = 499;
+const product = {
+  link: "https://m.media-amazon.com/images/I/81m+IKu7TUL._AC_UL320_.jpg",
+  brand: "Elements by Peter England",
+  title: "Men's T-Shirt",
+  actualPrice: 2013,
+  offerPrice: 545,
+  category: "accessories-backpacks",
+};
 const sizes = ["XS", "S", "M", "L", "XL"];
 const colors = ["red", "blue", "grey"];
 const smallImages = [
@@ -26,7 +33,10 @@ const smallImages = [
 ];
 
 const ProductPage = (props) => {
-  const { updateToastState } = props;
+  const { updateToastState, addToCart } = props;
+  const { brand, title, actualPrice, offerPrice } = product;
+
+  // STATE VARIABLES
   const [smallImageIndex, setSmallImageIndex] = useState(0);
   const [productSize, setProductSize] = useState("");
   const [productColor, setProductColor] = useState("");
@@ -49,6 +59,7 @@ const ProductPage = (props) => {
   const handleAddToCart = () => {
     updateToastState({ position: "bottom-center" });
     if (productSize && productColor) {
+      addToCart(product);
       toast.info("Added to cart");
       return;
     }
@@ -117,10 +128,8 @@ const ProductPage = (props) => {
           </div>
         </section>
         <section className="product-page__content--right">
-          <div className="product-page__content__brandName">{brandName}</div>
-          <div className="product-page__content__productTitle">
-            {productTitle}
-          </div>
+          <div className="product-page__content__brandName">{brand}</div>
+          <div className="product-page__content__productTitle">{title}</div>
           <div className="product-page__content__prices">
             <div className="product-page__content__prices-offerPrice">
               {`Rs ${offerPrice}`}
@@ -129,7 +138,9 @@ const ProductPage = (props) => {
               {actualPrice}
             </div>
             <div className="product-page__content__prices-discount">
-              {`(${((offerPrice / actualPrice) * 100).toFixed(0)} % Off)`}
+              {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(
+                0
+              )} % Off)`}
             </div>
           </div>
           <div className="product-page__content__size">
@@ -193,6 +204,7 @@ const ProductPage = (props) => {
   );
 };
 
-export default connect(null, { updateToastState: updateToastStateAction })(
-  ProductPage
-);
+export default connect(null, {
+  updateToastState: updateToastStateAction,
+  addToCart: addToCartAction,
+})(ProductPage);

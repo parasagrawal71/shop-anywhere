@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
@@ -8,22 +9,26 @@ import Button from "subComponents/button/Button";
 // IMPORT OTHERS HERE //
 import "./CartPage.scss";
 
-const CartPage = () => {
+const CartPage = (props) => {
+  const { cart } = props;
+
   return (
     <div className="cart">
       <Header />
       <section className="cart__content">
         <section className="cart__content--left">
           <div className="cart__content--left-header">
-            <div className="cart__content--left-header-cart">My Cart (2)</div>
+            <div className="cart__content--left-header-cart">
+              {`My Cart (${cart.length})`}
+            </div>
             <div className="cart__content--left-header-later">
-              Save for Later (3)
+              Save for Later (0)
             </div>
           </div>
           <div className="cart__content--left-items">
-            <CartItemCard />
-            <CartItemCard />
-            <CartItemCard />
+            {cart.map((cartItem) => {
+              return <CartItemCard cartItem={cartItem} />;
+            })}
           </div>
         </section>
         <aside className="cart__content__aside">
@@ -54,4 +59,8 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+const mapStateToProps = (store) => {
+  return { cart: store.cart };
+};
+
+export default connect(mapStateToProps)(CartPage);

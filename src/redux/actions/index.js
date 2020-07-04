@@ -1,4 +1,4 @@
-import { TOAST_NEW_STATE } from "./types";
+import { TOAST_NEW_STATE, ADD_TO_CART, REMOVE_FROM_CART } from "./types";
 
 export const updateToastState = (state) => {
   return {
@@ -7,4 +7,16 @@ export const updateToastState = (state) => {
   };
 };
 
-export const dummy = "eslint";
+export const addToCart = (newItem) => {
+  return {
+    type: ADD_TO_CART,
+    payload: newItem,
+  };
+};
+
+export const removeFromCart = (item) => {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: item,
+  };
+};
