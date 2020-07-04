@@ -8,6 +8,7 @@ const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
 
   if (isPrivate && !signed) {
     toast.error("Login to open cart");
+    toast.clearWaitingQueue();
     return <Redirect to="/" />;
   }
 

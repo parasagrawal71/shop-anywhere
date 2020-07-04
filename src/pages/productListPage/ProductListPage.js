@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
@@ -32,10 +32,6 @@ const BreadcrumbData = [
 ];
 
 const ProductListPage = (props) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const returnVisitedCategoryItems = () => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
     const categoryItems = require(`assets/jsons/categories/${props.match.params.category}.json`);

@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import history from "routes/history";
 import Routes from "routes/Routes";
 import Toast from "subComponents/toast/Toast";
+import ScrollToTop from "routes/ScrollToTop";
 
 // IMPORT OTHERS HERE //
 import "./App.css";
@@ -17,6 +18,7 @@ const App = (props) => {
     <>
       <Toast toastState={toastState} />
       <Router history={history}>
+        <ScrollToTop />
         <Routes />
       </Router>
     </>
