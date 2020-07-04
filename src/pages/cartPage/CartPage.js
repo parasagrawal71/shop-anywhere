@@ -21,12 +21,8 @@ const CartPage = (props) => {
     let productSum = 0;
     let deliverySum = 0;
     if (myCart.length > 1) {
-      productSum = myCart.reduce(
-        (sum, curr) => sum.offerPrice + curr.offerPrice
-      );
-      deliverySum = myCart.reduce(
-        (sum, curr) => sum.deliveryFee + curr.deliveryFee
-      );
+      productSum = myCart.reduce((sum, curr) => sum + curr.offerPrice, 0);
+      deliverySum = myCart.reduce((sum, curr) => sum + curr.deliveryFee, 0);
     } else if (myCart.length === 1) {
       productSum = myCart[0].offerPrice;
       deliverySum = myCart[0].deliveryFee;

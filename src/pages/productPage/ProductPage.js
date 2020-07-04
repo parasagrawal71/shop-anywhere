@@ -22,6 +22,8 @@ const product = {
   actualPrice: 2013,
   offerPrice: 545,
   category: "accessories-backpacks",
+  itemCount: 1,
+  deliveryFee: 50,
 };
 const sizes = ["XS", "S", "M", "L", "XL"];
 const colors = ["red", "blue", "grey"];
