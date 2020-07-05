@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 // IMPORT OTHERS HERE //
 import "./Pagination.scss";
 
-const Pagination = ({ data, perPage }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [pageCount, setPageCount] = useState(Math.ceil(data.length / perPage));
+const Pagination = ({ totalItems, perPage, setOffset }) => {
+  // STATE VARIABLES
+  const [numOfPages, setNumOfPages] = useState(null);
 
-  // const handlePageClick = (data) => {
-  //   let selected = data.selected;
-  //   let offset = Math.ceil(selected * perPage);
-  //   this.setState({ offset: offset }, () => {
-  //     this.loadCommentsFromServer();
-  //   });
-  // };
+  useEffect(() => {
+    setNumOfPages(Math.ceil(totalItems / perPage));
+  }, [totalItems, perPage]);
+
+  const handlePageClick = (event) => {
+    const offset = Math.ceil(event.selected * perPage);
+    setOffset(offset);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div>
@@ -23,10 +25,10 @@ const Pagination = ({ data, perPage }) => {
         nextLabel="Next"
         breakLabel="..."
         breakClassName="break-me"
-        pageCount={pageCount}
+        pageCount={numOfPages}
         marginPagesDisplayed={2}
         pageRangeDisplayed={5}
-        onPageChange={() => {}}
+        onPageChange={handlePageClick}
         containerClassName="pagination-container"
         activeClassName="active-page"
         pageClassName="any-page"

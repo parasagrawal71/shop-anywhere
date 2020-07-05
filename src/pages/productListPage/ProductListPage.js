@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import Header from "components/header/Header";
@@ -32,11 +32,29 @@ const BreadcrumbData = [
 ];
 
 const ProductListPage = (props) => {
+  const PER_PAGE = 20;
+  const [dataDetails, setDataDetails] = useState({});
+  const [currData, setCurrData] = useState([]);
+  const [offset, setOffset] = useState(0);
+
   const returnVisitedCategoryItems = () => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
     const categoryItems = require(`assets/jsons/categories/${props.match.params.category}.json`);
     return categoryItems;
   };
+
+  useEffect(() => {
+    const data = returnVisitedCategoryItems();
+    setDataDetails({ ...currData, totalCount: data.length, data });
+    setCurrData([...data.slice(0, 20)]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (dataDetails && dataDetails.data) {
+      setCurrData([...dataDetails.data.slice(0 + offset, PER_PAGE + offset)]);
+    }
+  }, [offset, dataDetails]);
 
   return (
     <div className="product-list">
@@ -71,7 +89,7 @@ const ProductListPage = (props) => {
             </div>
           </div>
           <div className="product-list__content__products">
-            {returnVisitedCategoryItems().map((image) => {
+            {currData.map((image) => {
               return (
                 <ProductCard
                   imgSrc={image.link}
@@ -86,7 +104,11 @@ const ProductListPage = (props) => {
             })}
           </div>
           <div className="product-list__content__footer">
-            <Pagination data={returnVisitedCategoryItems()} perPage={20} />
+            <Pagination
+              totalItems={dataDetails.totalCount}
+              perPage={PER_PAGE}
+              setOffset={setOffset}
+            />
           </div>
         </div>
       </div>
