@@ -6,23 +6,44 @@
   @include flex-row-cen;
 }
 
-.active-page {
-  border: 1px solid $lightGrey;
-  border-radius: 2px;
+.pagination-container a {
+  outline: none;
+  padding: 5px 10px;
 }
 
-.any-page {
-  padding: 5px 10px;
+.any-page:not(:last-child) {
+  margin-right: 5px;
 }
 
 .any-page a {
-  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-.previous-btn {
-  padding: 5px 10px;
+.any-page a:hover {
+  border: 1px solid $lightGrey;
+  border-radius: 3px;
 }
 
-.next-btn {
-  padding: 5px 10px;
+.active-page a {
+  border: 1px solid $darkGrey !important;
+  border-radius: 3px;
+}
+
+.previous-btn a {
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.next-btn a {
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.previous-btn a:hover,
+.next-btn a:hover {
+  border: 1px solid $lightGrey;
+  border-radius: 3px;
 }
