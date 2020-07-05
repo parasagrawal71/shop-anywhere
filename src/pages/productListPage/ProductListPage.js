@@ -36,6 +36,24 @@ const ProductListPage = (props) => {
   const [dataDetails, setDataDetails] = useState({});
   const [currData, setCurrData] = useState([]);
   const [offset, setOffset] = useState(0);
+  const [sortOrder, setSortOrder] = useState("discount");
+
+  useEffect(() => {
+    const data = returnVisitedCategoryItems();
+    setDataDetails({ ...currData, totalCount: data.length, data });
+    setCurrData([...data.slice(0, 20)].sort(sortByDiscount()));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (dataDetails && dataDetails.data) {
+      setCurrData(
+        [...dataDetails.data.slice(0 + offset, PER_PAGE + offset)].sort(
+          sortByDiscount()
+        )
+      );
+    }
+  }, [offset, dataDetails]);
 
   const returnVisitedCategoryItems = () => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
@@ -43,18 +61,21 @@ const ProductListPage = (props) => {
     return categoryItems;
   };
 
-  useEffect(() => {
-    const data = returnVisitedCategoryItems();
-    setDataDetails({ ...currData, totalCount: data.length, data });
-    setCurrData([...data.slice(0, 20)]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (dataDetails && dataDetails.data) {
-      setCurrData([...dataDetails.data.slice(0 + offset, PER_PAGE + offset)]);
+  const sortItems = (order) => {
+    if (order === "lth") {
+      setCurrData([...currData.sort((a, b) => a.offerPrice - b.offerPrice)]);
+    } else if (order === "htl") {
+      setCurrData([...currData.sort((a, b) => b.offerPrice - a.offerPrice)]);
+    } else {
+      setCurrData([...currData.sort(sortByDiscount())]);
     }
-  }, [offset, dataDetails]);
+  };
+
+  const sortByDiscount = () => {
+    return (a, b) => {
+      return b.actualPrice - b.offerPrice - (a.actualPrice - a.offerPrice);
+    };
+  };
 
   return (
     <div className="product-list">
@@ -70,21 +91,36 @@ const ProductListPage = (props) => {
               Men&#39;s Tshirts
             </div>
             <div className="product-list__content__sortby">
-              <div className="product-list__content__sortby-item">Sort By</div>
+              <div className="product-list__content__sortby-item">Sort By:</div>
               <TextButton
                 btnText="Discount"
-                btnCallback={() => {}}
-                customBtnClass="product-list__content__sortby-item activeClass"
+                btnCallback={() => {
+                  setSortOrder("discount");
+                  sortItems("discount");
+                }}
+                customBtnClass={`product-list__content__sortby-item ${
+                  sortOrder === "discount" ? "activeClass" : ""
+                }`}
               />
               <TextButton
                 btnText="Low to High"
-                btnCallback={() => {}}
-                customBtnClass="product-list__content__sortby-item"
+                btnCallback={() => {
+                  setSortOrder("lth");
+                  sortItems("lth");
+                }}
+                customBtnClass={`product-list__content__sortby-item ${
+                  sortOrder === "lth" ? "activeClass" : ""
+                }`}
               />
               <TextButton
                 btnText="High to Low"
-                btnCallback={() => {}}
-                customBtnClass="product-list__content__sortby-item"
+                btnCallback={() => {
+                  setSortOrder("htl");
+                  sortItems("htl");
+                }}
+                customBtnClass={`product-list__content__sortby-item ${
+                  sortOrder === "htl" ? "activeClass" : ""
+                }`}
               />
             </div>
           </div>
