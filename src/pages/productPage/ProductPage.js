@@ -8,10 +8,8 @@ import Footer from "components/footer/Footer";
 import Button from "subComponents/button/Button";
 // import TextInput from "subComponents/textInput/TextInput";
 import history from "routes/history";
-import {
-  updateToastState as updateToastStateAction,
-  addToCart as addToCartAction,
-} from "redux/actions";
+import { updateToastState as updateToastStateAction } from "redux/actions/toastActions";
+import { addToCart as addToCartAction } from "redux/actions/cartActions";
 
 // IMPORT OTHERS HERE //
 import "./ProductPage.scss";

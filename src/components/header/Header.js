@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 // IMPORT USER-DEFINED COMPONENTS HERE //
 import SearchBox from "subComponents/searchBox/SearchBox";
 import TextButton from "subComponents/textButton/TextButton";
-import { updateToastState as updateToastStateAction } from "redux/actions";
+import { updateToastState as updateToastStateAction } from "redux/actions/toastActions";
 
 // IMPORT OTHERS HERE //
 import "./Header.scss";

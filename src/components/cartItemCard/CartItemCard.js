@@ -9,7 +9,7 @@ import {
   moveToCart as moveToCartAction,
   removeSaveForLater as removeSaveForLaterAction,
   updateProductCount as updateProductCountAction,
-} from "redux/actions";
+} from "redux/actions/cartActions";
 
 // IMPORT OTHERS HERE //
 import "./CartItemCard.scss";

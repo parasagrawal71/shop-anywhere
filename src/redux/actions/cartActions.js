@@ -1,5 +1,4 @@
 import {
-  TOAST_NEW_STATE,
   ADD_TO_CART,
   REMOVE_FROM_CART,
   SAVE_FOR_LATER,
@@ -7,13 +6,6 @@ import {
   REMOVE_SAVE_FOR_LATER,
   UPDATE_PRODUCT_COUNT,
 } from "./types";
-
-export const updateToastState = (state) => {
-  return {
-    type: TOAST_NEW_STATE,
-    payload: state,
-  };
-};
 
 export const addToCart = (newItem) => {
   return {
