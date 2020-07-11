@@ -41,35 +41,27 @@ export default (state = INITIAL_STATE, action) => {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        myCart: [
-          ...state.myCart.filter((ele) => ele.link !== action.payload.link),
-        ],
+        myCart: [...state.myCart.filter((ele) => ele.link !== action.payload.link)],
       };
 
     case SAVE_FOR_LATER:
       return {
         ...state,
         saveLater: [...state.saveLater, action.payload],
-        myCart: [
-          ...state.myCart.filter((ele) => ele.link !== action.payload.link),
-        ],
+        myCart: [...state.myCart.filter((ele) => ele.link !== action.payload.link)],
       };
 
     case MOVE_TO_CART:
       return {
         ...state,
-        saveLater: [
-          ...state.saveLater.filter((ele) => ele.link !== action.payload.link),
-        ],
+        saveLater: [...state.saveLater.filter((ele) => ele.link !== action.payload.link)],
         myCart: [...state.myCart, action.payload],
       };
 
     case REMOVE_SAVE_FOR_LATER:
       return {
         ...state,
-        saveLater: [
-          ...state.saveLater.filter((ele) => ele.link !== action.payload.link),
-        ],
+        saveLater: [...state.saveLater.filter((ele) => ele.link !== action.payload.link)],
       };
 
     case UPDATE_PRODUCT_COUNT:

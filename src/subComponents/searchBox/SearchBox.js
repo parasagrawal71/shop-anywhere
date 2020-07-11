@@ -10,13 +10,7 @@ let debouncedFunc;
 
 const SearchBox = (props) => {
   // PROPS
-  const {
-    placeholder,
-    suggestionsCallback,
-    suggestions,
-    searchCallback,
-    keyNames,
-  } = props;
+  const { placeholder, suggestionsCallback, suggestions, searchCallback, keyNames } = props;
 
   // STATE VARIABLES
   const [query, setQuery] = useState("");

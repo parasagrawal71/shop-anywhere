@@ -13,12 +13,7 @@ import { updateToastState as updateToastStateAction } from "redux/actions/toastA
 
 // IMPORT OTHERS HERE //
 import "./Header.scss";
-import {
-  cartIcon24px,
-  appLogo32px,
-  rightSolidIcon16px,
-  downThinIcon16px,
-} from "assets/Images";
+import { cartIcon24px, appLogo32px, rightSolidIcon16px, downThinIcon16px } from "assets/Images";
 import { APP_NAME } from "utils/constants";
 import jsonServer from "apis/jsonServer";
 import headerCategories from "assets/jsons/headerCategories.json"; // TODO: REMOVE THIS LATER
@@ -47,8 +42,7 @@ const Header = (props) => {
       {
         params: { query },
         transformResponse: [
-          (data) =>
-            JSON.parse(data).filter((value) => value.name.startsWith(query)),
+          (data) => JSON.parse(data).filter((value) => value.name.startsWith(query)),
         ],
       }
     );
@@ -69,8 +63,7 @@ const Header = (props) => {
       {
         params: { query },
         transformResponse: [
-          (data) =>
-            JSON.parse(data).filter((value) => value.name.startsWith(query)),
+          (data) => JSON.parse(data).filter((value) => value.name.startsWith(query)),
         ],
       }
     );
@@ -89,20 +82,14 @@ const Header = (props) => {
           <section className="header__categories__dropdown-content">
             {Object.values(headerCategories[majorCat]).map((col, j) => {
               return (
-                <section
-                  className="header__categories__dropdown-column"
-                  key={col + String(j)}
-                >
+                <section className="header__categories__dropdown-column" key={col + String(j)}>
                   {Object.keys(col).map((subCol, k) => {
                     return (
                       <div
                         className="header__categories__dropdown-sub-column"
                         key={subCol + String(k)}
                       >
-                        <Link
-                          to="/"
-                          className="header__categories__dropdown-sub-column-header"
-                        >
+                        <Link to="/" className="header__categories__dropdown-sub-column-header">
                           {subCol.replace("-", " ")}
                           <img
                             src={rightSolidIcon16px}
@@ -137,11 +124,7 @@ const Header = (props) => {
 
   const returnProfileIcon = () => {
     return (
-      <img
-        src={downThinIcon16px}
-        alt="down-arrow-thin"
-        className="header__profile-down-icon"
-      />
+      <img src={downThinIcon16px} alt="down-arrow-thin" className="header__profile-down-icon" />
     );
   };
 
@@ -153,9 +136,7 @@ const Header = (props) => {
             <img src={appLogo32px} alt="app-logo" className="header__logo" />
             <div className="header__app-title">{APP_NAME}</div>
           </Link>
-          <section className="header__categories">
-            {returnCategoriesAndContent()}
-          </section>
+          <section className="header__categories">{returnCategoriesAndContent()}</section>
         </section>
 
         <section className="header--right">
@@ -176,16 +157,10 @@ const Header = (props) => {
             iconOnRight={returnProfileIcon()}
           >
             <div className="header__profile-dropdown-content">
-              <Link
-                to="/profile"
-                className="header__profile-dropdown-content-item"
-              >
+              <Link to="/profile" className="header__profile-dropdown-content-item">
                 My Profile
               </Link>
-              <Link
-                to="/wishlist"
-                className="header__profile-dropdown-content-item"
-              >
+              <Link to="/wishlist" className="header__profile-dropdown-content-item">
                 Wishlist
               </Link>
               <Link to="/" className="header__profile-dropdown-content-item">
@@ -199,11 +174,7 @@ const Header = (props) => {
           <Link to="/cart" className="header__cart">
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={myCart.length} color="secondary">
-                <img
-                  className="header__cart-img"
-                  src={cartIcon24px}
-                  alt="cart"
-                />
+                <img className="header__cart-img" src={cartIcon24px} alt="cart" />
               </StyledBadge>
             </IconButton>
             <div className="header__cart-text">Cart</div>

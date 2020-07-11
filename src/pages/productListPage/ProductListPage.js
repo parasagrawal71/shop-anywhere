@@ -47,11 +47,7 @@ const ProductListPage = (props) => {
 
   useEffect(() => {
     if (dataDetails && dataDetails.data) {
-      setCurrData(
-        [...dataDetails.data.slice(0 + offset, PER_PAGE + offset)].sort(
-          sortByDiscount()
-        )
-      );
+      setCurrData([...dataDetails.data.slice(0 + offset, PER_PAGE + offset)].sort(sortOrder));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset, dataDetails]);
@@ -88,9 +84,7 @@ const ProductListPage = (props) => {
         <div className="product-list__content--right">
           <div className="product-list__content__header">
             <Breadcrumb BreadcrumbData={BreadcrumbData} />
-            <div className="product-list__content__productTitle">
-              Men&#39;s Tshirts
-            </div>
+            <div className="product-list__content__productTitle">Men&#39;s Tshirts</div>
             <div className="product-list__content__sortby">
               <div className="product-list__content__sortby-item">Sort By:</div>
               <TextButton

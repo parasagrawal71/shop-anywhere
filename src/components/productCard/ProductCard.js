@@ -5,14 +5,7 @@ import "./ProductCard.scss";
 import { CLIENT_URL } from "utils/constants";
 
 const ProductCard = (props) => {
-  const {
-    imgSrc,
-    imageTitle,
-    actualPrice,
-    offerPrice,
-    brandName,
-    numOfItemsInALine,
-  } = props;
+  const { imgSrc, imageTitle, actualPrice, offerPrice, brandName, numOfItemsInALine } = props;
 
   // CONSTANTS
 

@@ -56,11 +56,7 @@ const Dropdown = (props) => {
           })}
           <div className="dropdown__showMoreLessBtn">
             <Button
-              btnText={
-                numOfItemsVisible === MAX_ITEMS_VISIBLE
-                  ? "Show More"
-                  : "Show Less"
-              }
+              btnText={numOfItemsVisible === MAX_ITEMS_VISIBLE ? "Show More" : "Show Less"}
               btnCallback={handleMoreLessItems}
               btnColor="white"
               btnTextColor="blue"

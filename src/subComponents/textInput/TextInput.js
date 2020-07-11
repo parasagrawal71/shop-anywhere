@@ -16,11 +16,7 @@ const TextFieldComponent = (props) => {
   const classes = useStyles();
 
   return (
-    <form
-      className={(classes.root, customContainerClass)}
-      noValidate
-      autoComplete="off"
-    >
+    <form className={(classes.root, customContainerClass)} noValidate autoComplete="off">
       <TextField
         id="outlined-basic"
         label={label}

@@ -35,14 +35,10 @@ const CartItemCard = (props) => {
         <div className="cart-item__brandName">{brand}</div>
         <div className="cart-item__productTitle">{title}</div>
         <div className="cart-item__prices">
-          <div className="cart-item__prices-offerPrice">
-            {`Rs ${offerPrice}`}
-          </div>
+          <div className="cart-item__prices-offerPrice">{`Rs ${offerPrice}`}</div>
           <div className="cart-item__prices-actualPrice">{actualPrice}</div>
           <div className="cart-item__prices-discount">
-            {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(
-              0
-            )} % Off)`}
+            {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(0)} % Off)`}
           </div>
         </div>
 

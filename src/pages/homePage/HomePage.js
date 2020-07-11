@@ -42,11 +42,7 @@ const HomePage = () => {
           />
         </div>
         <div className="home__images-queue">
-          <ImagesQueue
-            headerText="Recently Viewed"
-            headerSubText=""
-            imagesData={offersImages}
-          />
+          <ImagesQueue headerText="Recently Viewed" headerSubText="" imagesData={offersImages} />
         </div>
       </div>
       <Footer />

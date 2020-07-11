@@ -27,9 +27,7 @@ const TextButton = (props) => {
       {btnText}
       {iconOnRight}
       {onHoverRequired && (
-        <div className={`dropdown-content ${customDropdownClass || ""}`}>
-          {children}
-        </div>
+        <div className={`dropdown-content ${customDropdownClass || ""}`}>{children}</div>
       )}
     </div>
   );

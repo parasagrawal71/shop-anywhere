@@ -91,11 +91,7 @@ const ProductPage = (props) => {
                   <div
                     role="button"
                     className="product-page__content__small-image"
-                    style={
-                      smallImageIndex === index
-                        ? conditionalStyles.activeSmallImage
-                        : {}
-                    }
+                    style={smallImageIndex === index ? conditionalStyles.activeSmallImage : {}}
                     onClick={() => setSmallImageIndex(index)}
                     onKeyDown={() => {}}
                     tabIndex="0"
@@ -136,22 +132,14 @@ const ProductPage = (props) => {
           <div className="product-page__content__brandName">{brand}</div>
           <div className="product-page__content__productTitle">{title}</div>
           <div className="product-page__content__prices">
-            <div className="product-page__content__prices-offerPrice">
-              {`Rs ${offerPrice}`}
-            </div>
-            <div className="product-page__content__prices-actualPrice">
-              {actualPrice}
-            </div>
+            <div className="product-page__content__prices-offerPrice">{`Rs ${offerPrice}`}</div>
+            <div className="product-page__content__prices-actualPrice">{actualPrice}</div>
             <div className="product-page__content__prices-discount">
-              {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(
-                0
-              )} % Off)`}
+              {`(${(((actualPrice - offerPrice) / actualPrice) * 100).toFixed(0)} % Off)`}
             </div>
           </div>
           <div className="product-page__content__size">
-            <div className="product-page__content__size-header">
-              Select Size
-            </div>
+            <div className="product-page__content__size-header">Select Size</div>
             <div className="product-page__content__size-values">
               {sizes.map((size) => {
                 return (
@@ -161,18 +149,14 @@ const ProductPage = (props) => {
                     btnColor="white"
                     customBtnClass="product-page__content__size-value"
                     customContainerClass="product-page__content__size-value-btnWrapper"
-                    customBtnStyle={
-                      productSize === size ? conditionalStyles.activeSize : {}
-                    }
+                    customBtnStyle={productSize === size ? conditionalStyles.activeSize : {}}
                   />
                 );
               })}
             </div>
           </div>
           <div className="product-page__content__color">
-            <div className="product-page__content__color-header">
-              Select Color
-            </div>
+            <div className="product-page__content__color-header">Select Color</div>
             <div className="product-page__content__color-values">
               {colors.map((color) => {
                 return (
@@ -182,11 +166,7 @@ const ProductPage = (props) => {
                     btnColor={color}
                     customBtnClass="product-page__content__color-value"
                     customContainerClass="product-page__content__color-value-btnWrapper"
-                    customBtnStyle={
-                      productColor === color
-                        ? conditionalStyles.activeColor
-                        : {}
-                    }
+                    customBtnStyle={productColor === color ? conditionalStyles.activeColor : {}}
                   />
                 );
               })}
