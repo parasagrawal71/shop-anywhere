@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./Carousel.scss";
 
 const responsive = {
@@ -43,14 +43,7 @@ const CarouselComponent = (props) => {
       itemClass="carousel-item-padding-40-px"
     >
       {slidesImages.map((item) => {
-        return (
-          <img
-            src={item.link}
-            alt={item.link}
-            key={item.link}
-            className="carousel__image"
-          />
-        );
+        return <img src={item.link} alt={item.link} key={item.link} className="carousel__image" />;
       })}
     </Carousel>
   );

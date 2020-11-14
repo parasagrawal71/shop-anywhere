@@ -1,6 +1,6 @@
 import React from "react";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./Button.scss";
 
 const Button = (props) => {
@@ -14,6 +14,8 @@ const Button = (props) => {
     btnHeight,
     customContainerClass,
     customBtnClass,
+    customContainerStyle,
+    customBtnStyle,
   } = props;
 
   const returnBtnClasses = () => {
@@ -25,14 +27,18 @@ const Button = (props) => {
 
   return (
     <div
-      className={`button ${customContainerClass}`}
-      style={{ width: btnWidth, height: btnHeight }}
+      className={`button ${customContainerClass || ""}`}
+      style={{ width: btnWidth, height: btnHeight, ...customContainerStyle }}
     >
       <button
         type="button"
         onClick={btnCallback}
-        className={`button__btn ${returnBtnClasses()} ${customBtnClass}`}
-        style={{ background: btnColor, color: btnTextColor }}
+        className={`button__btn ${returnBtnClasses()} ${customBtnClass || ""}`}
+        style={{
+          background: btnColor,
+          color: btnTextColor,
+          ...customBtnStyle,
+        }}
       >
         {btnText}
       </button>

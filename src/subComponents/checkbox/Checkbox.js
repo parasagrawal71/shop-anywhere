@@ -13,12 +13,7 @@ const CheckboxComponent = (props) => {
   const classes = useStyles();
 
   return (
-    <Checkbox
-      checked={checked}
-      onChange={handleChange}
-      className={classes.root}
-      color={color}
-    />
+    <Checkbox checked={checked} onChange={handleChange} className={classes.root} color={color} />
   );
 };
 

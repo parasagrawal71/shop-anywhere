@@ -30,6 +30,7 @@
   min-height: 62px;
   margin: 5px;
   border: 1px solid $lightGrey;
+  outline: none;
 }
 
 .product-page__content__small-image:first-child {
@@ -59,6 +60,10 @@
 
 .product-page__content--left-bottom {
   @include flex-row-sb;
+}
+
+.product-page__content--left-bottom-btn:active {
+  border: 1px solid $lightGrey;
 }
 
 .product-page__content--right {
@@ -138,6 +143,7 @@
 
 .product-page__content__color-values {
   @include flex-row;
+  padding-bottom: 15px;
 }
 
 .product-page__content__color-value-btnWrapper {
@@ -152,6 +158,19 @@
 
 .product-page__content__color-value:last-child {
   margin-right: 0;
+}
+
+.product-page__content__delivery {
+}
+
+.product-page__content__delivery-header {
+}
+
+.product-page__content__delivery-input-wrapper {
+  margin-top: 10px;
+}
+
+.product-page__content__delivery-input {
 }
 
 // Custom Scroll bar

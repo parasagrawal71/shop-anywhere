@@ -1,0 +1,77 @@
+@import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
+
+.cart-item {
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  background-color: $white;
+  box-shadow: 2px 2px 10px $lightGrey;
+  @include flex-row;
+  position: relative;
+}
+
+.cart-item__img img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.cart-item__details {
+  padding-left: 20px;
+}
+.cart-item__brandName {
+}
+.cart-item__productTitle {
+}
+.cart-item__prices {
+  @include flex-row-v-cen;
+  padding-bottom: 5px;
+}
+.cart-item__prices-offerPrice {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.cart-item__prices-actualPrice {
+  text-decoration: line-through;
+  padding-right: 10px;
+}
+.cart-item__prices-discount {
+}
+
+.cart-item__deliveryFee {
+  padding-bottom: 20px;
+}
+
+.cart-item__quantity {
+  @include flex-row;
+  padding-bottom: 12px;
+}
+
+.cart-item__quantity-btnWrapper {
+  margin-right: 5px;
+}
+
+.cart-item__quantity-btn {
+  border: 1px solid $lightGrey;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.cart-item__quantity {
+  margin-right: 5px;
+}
+
+.cart-item__crossWrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.cart-item__cross {
+  border: 1px solid $lightGrey;
+  border-radius: 50%;
+  padding: 5px 10px;
+}

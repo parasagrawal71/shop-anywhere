@@ -5,7 +5,7 @@ import Slider from "subComponents/slider/Slider";
 import Button from "subComponents/button/Button";
 import Dropdown from "./components/dropDown/DropDown";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./FilterBox.scss";
 
 const brandList = [
@@ -38,18 +38,17 @@ const FilterBox = () => {
     <div className="filterbox">
       <div className="filterbox__header">
         <div className="filterbox__header--left">Filters</div>
-        <div className="filterbox__header--right">
-          <Button btnText="Clear All" btnColor="white" btnTextColor="blue" />
-        </div>
+        <Button
+          btnText="Clear All"
+          btnColor="white"
+          btnTextColor="blue"
+          customContainerClass="filterbox__header--right"
+        />
       </div>
       <div className="filterbox__price">
         <div className="filterbox__price-header">Price</div>
         <div className="filterbox__price-slider">
-          <Slider
-            rangeValue={rangeValue}
-            handleRangeValue={handleRangeValue}
-            sliderWidth="100%"
-          />
+          <Slider rangeValue={rangeValue} handleRangeValue={handleRangeValue} sliderWidth="100%" />
         </div>
         <div className="filterbox__price-inputbox">
           <div className="filterbox__price-inputbox-min">{rangeValue[0]}</div>
@@ -57,12 +56,7 @@ const FilterBox = () => {
         </div>
       </div>
       <div className="filterbox__brand">
-        <Dropdown
-          headerText="Brand"
-          itemList={brandList}
-          maxItemsVisible={4}
-          itemKey="brand"
-        />
+        <Dropdown headerText="Brand" itemList={brandList} maxItemsVisible={4} itemKey="brand" />
       </div>
       <div className="filterbox__discount">
         <Dropdown

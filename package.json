@@ -14,9 +14,13 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-multi-carousel": "^2.5.5",
+    "react-paginate": "^6.3.2",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-toastify": "^6.0.5"
+    "react-toastify": "^6.0.5",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

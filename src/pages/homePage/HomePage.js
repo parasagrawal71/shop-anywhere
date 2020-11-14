@@ -6,10 +6,8 @@ import ImagesQueue from "components/imagesQueue/ImagesQueue";
 import Footer from "components/footer/Footer";
 import Carousel from "subComponents/carousel/Carousel";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./HomePage.scss";
-
-// IMPORT ASSETS HERE //
 import offersImages from "assets/jsons/offersImages.json"; // TODO: REMOVE THIS LATER
 import slidesImages from "assets/jsons/slidesImages.json"; // TODO: REMOVE THIS LATER
 
@@ -17,25 +15,14 @@ const HomePage = () => {
   return (
     <div className="home">
       <Header />
+      {/* <div className="home__temp-msg">This website is not completed yet</div> */}
       <div className="home__content">
         <div className="home__carousel">
-          <div className="home__carousel-left">
-            <Carousel slidesImages={slidesImages.items1} autoPlaySpeed={2000} />
-          </div>
-          <div className="home__carousel-right">
-            <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
-          </div>
+          <Carousel slidesImages={slidesImages.items2} autoPlaySpeed={2500} />
         </div>
         <div className="home__images-queue">
           <ImagesQueue
             headerText="offers"
-            headerSubText="suggested for you"
-            imagesData={offersImages}
-          />
-        </div>
-        <div className="home__images-queue">
-          <ImagesQueue
-            headerText="Categories"
             headerSubText="suggested for you"
             imagesData={offersImages}
           />
@@ -49,10 +36,13 @@ const HomePage = () => {
         </div>
         <div className="home__images-queue">
           <ImagesQueue
-            headerText="Recently Viewed"
+            headerText="You may like"
             headerSubText="suggested for you"
             imagesData={offersImages}
           />
+        </div>
+        <div className="home__images-queue">
+          <ImagesQueue headerText="Recently Viewed" headerSubText="" imagesData={offersImages} />
         </div>
       </div>
       <Footer />

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-// IMPORT ASSETS HERE //
-import downIcon from "assets/png/down-16px.png";
+// IMPORT USER-DEFINED COMPONENTS HERE //
 import Button from "subComponents/button/Button";
 import Checkbox from "subComponents/checkbox/Checkbox";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./DropDown.scss";
+import { downIcon16px } from "assets/Images";
 
 const Dropdown = (props) => {
   const { headerText, itemList, maxItemsVisible, itemKey } = props;
@@ -37,7 +37,7 @@ const Dropdown = (props) => {
           className="dropdown__header-icon"
           onClick={() => setShowItems(!showItems)}
         >
-          <img src={downIcon} alt="dropdown" />
+          <img src={downIcon16px} alt="dropdown" />
         </button>
       </div>
       {showItems && (
@@ -56,11 +56,7 @@ const Dropdown = (props) => {
           })}
           <div className="dropdown__showMoreLessBtn">
             <Button
-              btnText={
-                numOfItemsVisible === MAX_ITEMS_VISIBLE
-                  ? "Show More"
-                  : "Show Less"
-              }
+              btnText={numOfItemsVisible === MAX_ITEMS_VISIBLE ? "Show More" : "Show Less"}
               btnCallback={handleMoreLessItems}
               btnColor="white"
               btnTextColor="blue"

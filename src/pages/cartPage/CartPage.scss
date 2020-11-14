@@ -3,12 +3,12 @@
 
 .cart {
   background-color: $grey;
+  min-height: 100vh;
   font-family: Poppins-Regular;
 }
 
 .cart__content {
   @include flex-row;
-  height: 100vh;
   padding-top: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -19,21 +19,44 @@
 }
 
 .cart__content--left-header {
-  padding: 15px 10px;
-  margin-bottom: 5px;
+  // padding: 12px 10px;
+  margin-bottom: 10px;
   font-size: 18px;
   background-color: $white;
   box-shadow: 2px 2px 10px $lightGrey;
+  @include flex-row;
 }
 
-.cart__content--left-item {
-  padding: 20px 10px;
-  font-size: 18px;
-  background-color: $white;
-  box-shadow: 2px 2px 10px $lightGrey;
+.cart__content--left-header-cart {
+  padding: 12px 10px;
 }
 
-.cart__content--right {
-  padding: 10px;
+.cart__content--left-header-later {
+  padding: 12px 10px;
+}
+
+.cart__content--left-items {
+}
+
+.cart__content__aside {
+  margin-left: 20px;
+  padding: 20px 20px;
   width: 30%;
+  background-color: $white;
+  box-shadow: 2px 2px 10px $lightGrey;
+  @include flex-col;
+  height: 200px;
+}
+
+.cart__content__aside__header {
+  padding-bottom: 10px;
+}
+
+.cart__content__aside__price {
+  @include flex-row-sb;
+  padding-bottom: 20px;
+}
+
+.cart__content__aside__placeOrder {
+  align-self: center;
 }

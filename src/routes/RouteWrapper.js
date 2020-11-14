@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
-
-// IMPORT USER-DEFINED COMPONENTS HERE //
 import { toast } from "react-toastify";
 
 const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
@@ -10,6 +8,7 @@ const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
 
   if (isPrivate && !signed) {
     toast.error("Login to open cart");
+    toast.clearWaitingQueue();
     return <Redirect to="/" />;
   }
 
@@ -19,7 +18,7 @@ const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
 
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.elementType])
     .isRequired,
 };
 

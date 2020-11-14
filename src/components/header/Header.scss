@@ -2,61 +2,208 @@
 @import "utils/commonStyles/flex.scss";
 
 .header {
-  @include flex-row-sb;
+  @include flex-row-b-sb-cen;
   font-family: Poppins-Regular;
   background-color: $white;
   color: $black;
-  padding: 20px 10px;
+  padding: 5px 10px;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 2px 2px 10px $lightGrey;
+  box-shadow: 2px 2px 7px $lightGrey;
 }
 
-/* header-left */
+/* ---------------------------------------header-left--------------------------------------- */
 .header--left {
-  @include flex-row-v-cen;
-  width: 60%;
-  height: 35px;
-}
-.header__logo {
-  text-decoration: none;
-  color: $black;
-  font-size: 20px;
-  padding: 0 10px;
+  @include flex-row;
+  width: 50%;
 }
 
-.header__searchbox {
-  padding: 0 10px;
-  flex: 1;
+.header__logo-wrapper {
+  @include flex-row-v-cen;
+  text-decoration: none;
   min-width: 200px;
+}
+
+.header__logo {
+}
+
+.header__app-title {
+  padding-left: 10px;
+  font-family: "IndieFlower-Regular";
+  font-size: 22px;
+  color: $black;
+  margin-top: 8px;
+}
+
+.header__categories {
+  @include flex-row;
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+.header__categories__item {
+  font-family: "Roboto-Medium";
+  font-size: 15px;
+  padding: 20px 20px;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+}
+
+.header__categories__item:hover {
+  border-bottom: 3px solid $orange;
+}
+
+.header__categories__dropdown {
+  top: 100%;
+  left: 200px;
+  background-color: $white;
+  min-width: 700px;
+  min-height: 430px;
+  height: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.header__categories__dropdown-content {
+  @include flex-row;
+  width: 100%;
   height: 100%;
 }
 
-/* header-right */
+.header__categories__dropdown-column {
+  width: calc(100% / 3);
+  padding: 25px 30px;
+}
+
+.header__categories__dropdown-column:nth-child(2n) {
+  background-color: $c-gray-99;
+}
+
+.header__categories__dropdown-sub-column {
+  @include flex-col-h-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightGrey;
+}
+
+.header__categories__dropdown-sub-column:first-child {
+  padding-top: 0;
+}
+
+.header__categories__dropdown-sub-column:last-child {
+  border-bottom: 0;
+}
+
+.header__categories__dropdown-sub-column-header {
+  text-decoration: none;
+  color: $black;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.header__categories__dropdown-sub-column-icon {
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  opacity: 0.7;
+}
+
+.header__categories__dropdown-sub-column-items {
+  @include flex-col-h-start;
+}
+
+.header__categories__dropdown-sub-column-item {
+  text-decoration: none;
+  color: $black;
+  font-family: "Roboto-Regular";
+  padding-bottom: 7px;
+}
+
+.header__categories__dropdown-sub-column-item:last-child {
+  padding-bottom: 0;
+}
+
+/* ---------------------------------------header-right--------------------------------------- */
 .header--right {
+  font-family: "Roboto-Medium";
   @include flex-row-v-cen;
-  padding: 0 10px;
+}
+
+.header__searchbox {
+  flex: 1;
+  width: 300px;
+  transition: width ease-in-out 0.25s;
+  height: 100%;
+  padding-right: 30px;
+}
+
+.header__searchbox:focus-within {
+  width: 450px;
+  transition: width ease-in-out 0.35s;
 }
 
 .header__profile {
-  padding: 0 10px;
+  text-decoration: none;
+  color: $black;
+  font-family: "Roboto-Medium";
+  font-size: 15px;
+  padding: 25px 0;
+  padding-right: 30px;
+  position: relative;
+}
+
+.header__profile-down-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 7px;
+}
+
+.header__profile:hover .header__profile-down-icon {
+  transform: rotate(180deg);
+  transition: transform ease-in-out 0.2s;
+}
+
+.header__profile-dropdown {
+  top: 73px;
+  left: -35px;
+  background-color: $white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  padding: 15px 30px;
+}
+
+.header__profile-dropdown-content {
+  @include flex-col;
+}
+
+.header__profile-dropdown-content-item {
+  text-decoration: none;
+  color: $black;
+  padding-bottom: 15px;
+  text-align: start;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+}
+
+.header__profile-dropdown-content-item:last-child {
+  padding-bottom: 0;
 }
 
 .header__orders {
-  padding: 0 10px;
+  font-size: 15px;
+  padding-right: 18px;
 }
 
 .header__cart {
   @include flex-row-v-cen;
   text-decoration: none;
   color: $black;
-  padding: 0 10px;
 }
 
 .header__cart-img {
 }
 
 .header__cart-text {
-  padding-left: 5px;
+  font-size: 15px;
 }

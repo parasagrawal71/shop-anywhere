@@ -4,14 +4,11 @@ import React, { useState } from "react";
 import Button from "subComponents/button/Button";
 import ImageCard from "components/imageCard/ImageCard";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ImagesQueue.scss";
+import { nextIcon32px, prevIcon32px } from "assets/Images";
 
-// IMPORT ASSETS HERE //
-import nextIcon from "assets/png/next-32px.png";
-import prevIcon from "assets/png/prev-32px.png";
-
-// Variables
+// VARIABLES
 const MAX_IMAGES_IN_ROW = 7;
 
 const ImagesQueue = (props) => {
@@ -50,15 +47,14 @@ const ImagesQueue = (props) => {
           <div className="images-queue__header-text">{headerText}</div>
           <div className="images-queue__header-subtext">{headerSubText}</div>
         </div>
-        <div className="images-queue__header--right">
-          <Button
-            btnText="view all"
-            btnCallback={() => {}}
-            btnColor="#2874f0"
-            btnTextColor="white"
-            isShadow
-          />
-        </div>
+        <Button
+          btnText="view all"
+          btnCallback={() => {}}
+          btnColor="#2874f0"
+          btnTextColor="white"
+          isShadow
+          customContainerClass="images-queue__header--right"
+        />
       </div>
       <div className="images-queue__content">
         {start !== 0 ? (
@@ -69,7 +65,7 @@ const ImagesQueue = (props) => {
             onKeyDown={() => {}}
             tabIndex="0"
           >
-            <img src={prevIcon} alt="prev-large" />
+            <img src={prevIcon32px} alt="prev-large" />
           </div>
         ) : null}
         {imagesData.slice(start, end).map((image) => {
@@ -81,6 +77,7 @@ const ImagesQueue = (props) => {
               thirdTitle={image.subTitle}
               key={image.link}
               numOfItemsInALine={MAX_IMAGES_IN_ROW}
+              route={image.category}
             />
           );
         })}
@@ -92,7 +89,7 @@ const ImagesQueue = (props) => {
             onKeyDown={() => {}}
             tabIndex="0"
           >
-            <img src={nextIcon} alt="next-large" />
+            <img src={nextIcon32px} alt="next-large" />
           </div>
         ) : null}
       </div>

@@ -15,8 +15,37 @@
 }
 
 .product-list__content--right {
-  @include flex-row;
+  background-color: $white;
   margin-left: 1%;
   width: 79%;
+}
+
+.product-list__content__header {
+  padding: 10px 0 0 20px;
+  border-bottom: 1px solid $lightGrey;
+}
+
+.product-list__content__productTitle {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.product-list__content__sortby {
+  padding-top: 10px;
+  @include flex-row;
+}
+
+.activeClass {
+  color: $darkGrey;
+  border-bottom: 2px solid $darkGrey;
+}
+
+.product-list__content__sortby-item:not(:first-child) {
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+
+.product-list__content__products {
+  @include flex-row;
   flex-wrap: wrap;
 }

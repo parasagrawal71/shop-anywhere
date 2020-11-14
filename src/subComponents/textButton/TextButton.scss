@@ -1,0 +1,25 @@
+@import "utils/commonStyles/colors.scss";
+
+.text-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: $white;
+  padding: 0;
+}
+
+.dropdown-content {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.3s linear;
+  border-radius: 0 0 4px 4px;
+  text-transform: capitalize;
+}
+
+.text-button:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}

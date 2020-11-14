@@ -69,6 +69,13 @@
   align-items: center;
 }
 
+@mixin flex-row-b-sb-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 /* *********************************** FLEX COLUMN STLYES *********************************** */
 @mixin flex-col {
   display: flex;

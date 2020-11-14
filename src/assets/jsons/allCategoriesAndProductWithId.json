@@ -1,0 +1,126 @@
+{
+  "categories": {
+    "men": {
+      "_id": "mj-men",
+      "top-wear": {
+        "tshirts": { "route": "men-tshirts" },
+        "shirts": { "route": "men-shirts" },
+        "sleeveless": { "route": "men-sleeveless" }
+      },
+      "bottom-wear": {
+        "jeans": { "route": "men-jeans" },
+        "shorts": { "route": "men-shorts" },
+        "pants": { "route": "men-pants" },
+        "trousers": { "route": "men-trousers" }
+      },
+      "footwear": {
+        "slippers": { "route": "men-slippers" },
+        "shoes": { "route": "men-shoes" }
+      },
+      "casual-wear": {
+        "tshirts": { "route": "men-casual-tshirts" },
+        "shirts": { "route": "men-casual-shirts" },
+        "jeans": { "route": "men-casual-jeans" }
+      },
+      "formal-wear": {
+        "shirts": { "route": "men-formal-shirts" },
+        "pants": { "route": "men-formal-pants" },
+        "tie": { "route": "men-formal-tie" }
+      },
+      "sports-wear": {
+        "tshirts": { "route": "men-sports-tshirts" },
+        "shorts": { "route": "men-sports-shorts" }
+      },
+      "accessories": {
+        "tie": { "route": "men-tie" },
+        "belt": { "route": "men-belt" },
+        "caps": { "route": "men-caps" },
+        "socks": { "route": "men-socks" },
+        "watches": { "route": "men-watches" }
+      }
+    },
+    "women": {
+      "_id": "mj-women",
+      "top-wear": {
+        "tops": { "route": "women-tops" },
+        "shirts": { "route": "women-shirts" },
+        "kurtas": { "route": "women-kurtas" }
+      },
+      "bottom-wear": {
+        "jeans": { "route": "women-jeans" },
+        "skirts": { "route": "women-skirts" },
+        "pants": { "route": "women-pants" }
+      },
+      "footwear": {
+        "slippers": { "route": "women-slippers" },
+        "heels": { "route": "women-heels" },
+        "boots": { "route": "women-boots" }
+      },
+      "casual-wear": {
+        "tshirts": { "route": "women-casual-tshirts" },
+        "shirts": { "route": "women-casual-shirts" },
+        "jeans": { "route": "women-casual-jeans" }
+      },
+      "indian-wear": {
+        "sarees": { "route": "women-indian-sarees" },
+        "dresses": { "route": "women-indian-dresses" }
+      },
+      "sports-wear": {
+        "tshirts": { "route": "women-sports-tshirts" },
+        "shorts": { "route": "women-sports-shorts" }
+      },
+      "accessories": {
+        "belt": { "route": "women-belt" },
+        "socks": { "route": "women-socks" },
+        "watches": { "route": "women-watches" }
+      }
+    },
+    "kids": {
+      "_id": "mj-kids",
+      "top-wear": {
+        "tshirts": { "route": "kids-tshirts" },
+        "shirts": { "route": "kids-shirts" },
+        "sleeveless": { "route": "kids-sleeveless" }
+      },
+      "bottom-wear": {
+        "jeans": { "route": "kids-jeans" },
+        "shorts": { "route": "kids-shorts" },
+        "pants": { "route": "kids-pants" }
+      },
+      "footwear": {
+        "slippers": { "route": "kids-slippers" },
+        "shoes": { "route": "kids-shoes" }
+      },
+      "casual-wear": {
+        "tshirts": { "route": "kids-casual-tshirts" },
+        "shirts": { "route": "kids-casual-shirts" },
+        "jeans": { "route": "kids-casual-jeans" }
+      },
+      "sports-wear": {
+        "tshirts": { "route": "kids-sports-tshirts" },
+        "shorts": { "route": "kids-sports-shorts" }
+      },
+      "accessories": {
+        "belt": { "route": "kids-belt" },
+        "caps": { "route": "kids-caps" },
+        "socks": { "route": "kids-socks" }
+      }
+    },
+    "accessories": {
+      "_id": "mj-accessories",
+      "electronics": {
+        "mobile": { "route": "accessories-mobile" },
+        "tvs": { "route": "accessories-tvs" },
+        "headphones": { "route": "accessories-headphones" },
+        "trimmers": { "route": "accessories-trimmers" },
+        "laptops": { "route": "accessories-laptops" }
+      },
+      "others": {
+        "backpacks": { "route": "accessories-backpacks" },
+        "wallets": { "route": "accessories-wallets" },
+        "goggles": { "route": "accessories-goggles" },
+        "fitness-accessories": { "route": "accessories-fitness-accessories" }
+      }
+    }
+  }
+}

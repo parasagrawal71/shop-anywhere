@@ -1,0 +1,49 @@
+@import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
+
+.pagination-container {
+  list-style-type: none;
+  @include flex-row-cen;
+}
+
+.pagination-container a {
+  outline: none;
+  padding: 5px 10px;
+}
+
+.any-page:not(:last-child) {
+  margin-right: 5px;
+}
+
+.any-page a {
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.any-page a:hover {
+  border: 1px solid $lightGrey;
+  border-radius: 3px;
+}
+
+.active-page a {
+  border: 1px solid $darkGrey !important;
+  border-radius: 3px;
+}
+
+.previous-btn a {
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.next-btn a {
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.previous-btn a:hover,
+.next-btn a:hover {
+  border: 1px solid $lightGrey;
+  border-radius: 3px;
+}

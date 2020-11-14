@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-// IMPORTS //
-import { debounce } from "utils/functions";
-
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./SearchBox.scss";
-
-// IMPORT ASSETS HERE //
-import searchIcon from "assets/svg/search-icon.svg";
+import { searchIcon } from "assets/Images";
+import { debounce } from "utils/functions";
 
 // VARIABLES
 let debouncedFunc;
 
 const SearchBox = (props) => {
   // PROPS
-  const {
-    placeholder,
-    suggestionsCallback,
-    suggestions,
-    searchCallback,
-    keyNames,
-  } = props;
+  const { placeholder, suggestionsCallback, suggestions, searchCallback, keyNames } = props;
 
   // STATE VARIABLES
   const [query, setQuery] = useState("");
@@ -66,7 +56,7 @@ const SearchBox = (props) => {
   };
 
   return (
-    <div className="searchbox">
+    <main className="searchbox">
       <input
         type="search"
         placeholder={placeholder}
@@ -76,7 +66,6 @@ const SearchBox = (props) => {
         onChange={onInputChange}
         onKeyDown={onEnterKeyPress}
       />
-      <datalist id="suggestions">{renderSuggestions()}</datalist>
       <div
         role="button"
         className="searchbox__icon-wrapper"
@@ -86,7 +75,8 @@ const SearchBox = (props) => {
       >
         <img src={searchIcon} alt="Search" className="searchbox__icon" />
       </div>
-    </div>
+      <datalist id="suggestions">{renderSuggestions()}</datalist>
+    </main>
   );
 };
 

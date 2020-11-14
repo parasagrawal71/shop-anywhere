@@ -1,28 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// IMPORT STYLES HERE //
+// IMPORT OTHERS HERE //
 import "./ImageCard.scss";
 
 const ImageCard = (props) => {
-  const {
-    imageTitle,
-    secondTitle,
-    thirdTitle,
-    imgSrc,
-    numOfItemsInALine,
-  } = props;
+  const { imageTitle, secondTitle, thirdTitle, imgSrc, numOfItemsInALine, route } = props;
 
   const calculateWidth = () => {
     return `${100 / numOfItemsInALine}%`;
   };
 
   return (
-    <Link
-      to="/category"
-      className="imagecard"
-      style={{ width: calculateWidth() }}
-    >
+    <Link to={`/category/${route}`} className="imagecard" style={{ width: calculateWidth() }}>
       <div className="imagecard__img">
         <img src={imgSrc} alt={imageTitle} />
       </div>

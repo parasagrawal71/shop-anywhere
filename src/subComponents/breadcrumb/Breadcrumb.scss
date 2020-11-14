@@ -1,0 +1,19 @@
+@import "utils/commonStyles/colors.scss";
+@import "utils/commonStyles/flex.scss";
+
+.breadcrumb {
+}
+
+.breadcrumb-item {
+  text-decoration: none;
+  color: $darkGrey;
+}
+
+.breadcrumb-item:hover {
+  color: $blue;
+}
+
+.breadcrumb-item-separater {
+  padding: 0 10px;
+  color: $darkGrey;
+}
