@@ -116,7 +116,7 @@ NOTE:- I have scrapped few images from some websites to only use it for learning
 
 [website-link]: https://shop-anywhere.web.app
 [product-screenshot]: src/assets/png/product-screenshot.png
-[product-gif]: 
+[product-gif]: #
 
 <!-- SKILLS -->
 
